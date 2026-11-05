@@ -1,0 +1,9 @@
+GSAP 3.15.0
+Copyright 2026, GreenSock. All rights reserved.
+Subject to the Standard No Charge GSAP License:
+https://gsap.com/standard-license
+https://gsap.com/community/standard-license/
+
+The original notice is retained unchanged in gsap.min.js.
+This demo uses GSAP only for its fixed portfolio title and navigation animation.
+The separate editable sculpture uses Anime.js; this is not a GSAP visual animation builder.

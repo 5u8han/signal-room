@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="theme-boot.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="After Hours Radio by 5u8han. Original synth music in a classic Webamp player.">
+  <title>After Hours Radio · 5u8han</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="music.css">
+  <script defer src="vendor/webamp/webamp.bundle.min.js"></script>
+  <script type="module" src="music.js"></script>
+</head>
+<body class="radio-page">
+  <a class="skip-link" href="#main">Skip to the player</a>
+  <header class="radio-header">
+    <a class="radio-brand" href="index.html">5u8han<span>.dev</span></a>
+    <div class="radio-header-right">
+      <a href="index.html">← Homelab</a>
+      <div id="radio-theme"></div>
+    </div>
+  </header>
+  <main class="radio-main" id="main">
+    <section class="radio-copy" aria-labelledby="radio-title">
+      <p class="radio-label"><span></span> HOMELAB RADIO / 001</p>
+      <h1 id="radio-title">After Hours <em>Radio.</em></h1>
+      <p class="radio-description">A little synth for the late shift. Keep this tab open to listen while you explore the homelab.</p>
+      <div class="radio-track">
+        <span class="radio-track-index" aria-hidden="true">01</span>
+        <div><strong>Late Shift</strong><small>5u8han Radio · Original synth loop</small></div>
+        <time datetime="PT48S">0:48</time>
+      </div>
+      <label class="radio-autoplay">
+        <input id="radio-autoplay" type="checkbox">
+        <span>Play when I open Radio<small>Starts automatically when your browser allows it.</small></span>
+      </label>
+    </section>
+    <section class="radio-deck" aria-label="After Hours Radio player" data-state="loading">
+      <header class="radio-deck-header">
+        <span><strong>WEBAMP</strong><small>STEREO / 44.1 kHz</small></span>
+        <span id="radio-status" role="status">Loading player</span>
+      </header>
+      <div class="radio-screen">
+        <div id="radio-stage" aria-label="Classic Webamp controls"></div>
+        <p id="radio-stage-note">Tuning in…</p>
+        <span class="radio-screen-label" aria-hidden="true">SIGNAL 01</span>
+      </div>
+      <footer class="radio-deck-footer">
+        <button id="radio-transport" type="button" aria-controls="radio-stage" disabled>Play Late Shift</button>
+        <div class="radio-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <audio id="radio-fallback" controls preload="none" loop src="assets/music/late-shift.mp3" aria-label="Play Late Shift with your browser audio controls" hidden></audio>
+      </footer>
+      <noscript><p class="radio-noscript"><a href="assets/music/late-shift.mp3">Listen to Late Shift</a></p></noscript>
+    </section>
+  </main>
+  <footer class="radio-footer">
+    <span>5U8HAN.DEV / AFTER HOURS RADIO</span>
+    <a href="https://github.com/captbaritone/webamp">Webamp by Jordan Eldredge and contributors ↗</a>
+  </footer>
+</body>
+</html>

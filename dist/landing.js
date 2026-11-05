@@ -1,0 +1,7 @@
+import{mountDatacenterScene}from'./datacenter-scene.js';
+const variants={cinematic:{name:'After Hours',heading:'CALM<br>IN THE<br><span>CHAOS.</span>',description:'A fault is a starting point. I follow it from the person at the keyboard to the hardware behind the wall.'},pixel:{name:'The Last Alert',heading:'ONE MORE<br>GREEN<br><span>LIGHT.</span>',description:'A little curiosity. A lot of persistence. One system, one fault, one better state at a time.'},blueprint:{name:'Signal & Structure',heading:'TRACE<br>THE<br><span>SIGNAL.</span>',description:'The whole system matters. So does the smallest connection. I work in the space between them.'}};
+const variant=document.body.dataset.variant||'cinematic',meta=variants[variant]||variants.cinematic;
+document.querySelector('#landing-title').innerHTML=meta.heading;document.querySelector('#landing-description').textContent=meta.description;document.querySelector('#landing-concept').textContent='LANDING STUDY / '+meta.name.toUpperCase();
+const host=document.querySelector('#landing-world');host.addEventListener('datacenter:status',event=>{document.querySelector('#landing-phase').textContent=event.detail.phase+' / '+event.detail.rack;document.querySelector('#landing-action').textContent=event.detail.action});
+const scene=mountDatacenterScene({container:host,variant,motion:()=>document.documentElement.dataset.motion!=='off'});
+window.addEventListener('pagehide',()=>scene.dispose(),{once:true});

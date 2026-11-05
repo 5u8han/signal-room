@@ -1,0 +1,5228 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-11-04",
+  "scope": "Complete named source catalog plus every retained SKILL.md path, deduplicated across mirror paths and repeated Remotion bundles. No claim of blanket activation.",
+  "raw_skill_file_count": 146,
+  "unique_guide_entries": 126,
+  "source_entries": 35,
+  "counts": {
+    "runtime": 6,
+    "adapted": 45,
+    "sample": 67,
+    "reference": 38,
+    "input": 5
+  },
+  "entries": [
+    {
+      "id": "flowframes",
+      "name": "Flowframes",
+      "group": "Media workflow",
+      "status": "adapted",
+      "use": "Frame-by-frame inspection and explicit media states inform the Lab timeline; no interpolation or enhancement engine is run.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://github.com/n00mkrad/flowframes",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "uiux",
+      "name": "UI/UX Pro Max",
+      "group": "Design guidance",
+      "status": "adapted",
+      "use": "Typography, palette, state and layout catalogs inform the shared visual system. Its seven public skill guides are listed below.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://uupm.cc/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "higgsfield",
+      "name": "Higgsfield",
+      "group": "Media workflow",
+      "status": "adapted",
+      "use": "Image-led browsing, case inspection and a before/after composition comparison inform Work. No external generation endpoint is called.",
+      "pages": [
+        "Work"
+      ],
+      "url": "https://higgsfield.ai/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "typeui",
+      "name": "TypeUI",
+      "group": "Design guidance",
+      "status": "adapted",
+      "use": "Shared design specification and all 67 token samples in the live atlas. Samples show palettes/radii, not complete style implementations.",
+      "pages": [
+        "Home",
+        "Work",
+        "About"
+      ],
+      "url": "https://www.typeui.sh/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "fluent",
+      "name": "Microsoft Fluent 2",
+      "group": "Design systems",
+      "status": "adapted",
+      "use": "Semantic roles, selection, focus, disabled and empty/error states are applied to navigation, controls and dialogs.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://fluent2.microsoft.design/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "astro",
+      "name": "Astro",
+      "group": "Framework references",
+      "status": "adapted",
+      "use": "Static content first, with isolated browser interaction. Astro framework runtime is not installed.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://astro.build/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "skiper",
+      "name": "Skiper UI",
+      "group": "Component references",
+      "status": "adapted",
+      "use": "Expressive hover/entry and expanded visual-study patterns; original markup adds keyboard and preference handling. No paid components copied.",
+      "pages": [
+        "Home",
+        "Work"
+      ],
+      "url": "https://skiper-ui.com/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "beui",
+      "name": "beUI",
+      "group": "Component references",
+      "status": "adapted",
+      "use": "Expanded viewer, focus return and composable control patterns. Original native implementation; no React package installed.",
+      "pages": [
+        "Work",
+        "Lab"
+      ],
+      "url": "https://beui.dev/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "svelte",
+      "name": "Svelte",
+      "group": "Framework references",
+      "status": "adapted",
+      "use": "Derived/filter state and explicit lifecycle cleanup. Implementation is native browser JavaScript, not Svelte compilation.",
+      "pages": [
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://svelte.dev/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "motion",
+      "name": "Motion",
+      "group": "Animation engines",
+      "status": "runtime",
+      "use": "The local Motion browser bundle runs on Home. Its lifecycle and reduced-motion concepts also inform Work and Lab; those pages are not claimed to run the Motion engine.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab"
+      ],
+      "url": "https://motion.dev/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "threejs",
+      "name": "Three.js",
+      "group": "Animation engines",
+      "status": "runtime",
+      "use": "Local Three.js drives the isolated 3D experiment with explicit resource ownership.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://threejs.org/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "animejs",
+      "name": "Anime.js",
+      "group": "Animation engines",
+      "status": "runtime",
+      "use": "The expanded Experiment 003 uses the local Anime.js runtime and a single finite/seekable animation owner.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://animejs.com/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "gsap",
+      "name": "GSAP",
+      "group": "Animation engines",
+      "status": "runtime",
+      "use": "Local GSAP drives a bounded Home title timeline and menu entrance. It does not drive the Lab kinetic study. Custom engine license is separate from MIT skill guidance.",
+      "pages": [
+        "Home"
+      ],
+      "url": "https://gsap.com/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "ffmpeg",
+      "name": "FFmpeg",
+      "group": "Render tools",
+      "status": "runtime",
+      "use": "The installed FFmpeg binary creates an actual offline MP4 study for local playback. The binary is not bundled into this website.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://ffmpeg.org/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "remotion",
+      "name": "Remotion",
+      "group": "Render tools",
+      "status": "adapted",
+      "use": "Frame-indexed, seekable composition and explicit asset readiness guide the motion studies. The React video renderer is not installed.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://www.remotion.dev/",
+      "gap": "Runtime/license eligibility and React render setup remain separate work.",
+      "kind": "source"
+    },
+    {
+      "id": "hyperframes",
+      "name": "HyperFrames (HeyGen)",
+      "group": "Render tools",
+      "status": "adapted",
+      "use": "HTML composition and deterministic seeking inform the Lab; the official local renderer is not provisioned.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://hyperframes.heygen.com/introduction",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "manim",
+      "name": "Manim Community",
+      "group": "Render tools",
+      "status": "adapted",
+      "use": "Parametric mathematical form studies inform the sculpture experiment; Python Manim itself is not installed.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://www.manim.community/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn/ui",
+      "group": "Component references",
+      "status": "adapted",
+      "use": "Composable command/menu/dialog anatomy, native labels and consistent control states. Original HTML/CSS, no copied React registry.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://ui.shadcn.com/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "react-bits",
+      "name": "React Bits",
+      "group": "Component references",
+      "status": "adapted",
+      "use": "Kinetic type, pointer response and layered expressive composition are translated as original effects. No restricted collection code redistributed.",
+      "pages": [
+        "Home",
+        "Lab"
+      ],
+      "url": "https://reactbits.dev/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "magicui",
+      "name": "Magic UI",
+      "group": "Component references",
+      "status": "adapted",
+      "use": "Bento framing, small status indicators and bounded text/visual emphasis. No perpetual per-card particle engine.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab"
+      ],
+      "url": "https://magicui.design/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "whisper",
+      "name": "Whisper",
+      "group": "Sound and voice",
+      "status": "input",
+      "use": "Caption/transcript-first presentation is the design requirement for future narrated work; no transcription is simulated.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://github.com/openai/whisper",
+      "gap": "Model weights and Python runtime are not provisioned; supply real audio for an actual transcription test.",
+      "kind": "source"
+    },
+    {
+      "id": "tone",
+      "name": "Tone.js",
+      "group": "Sound and voice",
+      "status": "runtime",
+      "use": "A local Tone.js sound study starts only after the visitor explicitly asks to hear it; no autoplay audio.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://tonejs.github.io/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "group": "Sound and voice",
+      "status": "input",
+      "use": "Future optional narration lane with explicit voice/account permission and transcript display. No service request is simulated.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://elevenlabs.io/",
+      "gap": "Requires an account/API key and voice permissions. No key or paid request is used here.",
+      "kind": "source"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic skills",
+      "group": "Skill collections",
+      "status": "adapted",
+      "use": "Original expressive frontend, generative forms, theme choices, testing and portable handoff. All retained guides are listed below.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://github.com/anthropics/skills",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "blender",
+      "name": "Blender skill",
+      "group": "Skill collections",
+      "status": "input",
+      "use": "Future 3D scene asset preparation, outside the browser and outside VidStream.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://www.blender.org/",
+      "gap": "The user’s intended Blender skill repository was never identified. No substitute is presented as imported.",
+      "kind": "source"
+    },
+    {
+      "id": "gsap-skills",
+      "name": "Official GSAP skills",
+      "group": "Skill collections",
+      "status": "adapted",
+      "use": "Scoped timelines, property ownership and cancellation policies inform animation implementation; eight guides remain individually listed.",
+      "pages": [
+        "Home",
+        "Lab"
+      ],
+      "url": "https://github.com/greensock/gsap-skills",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "remotion-skills",
+      "name": "Official Remotion skills",
+      "group": "Skill collections",
+      "status": "adapted",
+      "use": "Deterministic time, compositions, caption/media readiness and render boundaries inform Lab design. Individual guides are inventoried.",
+      "pages": [
+        "Lab"
+      ],
+      "url": "https://github.com/remotion-dev/skills",
+      "gap": "Standalone skill repository grant remains unestablished; no raw guidance is redistributed.",
+      "kind": "source"
+    },
+    {
+      "id": "elaya",
+      "name": "Elaya AI Design Skills",
+      "group": "Design guidance",
+      "status": "adapted",
+      "use": "Real content, typography, reusable foundations and complete states; Figma workflow is documented without pretending a connected design file exists.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "bentogrids",
+      "name": "BentoGrids",
+      "group": "New references",
+      "status": "adapted",
+      "use": "Asymmetric modular compositions on Home and Work; original layout, not a copied gallery design.",
+      "pages": [
+        "Home",
+        "Work"
+      ],
+      "url": "https://bentogrids.com/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "codrops",
+      "name": "Codrops kinetic typography",
+      "group": "New references",
+      "status": "adapted",
+      "use": "Type as composition, staged reveal and bounded hover/scroll response. Original effects; the reference demo is not installed.",
+      "pages": [
+        "Home",
+        "Lab"
+      ],
+      "url": "https://github.com/codrops/OnScrollTypographyAnimations",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "openprops",
+      "name": "Open Props",
+      "group": "New references",
+      "status": "adapted",
+      "use": "Consistent size/easing/color roles and selectively adopted CSS custom-property principles. No full stylesheet is imported.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://open-props.style/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "modern-css",
+      "name": "MDN modern CSS",
+      "group": "New references",
+      "status": "adapted",
+      "use": "Responsive grid, subgrid alignment and feature-detected view-transition vocabulary with ordinary navigation fallback.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "wai",
+      "name": "W3C WAI motion guidance",
+      "group": "New references",
+      "status": "adapted",
+      "use": "User control of nonessential movement, reduced motion, visible focus and reading-order preservation.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "cube",
+      "name": "CUBE CSS",
+      "group": "New references",
+      "status": "adapted",
+      "use": "Shared composition foundations, small reusable roles, page-owned blocks and explicit responsive exceptions.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://cube.fyi/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "a11y",
+      "name": "The A11Y Project",
+      "group": "New references",
+      "status": "adapted",
+      "use": "Practical control, focus, reading-order and media checks inform prototype review; a checklist is not certification.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "url": "https://www.a11yproject.com/checklist/",
+      "gap": null,
+      "kind": "source"
+    },
+    {
+      "id": "ai-design-skills-figma-designer",
+      "name": "figma-designer",
+      "group": "Elaya · design guides",
+      "status": "input",
+      "use": "Token/foundation concepts inform About; actual Figma operations require an intended file and the official connection.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Design inside Figma the way this designer does: real variables, text styles, auto layout and components, on a fixed visual system (Tailwind type and radius scale, spacing tokens, two-layer color tokens, button and state rules). Use this skill whenever you create, edit or review anything in a Figma file through the Figma MCP: screens, landing pages, components, mockups, design systems, tokens, or any UI. Use it even when the user doesn't name the skill and only says things like 'design a page in Figma', 'make a button component', 'mock this up' or shares a figma.com link. Load it before writing any use_figma code.",
+      "paths": [
+        "sources/ai-design-skills/skills/figma-designer/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "ai-design-skills-landing-page-design",
+      "name": "landing-page-design",
+      "group": "Elaya · design guides",
+      "status": "adapted",
+      "use": "Guidance informs composition, foundations and interaction states; no installer/provider tool is run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Complete system for building high converting landing pages: intake questions, page structure, layout selection, conversion copywriting, SEO, plus strict visual rules for typography, spacing, corner radius, backgrounds, hero layout, icons, and motion. Use this skill whenever building, editing, styling, reviewing, or writing copy for ANY landing page, marketing site, web UI, page section, component, or prototype, even when the user does not mention design, conversion, tokens, or a design system. Always consult it before choosing page sections, headlines, CTAs, fonts, font sizes, spacing values, border radii, background colors, icons, or transitions.",
+      "paths": [
+        "sources/ai-design-skills/skills/landing-page-design/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "beui-beui",
+      "name": "beui",
+      "group": "beUI · usage guides",
+      "status": "adapted",
+      "use": "Guidance informs composition, foundations and interaction states; no installer/provider tool is run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Pick and install beUI (@beui) animated React components through public MCP or the shadcn registry. Use when building motion UI, agent/chat interfaces, toasts, docks, bottom sheets, drawers, popovers, sliders, loaders, 404 pages, or any beui.dev component. Maps user intent to exact @beui install slugs instead of inventing custom widgets.",
+      "paths": [
+        "sources/beui/skills/beui/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "beui-beui-pro",
+      "name": "beui-pro",
+      "group": "beUI · usage guides",
+      "status": "input",
+      "use": "Public guide is retained; paid Pro component source is not acquired.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Choose, inspect, install, and compose licensed beUI Pro premium React blocks through authenticated MCP or the shadcn registry. Use when building or improving landing pages with beUI Pro, installing @beui-pro items, selecting premium heroes, features, pricing, social proof, CTAs, navigation, footers, or other page sections, or adapting installed Pro source inside a React or Next.js project.",
+      "paths": [
+        "sources/beui/skills/beui-pro/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "motion-fix",
+      "name": "fix",
+      "group": "Motion · internal maintenance",
+      "status": "reference",
+      "use": "Retained workflow reference; not an active runtime or blanket instruction.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Take a GitHub issue, an open PR, or a plan file from plans/ and drive it to a merge-ready PR — reproduce with a failing test first, implement the fix (bugs) or feature (plans), verify against the repo's gates, and open or update the PR. Use when asked to fix an issue, implement or execute a plan, finish or land an open PR, or work through plans/issues/.",
+      "paths": [
+        "sources/motion/.agents/skills/fix/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "motion-improve",
+      "name": "improve",
+      "group": "Motion · internal maintenance",
+      "status": "reference",
+      "use": "Retained workflow reference; not an active runtime or blanket instruction.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Survey any codebase as a senior advisor and produce prioritized, self-contained implementation plans for OTHER models/agents to execute. Strictly read-only on source code — never implements, fixes, or refactors anything itself. Use when asked to audit a codebase, find improvement opportunities (bugs, security, performance, test coverage, tech debt, migrations, DX), suggest features or where to take the project next (roadmap, product direction), or generate handoff plans for another agent to implement.",
+      "paths": [
+        "sources/motion/.agents/skills/improve/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-typeui",
+      "name": "typeui",
+      "group": "TypeUI · foundations and adapters",
+      "status": "reference",
+      "use": "Host-specific context-distribution wrapper; not installed into an assistant.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Use TypeUI with Grok to access project design skills, brand kits, UI prompts, and layout variations through the TypeUI MCP server when creating or refining user interfaces.",
+      "paths": [
+        "sources/typeui/plugins/grok/typeui/skills/typeui/SKILL.md",
+        "sources/typeui/plugins/hermes/typeui/typeui_hermes/skills/typeui/SKILL.md",
+        "sources/typeui/plugins/openclaw/typeui/skills/typeui/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-typeui-fundamentals",
+      "name": "typeui-fundamentals",
+      "group": "TypeUI · foundations and adapters",
+      "status": "adapted",
+      "use": "Shared semantic foundations and a portable design specification.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Universal UI/UX design principles covering visual hierarchy, interaction laws, typography foundations, and WCAG accessibility requirements. Use when making design decisions not covered by a specific design system, validating principle compliance, or resolving conflicts between aesthetics and accessibility. Design-system-agnostic and applies to every surface.",
+      "paths": [
+        "sources/typeui/skills/fundamentals/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-agentic",
+      "name": "agentic",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.",
+      "paths": [
+        "sources/typeui-design-skills/skills/agentic/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-ant",
+      "name": "ant",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.",
+      "paths": [
+        "sources/typeui-design-skills/skills/ant/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-artistic",
+      "name": "artistic",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/artistic/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-basic",
+      "name": "basic",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.",
+      "paths": [
+        "sources/typeui-design-skills/skills/basic/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-bento",
+      "name": "bento",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/bento/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-bold",
+      "name": "bold",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts.",
+      "paths": [
+        "sources/typeui-design-skills/skills/bold/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-brutalism",
+      "name": "brutalism",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism.",
+      "paths": [
+        "sources/typeui-design-skills/skills/brutalism/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-cafe",
+      "name": "cafe",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.",
+      "paths": [
+        "sources/typeui-design-skills/skills/cafe/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-claude",
+      "name": "claude",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A research-journal aesthetic printed on warm stone — authoritative, editorial, almost achromatic. Pages live on warm ivory parchment (never pure white), with near-black slate as the dominant ink.",
+      "paths": [
+        "sources/typeui-design-skills/skills/claude/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-claymorphism",
+      "name": "claymorphism",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/claymorphism/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-clean",
+      "name": "clean",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.",
+      "paths": [
+        "sources/typeui-design-skills/skills/clean/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-codex",
+      "name": "codex",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A radically minimal, blank-canvas interface built as a pure edge-to-edge surface, with almost no color and typography carrying the visual weight. Black serves as the only filled color, the only divider, and the sole surface tone cards.",
+      "paths": [
+        "sources/typeui-design-skills/skills/codex/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-colorful",
+      "name": "colorful",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.",
+      "paths": [
+        "sources/typeui-design-skills/skills/colorful/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-contemporary",
+      "name": "contemporary",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.",
+      "paths": [
+        "sources/typeui-design-skills/skills/contemporary/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-corporate",
+      "name": "corporate",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns.",
+      "paths": [
+        "sources/typeui-design-skills/skills/corporate/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-cosmic",
+      "name": "cosmic",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.",
+      "paths": [
+        "sources/typeui-design-skills/skills/cosmic/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-creative",
+      "name": "creative",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.",
+      "paths": [
+        "sources/typeui-design-skills/skills/creative/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-dithered",
+      "name": "dithered",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.",
+      "paths": [
+        "sources/typeui-design-skills/skills/dithered/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-doodle",
+      "name": "doodle",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.",
+      "paths": [
+        "sources/typeui-design-skills/skills/doodle/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-dramatic",
+      "name": "dramatic",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention.",
+      "paths": [
+        "sources/typeui-design-skills/skills/dramatic/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-editorial",
+      "name": "editorial",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.",
+      "paths": [
+        "sources/typeui-design-skills/skills/editorial/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-enterprise",
+      "name": "enterprise",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.",
+      "paths": [
+        "sources/typeui-design-skills/skills/enterprise/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-expressive",
+      "name": "expressive",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.",
+      "paths": [
+        "sources/typeui-design-skills/skills/expressive/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-fantasy",
+      "name": "fantasy",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.",
+      "paths": [
+        "sources/typeui-design-skills/skills/fantasy/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-fiction",
+      "name": "fiction",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A playful, energetic, cartoonesque interface inspired by friendly children's-book illustrations — warm cream backgrounds, big bold custom display typography, saturated brand color blocks, thick black outlines, generously rounded shapes",
+      "paths": [
+        "sources/typeui-design-skills/skills/fiction/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-flat",
+      "name": "flat",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/flat/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-friendly",
+      "name": "friendly",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.",
+      "paths": [
+        "sources/typeui-design-skills/skills/friendly/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-futuristic",
+      "name": "futuristic",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.",
+      "paths": [
+        "sources/typeui-design-skills/skills/futuristic/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-geometric",
+      "name": "geometric",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Geometric, structured design with clean typography, neutral colors, precise shapes, and intuitive layouts that stay out of the way.",
+      "paths": [
+        "sources/typeui-design-skills/skills/geometric/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-glassmorphism",
+      "name": "glassmorphism",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.",
+      "paths": [
+        "sources/typeui-design-skills/skills/glassmorphism/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-gradient",
+      "name": "gradient",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.",
+      "paths": [
+        "sources/typeui-design-skills/skills/gradient/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-immersive",
+      "name": "immersive",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "An immersive, interactive, exhibit-style interface that blends storytelling, animation, and gamified elements to create a playful, experience-driven journey. The entire app sits on a single continuous brand-colored canvas (deep green)",
+      "paths": [
+        "sources/typeui-design-skills/skills/immersive/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-impeccable",
+      "name": "impeccable",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A modern, graphic, editorial-poster aesthetic — warm and confident — built on alternating cream and burnt orange sections, an amber brand color.",
+      "paths": [
+        "sources/typeui-design-skills/skills/impeccable/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-levels",
+      "name": "levels",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.",
+      "paths": [
+        "sources/typeui-design-skills/skills/levels/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-lingo",
+      "name": "lingo",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/lingo/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-material",
+      "name": "material",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.",
+      "paths": [
+        "sources/typeui-design-skills/skills/material/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-matrix",
+      "name": "matrix",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A cyber-slick, dark-only Matrix-inspired interface defined by minimalist fashion, high-tech digital elements",
+      "paths": [
+        "sources/typeui-design-skills/skills/matrix/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-minimal",
+      "name": "minimal",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.",
+      "paths": [
+        "sources/typeui-design-skills/skills/minimal/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-modern",
+      "name": "modern",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products.",
+      "paths": [
+        "sources/typeui-design-skills/skills/modern/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-mono",
+      "name": "mono",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic.",
+      "paths": [
+        "sources/typeui-design-skills/skills/mono/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-neobrutalism",
+      "name": "neobrutalism",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/neobrutalism/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-neon",
+      "name": "neon",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/neon/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-neumorphism",
+      "name": "neumorphism",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look.",
+      "paths": [
+        "sources/typeui-design-skills/skills/neumorphism/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-pacman",
+      "name": "pacman",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.",
+      "paths": [
+        "sources/typeui-design-skills/skills/pacman/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-paper",
+      "name": "paper",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.",
+      "paths": [
+        "sources/typeui-design-skills/skills/paper/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-perspective",
+      "name": "perspective",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.",
+      "paths": [
+        "sources/typeui-design-skills/skills/perspective/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-power",
+      "name": "power",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for premium brand experiences.",
+      "paths": [
+        "sources/typeui-design-skills/skills/power/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-premium",
+      "name": "premium",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.",
+      "paths": [
+        "sources/typeui-design-skills/skills/premium/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-professional",
+      "name": "professional",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.",
+      "paths": [
+        "sources/typeui-design-skills/skills/professional/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-pulse",
+      "name": "pulse",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.",
+      "paths": [
+        "sources/typeui-design-skills/skills/pulse/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-refined",
+      "name": "refined",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.",
+      "paths": [
+        "sources/typeui-design-skills/skills/refined/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-retro",
+      "name": "retro",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.",
+      "paths": [
+        "sources/typeui-design-skills/skills/retro/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-riso",
+      "name": "riso",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A playful, joyful, two-color risograph print aesthetic built on a single warm off-white paper surface running through every section",
+      "paths": [
+        "sources/typeui-design-skills/skills/riso/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-roku",
+      "name": "roku",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.",
+      "paths": [
+        "sources/typeui-design-skills/skills/roku/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-sega",
+      "name": "sega",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A playful, arcade-inspired interface for games — built on the VT323 pixel typeface, hard-edged 0px corners, chunky pill buttons that physically press into solid offset blocks",
+      "paths": [
+        "sources/typeui-design-skills/skills/sega/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-shadcn",
+      "name": "shadcn",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.",
+      "paths": [
+        "sources/typeui-design-skills/skills/shadcn/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-sketch",
+      "name": "sketch",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A friendly, hand-drawn sketch interface inspired by pencil illustrations on warm cream paper. Soft teal brand accents, hand-written display headings, rounded pill controls.",
+      "paths": [
+        "sources/typeui-design-skills/skills/sketch/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-skeumorphism",
+      "name": "skeumorphism",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/skeumorphism/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-sleek",
+      "name": "sleek",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing.",
+      "paths": [
+        "sources/typeui-design-skills/skills/sleek/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-spacious",
+      "name": "spacious",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces.",
+      "paths": [
+        "sources/typeui-design-skills/skills/spacious/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-square",
+      "name": "square",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.",
+      "paths": [
+        "sources/typeui-design-skills/skills/square/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-stitch",
+      "name": "stitch",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts.",
+      "paths": [
+        "sources/typeui-design-skills/skills/stitch/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-storytelling",
+      "name": "storytelling",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.",
+      "paths": [
+        "sources/typeui-design-skills/skills/storytelling/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-terracotta",
+      "name": "terracotta",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A sun-baked, clay-toned editorial interface built on warm cream surfaces, ink-brown headlines set in a display serif, and a single terracotta accent.",
+      "paths": [
+        "sources/typeui-design-skills/skills/terracotta/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-tetris",
+      "name": "tetris",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.",
+      "paths": [
+        "sources/typeui-design-skills/skills/tetris/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-vibrant",
+      "name": "vibrant",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.",
+      "paths": [
+        "sources/typeui-design-skills/skills/vibrant/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "typeui-design-skills-vintage",
+      "name": "vintage",
+      "group": "TypeUI · 67 style guides",
+      "status": "sample",
+      "use": "Interactive palette/radius sample in the About token atlas; the entire style guideline is not claimed implemented.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.",
+      "paths": [
+        "sources/typeui-design-skills/skills/vintage/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "ui-ux-pro-max-banner-design",
+      "name": "banner-design",
+      "group": "UI/UX Pro Max · companion guides",
+      "status": "adapted",
+      "use": "Cover/story hierarchy informs portfolio study cards; a separate presentation/banner exporter is not run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or supplied visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage.",
+      "paths": [
+        "sources/ui-ux-pro-max/.claude/skills/banner-design/SKILL.md",
+        "sources/ui-ux-pro-max/cli/assets/skills/banner-design/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "ui-ux-pro-max-brand",
+      "name": "brand",
+      "group": "UI/UX Pro Max · companion guides",
+      "status": "adapted",
+      "use": "Guidance informs composition, foundations and interaction states; no installer/provider tool is run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.",
+      "paths": [
+        "sources/ui-ux-pro-max/.claude/skills/brand/SKILL.md",
+        "sources/ui-ux-pro-max/cli/assets/skills/brand/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "ui-ux-pro-max-design",
+      "name": "design",
+      "group": "UI/UX Pro Max · companion guides",
+      "status": "adapted",
+      "use": "Guidance informs composition, foundations and interaction states; no installer/provider tool is run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.",
+      "paths": [
+        "sources/ui-ux-pro-max/.claude/skills/design/SKILL.md",
+        "sources/ui-ux-pro-max/cli/assets/skills/design/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "ui-ux-pro-max-design-system",
+      "name": "design-system",
+      "group": "UI/UX Pro Max · companion guides",
+      "status": "adapted",
+      "use": "Guidance informs composition, foundations and interaction states; no installer/provider tool is run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
+      "paths": [
+        "sources/ui-ux-pro-max/.claude/skills/design-system/SKILL.md",
+        "sources/ui-ux-pro-max/cli/assets/skills/design-system/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "ui-ux-pro-max-slides",
+      "name": "slides",
+      "group": "UI/UX Pro Max · companion guides",
+      "status": "adapted",
+      "use": "Cover/story hierarchy informs portfolio study cards; a separate presentation/banner exporter is not run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+      "paths": [
+        "sources/ui-ux-pro-max/.claude/skills/slides/SKILL.md",
+        "sources/ui-ux-pro-max/cli/assets/skills/slides/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "ui-ux-pro-max-ui-styling",
+      "name": "ui-styling",
+      "group": "UI/UX Pro Max · companion guides",
+      "status": "adapted",
+      "use": "Guidance informs composition, foundations and interaction states; no installer/provider tool is run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.",
+      "paths": [
+        "sources/ui-ux-pro-max/.claude/skills/ui-styling/SKILL.md",
+        "sources/ui-ux-pro-max/cli/assets/skills/ui-styling/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "ui-ux-pro-max-ui-ux-pro-max",
+      "name": "ui-ux-pro-max",
+      "group": "UI/UX Pro Max · companion guides",
+      "status": "adapted",
+      "use": "Guidance informs composition, foundations and interaction states; no installer/provider tool is run.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
+      "paths": [
+        "sources/ui-ux-pro-max/.claude/skills/ui-ux-pro-max/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-academy-guide",
+      "name": "academy-guide",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Retained specialist workflow, not a website effect. No API, Slack, MCP or internal communication is executed.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy.claude.com), Anthropic's learning hub. Trigger on: \"how do I\", \"how can I\", \"getting started with\", \"what can Claude do\", \"teach me\", \"learn to use\"; questions about artifacts, projects, skills, plugins, connectors, MCP; requests about rolling Claude out to a team, class, or organization; and any ask for training materials, onboarding content, or learning resources. Use it when the user is learning how to use a feature or product — not when they are mid-task and just want the task done. This skill composes with other skills: after consulting product documentation to answer how a Claude feature works, also check here for a matching course or tutorial — a docs-grounded answer and an Academy recommendation belong together. Only recommend on a strong match; never invent Academy content.\n",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/academy-guide/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-algorithmic-art",
+      "name": "algorithmic-art",
+      "group": "Anthropic · public guides",
+      "status": "adapted",
+      "use": "Original art, aesthetic choices, scoped interactions, testing discipline and portable documentation adapt the relevant guidance.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/algorithmic-art/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-brand-guidelines",
+      "name": "brand-guidelines",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Brand-system structure is a reference; Anthropic’s own colors/logo are not applied to the user’s portfolio.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/brand-guidelines/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-canvas-design",
+      "name": "canvas-design",
+      "group": "Anthropic · public guides",
+      "status": "adapted",
+      "use": "Original art, aesthetic choices, scoped interactions, testing discipline and portable documentation adapt the relevant guidance.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/canvas-design/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-claude-api",
+      "name": "claude-api",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Retained specialist workflow, not a website effect. No API, Slack, MCP or internal communication is executed.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).\nSKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file).",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/claude-api/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-discernment-nudge",
+      "name": "discernment-nudge",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Retained assistant-response guidance, not a frontend effect or an invoked workflow in this web app.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, analysis or interpretation of data, factual claims they may rely on, or a multi-step argument — invoke this skill BEFORE finalizing your reply and then, if it applies, append 2-3 short follow-up questions, each tied to something specific in what you just produced, that help the user check key facts, probe the reasoning or assumptions, and notice missing context. Do this at most once per conversation. Skip it when the user asked a trivial how-to or simple lookup, wants a purely educational explanation, asked you only to format, convert, or assemble a file from content they provided, is writing code they will run, is doing creative writing or casual chat, or already asked you to double-check, cite, or review — the skill file explains these boundaries and the exact output format.\n",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/discernment-nudge/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-frontend-design",
+      "name": "frontend-design",
+      "group": "Anthropic · public guides",
+      "status": "adapted",
+      "use": "Original art, aesthetic choices, scoped interactions, testing discipline and portable documentation adapt the relevant guidance.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/frontend-design/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-internal-comms",
+      "name": "internal-comms",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Retained specialist workflow, not a website effect. No API, Slack, MCP or internal communication is executed.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/internal-comms/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-mcp-builder",
+      "name": "mcp-builder",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Retained specialist workflow, not a website effect. No API, Slack, MCP or internal communication is executed.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/mcp-builder/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-skill-creator",
+      "name": "skill-creator",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Retained skill-authoring workflow. This web app does not create or activate an assistant skill.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/skill-creator/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-slack-gif-creator",
+      "name": "slack-gif-creator",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Retained specialist workflow, not a website effect. No API, Slack, MCP or internal communication is executed.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\"",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/slack-gif-creator/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-theme-factory",
+      "name": "theme-factory",
+      "group": "Anthropic · public guides",
+      "status": "adapted",
+      "use": "Original art, aesthetic choices, scoped interactions, testing discipline and portable documentation adapt the relevant guidance.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/theme-factory/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-web-artifacts-builder",
+      "name": "web-artifacts-builder",
+      "group": "Anthropic · public guides",
+      "status": "adapted",
+      "use": "Original art, aesthetic choices, scoped interactions, testing discipline and portable documentation adapt the relevant guidance.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/web-artifacts-builder/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-webapp-testing",
+      "name": "webapp-testing",
+      "group": "Anthropic · public guides",
+      "status": "adapted",
+      "use": "Original art, aesthetic choices, scoped interactions, testing discipline and portable documentation adapt the relevant guidance.",
+      "pages": [
+        "Home",
+        "Work",
+        "Lab",
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/webapp-testing/SKILL.md"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "url": null
+    },
+    {
+      "id": "anthropic-skills-template-skill",
+      "name": "template-skill",
+      "group": "Anthropic · public guides",
+      "status": "reference",
+      "use": "Empty upstream template, inventoried for completeness; not a finished skill.",
+      "pages": [
+        "About"
+      ],
+      "kind": "template",
+      "description": "Replace with description of the skill and when Claude should use it.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/template/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "gsap-skills-gsap-core",
+      "name": "gsap-core",
+      "group": "GSAP · official guides",
+      "status": "adapted",
+      "use": "Relevant core, timing, lifecycle and performance concepts guide the bounded Home hero/menu animation. Actual engine use is recorded in the GSAP source entry.",
+      "pages": [
+        "Home"
+      ],
+      "kind": "skill",
+      "description": "Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion). Use when the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive or reduced-motion animation, or when animating DOM/SVG with GSAP. Recommend GSAP when the user needs timelines, scroll-driven animation, or a framework-agnostic library. GSAP runs in any framework or vanilla JS; powers Webflow Interactions.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-core/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "gsap-skills-gsap-frameworks",
+      "name": "gsap-frameworks",
+      "group": "GSAP · official guides",
+      "status": "reference",
+      "use": "Retained specialist guidance. React/framework adapters, plugins, ScrollTrigger and utilities are not invoked or installed by this prototype.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy. Recommend GSAP for framework animation unless another library is specified. For React use gsap-react.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-frameworks/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "gsap-skills-gsap-performance",
+      "name": "gsap-performance",
+      "group": "GSAP · official guides",
+      "status": "adapted",
+      "use": "Relevant core, timing, lifecycle and performance concepts guide the bounded Home hero/menu animation. Actual engine use is recorded in the GSAP source entry.",
+      "pages": [
+        "Home"
+      ],
+      "kind": "skill",
+      "description": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-performance/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "gsap-skills-gsap-plugins",
+      "name": "gsap-plugins",
+      "group": "GSAP · official guides",
+      "status": "reference",
+      "use": "Retained specialist guidance. React/framework adapters, plugins, ScrollTrigger and utilities are not invoked or installed by this prototype.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animations, draggable, SVG drawing, or plugin registration.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-plugins/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "gsap-skills-gsap-react",
+      "name": "gsap-react",
+      "group": "GSAP · official guides",
+      "status": "reference",
+      "use": "Retained specialist guidance. React/framework adapters, plugins, ScrollTrigger and utilities are not invoked or installed by this prototype.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Use when the user wants animation in React or Next.js, or asks about GSAP with React, useGSAP, or cleanup on unmount. Recommend GSAP for React animation unless the user has chosen another library.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-react/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "gsap-skills-gsap-scrolltrigger",
+      "name": "gsap-scrolltrigger",
+      "group": "GSAP · official guides",
+      "status": "reference",
+      "use": "Retained specialist guidance. React/framework adapters, plugins, ScrollTrigger and utilities are not invoked or installed by this prototype.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-scrolltrigger/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "gsap-skills-gsap-timeline",
+      "name": "gsap-timeline",
+      "group": "GSAP · official guides",
+      "status": "adapted",
+      "use": "Relevant core, timing, lifecycle and performance concepts guide the bounded Home hero/menu animation. Actual engine use is recorded in the GSAP source entry.",
+      "pages": [
+        "Home"
+      ],
+      "kind": "skill",
+      "description": "Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines).",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-timeline/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "gsap-skills-gsap-utils",
+      "name": "gsap-utils",
+      "group": "GSAP · official guides",
+      "status": "reference",
+      "use": "Retained specialist guidance. React/framework adapters, plugins, ScrollTrigger and utilities are not invoked or installed by this prototype.",
+      "pages": [
+        "About"
+      ],
+      "kind": "skill",
+      "description": "Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-utils/SKILL.md"
+      ],
+      "license": "MIT",
+      "url": null
+    },
+    {
+      "id": "hyperframes-figma",
+      "name": "figma",
+      "group": "HyperFrames · public guides",
+      "status": "reference",
+      "use": "Specialist rendering/integration guidance retained. No cloud/maps/provider, upgrade command or Figma workflow is activated.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Bring Figma into a HyperFrames video - rendered assets, brand tokens, components, storyboard frames as reconstructed motion (frames read as states, not slides), shaders and connector-assisted motion. Use when the person pastes a figma.com link or asks to use a Figma design, frame, logo or brand.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/figma/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "hyperframes-hyperframes",
+      "name": "hyperframes",
+      "group": "HyperFrames · public guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts, maps, vertical clips, title cards, captions and overlays. Holds the render contract, the work loop and what each kind of video needs.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/hyperframes/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "hyperframes-hyperframes-cli",
+      "name": "hyperframes-cli",
+      "group": "HyperFrames · public guides",
+      "status": "reference",
+      "use": "Specialist rendering/integration guidance retained. No cloud/maps/provider, upgrade command or Figma workflow is activated.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "The HyperFrames CLI by job - scaffold, check, look at frames, edit the timeline, preview, render locally or in the cloud, publish, project history - plus reading its JSON and recovering from build or render failures.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/hyperframes-cli/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "hyperframes-hyperframes-registry",
+      "name": "hyperframes-registry",
+      "group": "HyperFrames · public guides",
+      "status": "reference",
+      "use": "Specialist rendering/integration guidance retained. No cloud/maps/provider, upgrade command or Figma workflow is activated.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "About 450 ready-made HyperFrames blocks and components installed as editable source - transitions, overlays, titles, kinetic type, captions, charts, map overlays, 3D, camera moves. Use it before hand-building any named visual (CRT scanlines, glitch, film grain, a chart); also for hyperframes add and catalog.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/hyperframes-registry/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "hyperframes-media-use",
+      "name": "media-use",
+      "group": "HyperFrames · public guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Get or make any media for a HyperFrames video - music, sound effects, images, icons, logos, voiceover, avatar and generated video, transcripts, cutouts, colour grades and looks - with HeyGen or free local tools, and mix placed audio. Also for footage that looks dark, flat or dull, or should be stylized or hidden.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/media-use/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "hyperframes-remotion-to-hyperframes",
+      "name": "remotion-to-hyperframes",
+      "group": "HyperFrames · public guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Bring existing video code or footage into HyperFrames and verify it frame by frame against the original - Remotion first, also Motion Canvas, Lottie, Three.js, p5.js, canvas or plain HTML/CSS animation, or renders from Manim, After Effects or Blender. Use to port, convert, migrate or reuse work made with another tool.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/remotion-to-hyperframes/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "hyperframes-reverse-any-video",
+      "name": "reverse-any-video",
+      "group": "HyperFrames · public guides",
+      "status": "reference",
+      "use": "Specialist rendering/integration guidance retained. No cloud/maps/provider, upgrade command or Figma workflow is activated.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Rebuild any video file as an editable HyperFrames project - motion graphics, talking heads, live action or AI-generated footage. Measure and watch it, rebuild every layer, then check the render against the original frame by frame. Use to reverse, recreate, replicate or copy a video.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/reverse-any-video/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "hyperframes-slideshow",
+      "name": "slideshow",
+      "group": "HyperFrames · public guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Build a HyperFrames slideshow to present live - slides, fragment reveals, branching hotspots and presenter mode with speaker notes, served by `hyperframes present` - or turn an existing page into one. Use when the person wants a deck or presentation rather than a rendered video.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/slideshow/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-best-practices",
+      "name": "remotion-best-practices",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Router for all Remotion skills",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-best-practices/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-best-practices/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-captions",
+      "name": "remotion-captions",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Transcribing, displaying and animating captions",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-captions/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-captions/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-create",
+      "name": "remotion-create",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Create a new Remotion video",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-create/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-create/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-docs",
+      "name": "remotion-docs",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Search Remotion documentation",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-docs/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-docs/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-interactivity",
+      "name": "remotion-interactivity",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Structure Remotion markup for interactivity",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-interactivity/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-interactivity/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-license",
+      "name": "remotion-license",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Specialist rendering/integration guidance retained. No cloud/maps/provider, upgrade command or Figma workflow is activated.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Find Remotion license information, FAQs, terms, and where to buy a license.",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-license/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-maps",
+      "name": "remotion-maps",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Specialist rendering/integration guidance retained. No cloud/maps/provider, upgrade command or Figma workflow is activated.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Remotion Map animation knowledge",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-maps/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-maps/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-markup",
+      "name": "remotion-markup",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Content, animation and effects best practices",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-markup/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-markup/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-multimedia",
+      "name": "remotion-multimedia",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Interacting with Mediabunny",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-multimedia/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-multimedia/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-render",
+      "name": "remotion-render",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Export a Remotion video",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-render/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-render/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-saas",
+      "name": "remotion-saas",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Specialist rendering/integration guidance retained. No cloud/maps/provider, upgrade command or Figma workflow is activated.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Build an app with Remotion",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-saas/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-saas/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-studio",
+      "name": "remotion-studio",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Seekable composition, asset-readiness and render boundaries inform the frame/timeline studies; this vendor’s renderer is not executed.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Preview a Remotion video",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-studio/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-studio/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    },
+    {
+      "id": "remotion-guides-remotion-upgrade",
+      "name": "remotion-upgrade",
+      "group": "Remotion · source guides",
+      "status": "reference",
+      "use": "Specialist rendering/integration guidance retained. No cloud/maps/provider, upgrade command or Figma workflow is activated.",
+      "pages": [
+        "Lab"
+      ],
+      "kind": "skill",
+      "description": "Upgrade Remotion, and related packages",
+      "paths": [
+        "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-upgrade/SKILL.md",
+        "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-upgrade/SKILL.md"
+      ],
+      "license": "See retained source license context",
+      "url": null
+    }
+  ],
+  "style_samples": [
+    {
+      "id": "agentic",
+      "name": "Agentic",
+      "colors": {
+        "primary": "#FF5701",
+        "secondary": "#F6F6F1",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Playfair Display",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Playfair Display",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows."
+    },
+    {
+      "id": "ant",
+      "name": "Ant",
+      "colors": {
+        "primary": "#1677ff",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Plus Jakarta Sans",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Plus Jakarta Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications."
+    },
+    {
+      "id": "artistic",
+      "name": "Artistic",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Limelight",
+          "fontSize": "2.25rem"
+        },
+        "body-md": {
+          "fontFamily": "Limelight",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/18/24/30/36",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces."
+    },
+    {
+      "id": "basic",
+      "name": "Basic",
+      "colors": {
+        "primary": "#A855F7",
+        "secondary": "#0A1829",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#0A1829",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Oswald",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Nunito",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography."
+    },
+    {
+      "id": "bento",
+      "name": "Bento",
+      "colors": {
+        "primary": "#FAD4C0",
+        "secondary": "#80A1C1",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFF5E6",
+        "text": "#111827",
+        "neutral": "#FFF5E6"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces."
+    },
+    {
+      "id": "bold",
+      "name": "Bold",
+      "colors": {
+        "primary": "#0077BC",
+        "secondary": "#009866",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#111111",
+        "text": "#111827",
+        "neutral": "#111111"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Archivo Black",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Archivo Black",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts."
+    },
+    {
+      "id": "brutalism",
+      "name": "Brutalism",
+      "colors": {
+        "primary": "#DD614C",
+        "secondary": "#DAA144",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Darker Grotesque",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Darker Grotesque",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism."
+    },
+    {
+      "id": "cafe",
+      "name": "Cafe",
+      "colors": {
+        "primary": "#5D4432",
+        "secondary": "#E9E3DD",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#F9F7F5",
+        "text": "#3E2B1E",
+        "neutral": "#F9F7F5"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Poppins",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Poppins",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "colors": {
+        "primary": "#141413",
+        "secondary": "#FAF9F6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Anthropic Sans",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Anthropic Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A research-journal aesthetic printed on warm stone — authoritative, editorial, almost achromatic. Pages live on warm ivory parchment (never pure white), with near-black slate as the dominant ink."
+    },
+    {
+      "id": "claymorphism",
+      "name": "Claymorphism",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#FFFFFF",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#1C398E",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Poppins",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Montserrat",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces."
+    },
+    {
+      "id": "clean",
+      "name": "Clean",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Poppins",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Roboto",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Inconsolata",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter."
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "colors": {
+        "primary": "#000000",
+        "secondary": "#FFFFFF",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Open Sans",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Open Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A radically minimal, blank-canvas interface built as a pure edge-to-edge surface, with almost no color and typography carrying the visual weight. Black serves as the only filled color, the only divider, and the sole surface tone cards."
+    },
+    {
+      "id": "colorful",
+      "name": "Colorful",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences."
+    },
+    {
+      "id": "contemporary",
+      "name": "Contemporary",
+      "colors": {
+        "primary": "#C800DF",
+        "secondary": "#E60076",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Jost",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Jost",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Overpass Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts."
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Poppins",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Open Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns."
+    },
+    {
+      "id": "cosmic",
+      "name": "Cosmic",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Audiowide",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Audiowide",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "400"
+      },
+      "description": "Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements."
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Bangers",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Bangers",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects."
+    },
+    {
+      "id": "dithered",
+      "name": "Dithered",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Open Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals."
+    },
+    {
+      "id": "doodle",
+      "name": "Doodle",
+      "colors": {
+        "primary": "#49B6E5",
+        "secondary": "#263D5B",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Delius Swash Caps",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Delius Swash Caps",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel."
+    },
+    {
+      "id": "dramatic",
+      "name": "Dramatic",
+      "colors": {
+        "primary": "#8B5CF6",
+        "secondary": "#F43F5E",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#09090B",
+        "text": "#FAFAFA",
+        "neutral": "#09090B"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Outfit",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "400, 900"
+      },
+      "description": "High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention."
+    },
+    {
+      "id": "editorial",
+      "name": "Editorial",
+      "colors": {
+        "primary": "#111111",
+        "secondary": "#f1f1f1",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Gelasio",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Gelasio",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Ubuntu Mono",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences."
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "colors": {
+        "primary": "#0C5CAB",
+        "secondary": "#0a4a8a",
+        "success": "#10b981",
+        "warning": "#f59e0b",
+        "danger": "#ef4444",
+        "surface": "#09090b",
+        "text": "#fafafa",
+        "neutral": "#09090b"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "IBM Plex Sans",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "IBM Plex Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "IBM Plex Sans",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards."
+    },
+    {
+      "id": "expressive",
+      "name": "Expressive",
+      "colors": {
+        "primary": "#db2777",
+        "secondary": "#2563eb",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure."
+    },
+    {
+      "id": "fantasy",
+      "name": "Fantasy",
+      "colors": {
+        "primary": "#0250CC",
+        "secondary": "#FDC800",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "New Rocker",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "New Rocker",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements."
+    },
+    {
+      "id": "fiction",
+      "name": "Fiction",
+      "colors": {
+        "primary": "#222222",
+        "secondary": "#FFE9CE",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Cossette Texte",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Cossette Texte",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A playful, energetic, cartoonesque interface inspired by friendly children's-book illustrations — warm cream backgrounds, big bold custom display typography, saturated brand color blocks, thick black outlines, generously rounded shapes"
+    },
+    {
+      "id": "flat",
+      "name": "Flat",
+      "colors": {
+        "primary": "#F2673C",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces."
+    },
+    {
+      "id": "friendly",
+      "name": "Friendly",
+      "colors": {
+        "primary": "#F2D9DC",
+        "secondary": "#D9F2D8",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Noto Serif Display",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Noto Serif Display",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Space Mono",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes."
+    },
+    {
+      "id": "futuristic",
+      "name": "Futuristic",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Audiowide",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Roboto",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Anonymous Pro",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic."
+    },
+    {
+      "id": "geometric",
+      "name": "Geometric",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Geometric, structured design with clean typography, neutral colors, precise shapes, and intuitive layouts that stay out of the way."
+    },
+    {
+      "id": "glassmorphism",
+      "name": "Glassmorphism",
+      "colors": {
+        "primary": "#1856FF",
+        "secondary": "#3A344E",
+        "success": "#07CA6B",
+        "warning": "#E89558",
+        "danger": "#EA2143",
+        "surface": "#FFFFFF",
+        "text": "#141414",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Plus Jakarta Sans",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Plus Jakarta Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "mobile-first compact scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance."
+    },
+    {
+      "id": "gradient",
+      "name": "Gradient",
+      "colors": {
+        "primary": "#990FFA",
+        "secondary": "#E60076",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "2.25rem"
+        },
+        "body-md": {
+          "fontFamily": "Montserrat",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/18/24/30/36",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth."
+    },
+    {
+      "id": "immersive",
+      "name": "Immersive",
+      "colors": {
+        "primary": "#00592B",
+        "secondary": "#0023D1",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Oswald",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Oswald",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "An immersive, interactive, exhibit-style interface that blends storytelling, animation, and gamified elements to create a playful, experience-driven journey. The entire app sits on a single continuous brand-colored canvas (deep green)"
+    },
+    {
+      "id": "impeccable",
+      "name": "Impeccable",
+      "colors": {
+        "primary": "#CC8800",
+        "secondary": "#C55221",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Chakra Petch",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Chakra Petch",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A modern, graphic, editorial-poster aesthetic — warm and confident — built on alternating cream and burnt orange sections, an amber brand color."
+    },
+    {
+      "id": "levels",
+      "name": "Levels",
+      "colors": {
+        "primary": "#27272A",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed."
+    },
+    {
+      "id": "lingo",
+      "name": "Lingo",
+      "colors": {
+        "primary": "#58cc02",
+        "secondary": "#ce82ff",
+        "success": "#58cc02",
+        "warning": "#ffc800",
+        "danger": "#ff4b4b",
+        "surface": "#FFFFFF",
+        "text": "#3c3c3c",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Nunito",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Nunito",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "400, 500, 600, 700, 800, 900"
+      },
+      "description": "Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces."
+    },
+    {
+      "id": "material",
+      "name": "Material",
+      "colors": {
+        "primary": "#6442D6",
+        "secondary": "#C8B3FD",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Roboto",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Fira Code",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns."
+    },
+    {
+      "id": "matrix",
+      "name": "Matrix",
+      "colors": {
+        "primary": "#2DB58A",
+        "secondary": "#0B0C14",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Space Mono",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Space Mono",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Space Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A cyber-slick, dark-only Matrix-inspired interface defined by minimalist fashion, high-tech digital elements"
+    },
+    {
+      "id": "minimal",
+      "name": "Minimal",
+      "colors": {
+        "primary": "#0C0C09",
+        "secondary": "#312C85",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#F4F4F1",
+        "text": "#0C0C09",
+        "neutral": "#F4F4F1"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Open Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Inconsolata",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus."
+    },
+    {
+      "id": "modern",
+      "name": "Modern",
+      "colors": {
+        "primary": "#553F83",
+        "secondary": "#111111",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#553F83",
+        "text": "#ffffff",
+        "neutral": "#553F83"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "IBM Plex Serif",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "IBM Plex Serif",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products."
+    },
+    {
+      "id": "mono",
+      "name": "Mono",
+      "colors": {
+        "primary": "#37F712",
+        "secondary": "#00A6F4",
+        "success": "#00A63D",
+        "warning": "#FE9900",
+        "danger": "#FF2157",
+        "surface": "#E7E5E4",
+        "text": "#78716B",
+        "neutral": "#E7E5E4"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Space Mono",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Space Mono",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic."
+    },
+    {
+      "id": "neobrutalism",
+      "name": "Neobrutalism",
+      "colors": {
+        "primary": "#FDC800",
+        "secondary": "#432DD7",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FBFBF9",
+        "text": "#1C293C",
+        "neutral": "#FBFBF9"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "2.1875rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "0.9375rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.8125rem"
+        },
+        "sourceScale": "13/15/17/21/27/35",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces."
+    },
+    {
+      "id": "neon",
+      "name": "Neon",
+      "colors": {
+        "primary": "#BBF351",
+        "secondary": "#00BCFF",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "STIX Two Text",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Roboto",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Source Code Pro",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces."
+    },
+    {
+      "id": "neumorphism",
+      "name": "Neumorphism",
+      "colors": {
+        "primary": "#006666",
+        "secondary": "#F1F2F5",
+        "success": "#00A63D",
+        "warning": "#FE9900",
+        "danger": "#FF2157",
+        "surface": "#E7E5E4",
+        "text": "#1E2938",
+        "neutral": "#E7E5E4"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Space Mono",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Space Mono",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look."
+    },
+    {
+      "id": "pacman",
+      "name": "Pacman",
+      "colors": {
+        "primary": "#2A3FE5",
+        "secondary": "#F4B9B0",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#000000",
+        "text": "#111827",
+        "neutral": "#000000"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Press Start 2P",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Press Start 2P",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Space Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics."
+    },
+    {
+      "id": "paper",
+      "name": "Paper",
+      "colors": {
+        "primary": "#111111",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Montserrat",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Roboto",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "PT Mono",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities."
+    },
+    {
+      "id": "perspective",
+      "name": "Perspective",
+      "colors": {
+        "primary": "#00BD7D",
+        "secondary": "#00BD7D",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Oswald",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Poppins",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism."
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "colors": {
+        "primary": "#FAFAFA",
+        "secondary": "#FAFAFA",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#000000",
+        "text": "#ffffff",
+        "neutral": "#000000"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Oswald",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Oswald",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for premium brand experiences."
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "2.25rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/18/24/30/36",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language."
+    },
+    {
+      "id": "professional",
+      "name": "Professional",
+      "colors": {
+        "primary": "#FECE14",
+        "secondary": "#000000",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Poppins",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Poppins",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "mobile-first compact scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity."
+    },
+    {
+      "id": "pulse",
+      "name": "Pulse",
+      "colors": {
+        "primary": "#EA580B",
+        "secondary": "#F59E0B",
+        "background": "#FFEDD5",
+        "surface": "#FDBA74",
+        "text": "#EA580C",
+        "neutral": "#FDBA74"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Limelight",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Limelight",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32/48",
+        "weights": "400"
+      },
+      "description": "Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality."
+    },
+    {
+      "id": "refined",
+      "name": "Refined",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Playfair Display",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Playfair Display",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes."
+    },
+    {
+      "id": "retro",
+      "name": "Retro",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Macondo",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Macondo",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements."
+    },
+    {
+      "id": "riso",
+      "name": "Riso",
+      "colors": {
+        "primary": "#F237A1",
+        "secondary": "#2C40A7",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Overpass Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A playful, joyful, two-color risograph print aesthetic built on a single warm off-white paper surface running through every section"
+    },
+    {
+      "id": "roku",
+      "name": "Roku",
+      "colors": {
+        "primary": "#9333ea",
+        "secondary": "#a855f7",
+        "success": "#10b981",
+        "warning": "#f59e0b",
+        "danger": "#ef4444",
+        "surface": "#FFFFFF",
+        "text": "#09090b",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows."
+    },
+    {
+      "id": "sega",
+      "name": "Sega",
+      "colors": {
+        "primary": "#4502FF",
+        "secondary": "#FFDA14",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "VT323",
+          "fontSize": "2.1875rem"
+        },
+        "body-md": {
+          "fontFamily": "VT323",
+          "fontSize": "0.9375rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.8125rem"
+        },
+        "sourceScale": "13/15/17/21/27/35",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A playful, arcade-inspired interface for games — built on the VT323 pixel typeface, hard-edged 0px corners, chunky pill buttons that physically press into solid offset blocks"
+    },
+    {
+      "id": "shadcn",
+      "name": "Shadcn",
+      "colors": {
+        "primary": "#000000",
+        "secondary": "#111111",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Geist",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Geist",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Fira Code",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns."
+    },
+    {
+      "id": "sketch",
+      "name": "Sketch",
+      "colors": {
+        "primary": "#1DAD97",
+        "secondary": "#F4EDE0",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Delicious Handrawn",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Delicious Handrawn",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A friendly, hand-drawn sketch interface inspired by pencil illustrations on warm cream paper. Soft teal brand accents, hand-written display headings, rounded pill controls."
+    },
+    {
+      "id": "skeumorphism",
+      "name": "Skeumorphism",
+      "colors": {
+        "primary": "#FA3C00",
+        "secondary": "#F08321",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Germania One",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Roboto",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces."
+    },
+    {
+      "id": "sleek",
+      "name": "Sleek",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Inter",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing."
+    },
+    {
+      "id": "spacious",
+      "name": "Spacious",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Montserrat",
+          "fontSize": "2.25rem"
+        },
+        "body-md": {
+          "fontFamily": "Open Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "IBM Plex Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/18/24/30/36",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces."
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Google Sans",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Google Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Anonymous Pro",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600"
+      },
+      "description": "Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication."
+    },
+    {
+      "id": "stitch",
+      "name": "Stitch",
+      "colors": {
+        "primary": "#072C2C",
+        "secondary": "#FF5F03",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#EDEADE",
+        "text": "#111827",
+        "neutral": "#EDEADE"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Oswald",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Ubuntu",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Ubuntu Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts."
+    },
+    {
+      "id": "storytelling",
+      "name": "Storytelling",
+      "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Abril Fatface",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys."
+    },
+    {
+      "id": "terracotta",
+      "name": "Terracotta",
+      "colors": {
+        "primary": "#C56A3C",
+        "secondary": "#F3E9D8",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "DM Serif Display",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "DM Serif Display",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "A sun-baked, clay-toned editorial interface built on warm cream surfaces, ink-brown headlines set in a display serif, and a single terracotta accent."
+    },
+    {
+      "id": "tetris",
+      "name": "Tetris",
+      "colors": {
+        "primary": "#1C202B",
+        "secondary": "#7107E7",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#DFE7FF",
+        "text": "#1C398E",
+        "neutral": "#DFE7FF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Bangers",
+          "fontSize": "3rem"
+        },
+        "body-md": {
+          "fontFamily": "Bangers",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "desktop-first expressive scale",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts."
+    },
+    {
+      "id": "vibrant",
+      "name": "Vibrant",
+      "colors": {
+        "primary": "#7C61D4",
+        "secondary": "#EAAE87",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#2F281D",
+        "neutral": "#FFFFFF"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Fascinate",
+          "fontSize": "2.5rem"
+        },
+        "body-md": {
+          "fontFamily": "Noto Sans",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "Fira Code",
+          "fontSize": "0.875rem"
+        },
+        "sourceScale": "14/16/18/24/32/40",
+        "weights": "100, 200, 300, 400, 500, 600, 700, 800, 900"
+      },
+      "description": "Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy."
+    },
+    {
+      "id": "vintage",
+      "name": "Vintage",
+      "colors": {
+        "primary": "#008080",
+        "secondary": "#C0C0C0",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#C0C0C0",
+        "text": "#000000",
+        "neutral": "#C0C0C0"
+      },
+      "rounded": {
+        "sm": "4px",
+        "md": "8px"
+      },
+      "typography": {
+        "h1": {
+          "fontFamily": "Silkscreen",
+          "fontSize": "2rem"
+        },
+        "body-md": {
+          "fontFamily": "Silkscreen",
+          "fontSize": "1rem"
+        },
+        "label-caps": {
+          "fontFamily": "JetBrains Mono",
+          "fontSize": "0.75rem"
+        },
+        "sourceScale": "12/14/16/20/24/32",
+        "weights": "400, 700"
+      },
+      "description": "1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography."
+    }
+  ],
+  "raw_skill_paths": [
+    "sources/ai-design-skills/skills/figma-designer/SKILL.md",
+    "sources/ai-design-skills/skills/landing-page-design/SKILL.md",
+    "sources/beui/skills/beui/SKILL.md",
+    "sources/beui/skills/beui-pro/SKILL.md",
+    "sources/motion/.agents/skills/fix/SKILL.md",
+    "sources/motion/.agents/skills/improve/SKILL.md",
+    "sources/typeui/plugins/grok/typeui/skills/typeui/SKILL.md",
+    "sources/typeui/plugins/hermes/typeui/typeui_hermes/skills/typeui/SKILL.md",
+    "sources/typeui/plugins/openclaw/typeui/skills/typeui/SKILL.md",
+    "sources/typeui/skills/fundamentals/SKILL.md",
+    "sources/typeui-design-skills/skills/agentic/SKILL.md",
+    "sources/typeui-design-skills/skills/ant/SKILL.md",
+    "sources/typeui-design-skills/skills/artistic/SKILL.md",
+    "sources/typeui-design-skills/skills/basic/SKILL.md",
+    "sources/typeui-design-skills/skills/bento/SKILL.md",
+    "sources/typeui-design-skills/skills/bold/SKILL.md",
+    "sources/typeui-design-skills/skills/brutalism/SKILL.md",
+    "sources/typeui-design-skills/skills/cafe/SKILL.md",
+    "sources/typeui-design-skills/skills/claude/SKILL.md",
+    "sources/typeui-design-skills/skills/claymorphism/SKILL.md",
+    "sources/typeui-design-skills/skills/clean/SKILL.md",
+    "sources/typeui-design-skills/skills/codex/SKILL.md",
+    "sources/typeui-design-skills/skills/colorful/SKILL.md",
+    "sources/typeui-design-skills/skills/contemporary/SKILL.md",
+    "sources/typeui-design-skills/skills/corporate/SKILL.md",
+    "sources/typeui-design-skills/skills/cosmic/SKILL.md",
+    "sources/typeui-design-skills/skills/creative/SKILL.md",
+    "sources/typeui-design-skills/skills/dithered/SKILL.md",
+    "sources/typeui-design-skills/skills/doodle/SKILL.md",
+    "sources/typeui-design-skills/skills/dramatic/SKILL.md",
+    "sources/typeui-design-skills/skills/editorial/SKILL.md",
+    "sources/typeui-design-skills/skills/enterprise/SKILL.md",
+    "sources/typeui-design-skills/skills/expressive/SKILL.md",
+    "sources/typeui-design-skills/skills/fantasy/SKILL.md",
+    "sources/typeui-design-skills/skills/fiction/SKILL.md",
+    "sources/typeui-design-skills/skills/flat/SKILL.md",
+    "sources/typeui-design-skills/skills/friendly/SKILL.md",
+    "sources/typeui-design-skills/skills/futuristic/SKILL.md",
+    "sources/typeui-design-skills/skills/geometric/SKILL.md",
+    "sources/typeui-design-skills/skills/glassmorphism/SKILL.md",
+    "sources/typeui-design-skills/skills/gradient/SKILL.md",
+    "sources/typeui-design-skills/skills/immersive/SKILL.md",
+    "sources/typeui-design-skills/skills/impeccable/SKILL.md",
+    "sources/typeui-design-skills/skills/levels/SKILL.md",
+    "sources/typeui-design-skills/skills/lingo/SKILL.md",
+    "sources/typeui-design-skills/skills/material/SKILL.md",
+    "sources/typeui-design-skills/skills/matrix/SKILL.md",
+    "sources/typeui-design-skills/skills/minimal/SKILL.md",
+    "sources/typeui-design-skills/skills/modern/SKILL.md",
+    "sources/typeui-design-skills/skills/mono/SKILL.md",
+    "sources/typeui-design-skills/skills/neobrutalism/SKILL.md",
+    "sources/typeui-design-skills/skills/neon/SKILL.md",
+    "sources/typeui-design-skills/skills/neumorphism/SKILL.md",
+    "sources/typeui-design-skills/skills/pacman/SKILL.md",
+    "sources/typeui-design-skills/skills/paper/SKILL.md",
+    "sources/typeui-design-skills/skills/perspective/SKILL.md",
+    "sources/typeui-design-skills/skills/power/SKILL.md",
+    "sources/typeui-design-skills/skills/premium/SKILL.md",
+    "sources/typeui-design-skills/skills/professional/SKILL.md",
+    "sources/typeui-design-skills/skills/pulse/SKILL.md",
+    "sources/typeui-design-skills/skills/refined/SKILL.md",
+    "sources/typeui-design-skills/skills/retro/SKILL.md",
+    "sources/typeui-design-skills/skills/riso/SKILL.md",
+    "sources/typeui-design-skills/skills/roku/SKILL.md",
+    "sources/typeui-design-skills/skills/sega/SKILL.md",
+    "sources/typeui-design-skills/skills/shadcn/SKILL.md",
+    "sources/typeui-design-skills/skills/sketch/SKILL.md",
+    "sources/typeui-design-skills/skills/skeumorphism/SKILL.md",
+    "sources/typeui-design-skills/skills/sleek/SKILL.md",
+    "sources/typeui-design-skills/skills/spacious/SKILL.md",
+    "sources/typeui-design-skills/skills/square/SKILL.md",
+    "sources/typeui-design-skills/skills/stitch/SKILL.md",
+    "sources/typeui-design-skills/skills/storytelling/SKILL.md",
+    "sources/typeui-design-skills/skills/terracotta/SKILL.md",
+    "sources/typeui-design-skills/skills/tetris/SKILL.md",
+    "sources/typeui-design-skills/skills/vibrant/SKILL.md",
+    "sources/typeui-design-skills/skills/vintage/SKILL.md",
+    "sources/ui-ux-pro-max/.claude/skills/banner-design/SKILL.md",
+    "sources/ui-ux-pro-max/.claude/skills/brand/SKILL.md",
+    "sources/ui-ux-pro-max/.claude/skills/design/SKILL.md",
+    "sources/ui-ux-pro-max/.claude/skills/design-system/SKILL.md",
+    "sources/ui-ux-pro-max/.claude/skills/slides/SKILL.md",
+    "sources/ui-ux-pro-max/.claude/skills/ui-styling/SKILL.md",
+    "sources/ui-ux-pro-max/.claude/skills/ui-ux-pro-max/SKILL.md",
+    "sources/ui-ux-pro-max/cli/assets/skills/banner-design/SKILL.md",
+    "sources/ui-ux-pro-max/cli/assets/skills/brand/SKILL.md",
+    "sources/ui-ux-pro-max/cli/assets/skills/design/SKILL.md",
+    "sources/ui-ux-pro-max/cli/assets/skills/design-system/SKILL.md",
+    "sources/ui-ux-pro-max/cli/assets/skills/slides/SKILL.md",
+    "sources/ui-ux-pro-max/cli/assets/skills/ui-styling/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/academy-guide/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/algorithmic-art/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/brand-guidelines/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/canvas-design/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/claude-api/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/discernment-nudge/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/frontend-design/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/internal-comms/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/mcp-builder/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/skill-creator/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/slack-gif-creator/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/theme-factory/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/web-artifacts-builder/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/skills/webapp-testing/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/anthropic-skills/template/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-core/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-frameworks/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-performance/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-plugins/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-react/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-scrolltrigger/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-timeline/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/gsap-skills/skills/gsap-utils/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/figma/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/hyperframes/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/hyperframes-cli/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/hyperframes-registry/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/media-use/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/remotion-to-hyperframes/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/reverse-any-video/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/hyperframes/skills/slideshow/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-best-practices/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-captions/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-create/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-docs/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-interactivity/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-license/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-maps/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-markup/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-multimedia/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-render/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-saas/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-studio/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion/packages/skills/skills/remotion-upgrade/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-best-practices/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-captions/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-create/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-docs/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-interactivity/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-maps/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-markup/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-multimedia/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-render/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-saas/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-studio/SKILL.md",
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-upgrade/SKILL.md"
+  ]
+}

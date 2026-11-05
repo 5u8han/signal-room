@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 1,
+  "name": "Sub",
+  "fullName": "Subhan Noeman",
+  "domain": "5u8han.dev",
+  "siteUrl": "https://5u8han.dev",
+  "headline": "Support Engineer · Datacenter Tech",
+  "tagline": "From board to backbone.",
+  "location": "Chicago, Illinois",
+  "email": "info@5u8han.dev",
+  "introduction": [
+    "I work where hardware, infrastructure and the person using it meet.",
+    "My background spans enterprise support, datacenter equipment, networks, identity, collaboration technology and hands-on electronics practice.",
+    "The work moves between the wide view and the fine detail: a deployment, a network path, an access problem, or a component on the bench."
+  ],
+  "socials": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/5u8han"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/5u8han"
+    },
+    {
+      "label": "Twitter / X",
+      "url": "https://twitter.com/5u8han"
+    }
+  ],
+  "roles": [
+    {
+      "id": "tropicana",
+      "company": "Tropicana Brands Group",
+      "title": "Senior Desktop Support / Support Engineer",
+      "start": "2025-07",
+      "end": null,
+      "period": "Jul 2025 — Present",
+      "location": "Chicago, IL",
+      "engagement": "Contract",
+      "summary": "Cross-site support engineering across endpoints, identity, collaboration spaces and executive technology.",
+      "highlights": [
+        "Provide on-site and cross-site technical support across multiple office locations, including white-glove executive support.",
+        "Troubleshoot Windows and macOS hardware, software, performance, access and authentication issues.",
+        "Support Microsoft 365, Teams, Outlook and SharePoint, alongside Okta and Google Workspace identity workflows.",
+        "Configure and support Microsoft Teams Rooms, Zoom Rooms, AV systems and integrated collaboration technology.",
+        "Handle endpoint provisioning, onboarding/offboarding, asset tracking, patching and device lifecycle work.",
+        "Troubleshoot LAN, Wi-Fi, VPN and connectivity issues; maintain SOPs and knowledge-base documentation."
+      ],
+      "technologies": [
+        "Windows",
+        "macOS",
+        "Microsoft 365",
+        "Teams Rooms",
+        "Zoom Rooms",
+        "Okta",
+        "Google Workspace",
+        "LAN / Wi-Fi / VPN"
+      ]
+    },
+    {
+      "id": "robinhood",
+      "company": "Robinhood",
+      "title": "Support Engineer",
+      "start": "2024-11",
+      "end": "2025-12",
+      "period": "Nov 2024 — Dec 2025",
+      "location": "Chicago, IL",
+      "engagement": "Contract",
+      "summary": "Employee and executive support connecting device provisioning, identity and SaaS operations.",
+      "highlights": [
+        "Triage and resolve complex support issues through ServiceNow and Jira, with detailed escalation notes for engineering teams.",
+        "Administer and support Google Workspace, Slack, Okta and Microsoft 365, including provisioning, access and MFA.",
+        "Work with JAMF Pro, Apple Business Manager, Okta and FleetDM for zero-touch deployment, provisioning and compliance tracking.",
+        "Support YubiKey authentication using FIDO2, OTP and Touch ID workflows.",
+        "Provision and ship endpoint devices for new-hire waves; create onboarding documentation and support onboarding/offboarding.",
+        "Support Zoom Rooms, AV systems, release/change activity, macOS/iOS updates and white-glove executive technology.",
+        "Investigate application errors and service disruptions through logs, system metrics and user reports."
+      ],
+      "technologies": [
+        "ServiceNow",
+        "Jira",
+        "Confluence",
+        "JAMF Pro",
+        "Apple Business Manager",
+        "Okta",
+        "FleetDM",
+        "YubiKey / FIDO2",
+        "Google Workspace",
+        "Slack",
+        "Microsoft 365"
+      ]
+    },
+    {
+      "id": "illinois-doit",
+      "company": "Illinois Department of Innovation and Technology (DoIT)",
+      "title": "Helpdesk, Desktop & Network Specialist",
+      "start": "2024-03",
+      "end": "2024-11",
+      "period": "Mar 2024 — Nov 2024",
+      "location": "Chicago, IL",
+      "engagement": "Contract",
+      "summary": "Managed endpoint deployment, network troubleshooting and operational reporting in a multi-site environment.",
+      "highlights": [
+        "Track incidents, assets and CMDB records through ServiceNow and contribute to knowledge-base updates.",
+        "Use SCCM/MECM and PXE for zero-touch and batch Windows deployments, with driver packs, BIOS and firmware for Dell, HP and Lenovo.",
+        "Support Active Directory, Azure AD, Exchange, Intune and VMware AirWatch provisioning workflows.",
+        "Test hardware through thermal analysis, performance benchmarking, crash testing, battery evaluation and feature validation.",
+        "Package Windows images and use PowerShell, SQL and Power BI reporting to support administration and system visibility.",
+        "Monitor servers, switches, firewalls and hosts through SolarWinds and troubleshoot secure remote access.",
+        "Support conferencing, AV, Cisco/Avaya VoIP and SIP equipment alongside Windows, macOS and Linux endpoints."
+      ],
+      "technologies": [
+        "SCCM / MECM",
+        "PXE",
+        "PowerShell",
+        "SQL",
+        "Power BI",
+        "ServiceNow",
+        "Active Directory",
+        "Azure AD",
+        "Intune",
+        "AirWatch",
+        "SolarWinds",
+        "Cisco Meraki",
+        "Cisco AnyConnect",
+        "OpenVPN",
+        "Zscaler"
+      ]
+    },
+    {
+      "id": "kirkland-ellis",
+      "company": "Kirkland & Ellis LLP",
+      "title": "Desktop Support Analyst III",
+      "start": "2024-01",
+      "end": "2024-03",
+      "period": "Jan 2024 — Mar 2024",
+      "location": "Chicago, IL",
+      "engagement": "Contract",
+      "summary": "Tier 2/3 desktop, collaboration and connectivity support in a deadline-sensitive legal environment.",
+      "highlights": [
+        "Provide deskside and remote technical support for attorneys and staff, documenting issues and knowledge-base updates in KESM.",
+        "Support Windows, macOS, Microsoft 365, peripherals, AV and mobile devices through diagnostics, imaging, patching and deployment.",
+        "Manage user accounts and memberships through Active Directory and Azure AD, with SCCM, Intune and AirWatch endpoint workflows.",
+        "Resolve complex Outlook issues involving PST/OST files, calendar sync, mailbox permissions, delegate access and iManage integration.",
+        "Provision and troubleshoot Avaya SIP phones, extensions, voicemail, call groups, VLAN tagging, QoS and one-way audio.",
+        "Troubleshoot WLAN, DNS, DHCP, VPN and network connectivity; support secure printing and chargeback workflows."
+      ],
+      "technologies": [
+        "KESM",
+        "Windows",
+        "macOS",
+        "Microsoft 365",
+        "Outlook",
+        "iManage",
+        "Active Directory",
+        "Azure AD",
+        "SCCM",
+        "Intune",
+        "AirWatch",
+        "Avaya SIP",
+        "SolarWinds"
+      ]
+    },
+    {
+      "id": "alter-domus",
+      "company": "Alter Domus",
+      "title": "Desktop, Network & Infrastructure Support Specialist",
+      "start": "2023-09",
+      "end": "2024-01",
+      "period": "Sep 2023 — Jan 2024",
+      "location": "Chicago, IL",
+      "engagement": "Contract",
+      "summary": "Physical and virtual infrastructure support spanning servers, switching, firewalls, endpoints and datacenter health.",
+      "highlights": [
+        "Track, document and triage incidents through ServiceNow and maintain Confluence knowledge articles.",
+        "Support Cisco, Dell, HPE and Supermicro servers, Cisco Catalyst switches and Sophos firewall environments.",
+        "Inspect IPMI, iDRAC and iLO health, diagnose HDD/RAM/PSU failures, review logs and coordinate vendor RMA work.",
+        "Support firmware/patch updates, asset records, VMware ESXi/vSphere and VM provisioning.",
+        "Troubleshoot DNS, TCP/IP, DHCP, routing, NAT and VLANs using Wireshark and SolarWinds.",
+        "Support identity, Microsoft 365, Google Workspace, endpoint software deployment, VPN services, CUCM and collaboration equipment.",
+        "Participate in multi-site migration work and train team members on company technologies."
+      ],
+      "technologies": [
+        "Cisco Catalyst",
+        "Dell",
+        "HPE",
+        "Supermicro",
+        "Sophos",
+        "IPMI",
+        "iDRAC",
+        "iLO",
+        "VMware ESXi / vSphere",
+        "Wireshark",
+        "SolarWinds",
+        "SCCM",
+        "Active Directory",
+        "Azure AD",
+        "Confluence"
+      ]
+    },
+    {
+      "id": "endeavour",
+      "company": "Endeavour Health / Swedish Hospital",
+      "title": "Desktop, Network & Infrastructure Support Analyst",
+      "start": "2022-07",
+      "end": "2023-09",
+      "period": "Jul 2022 — Sep 2023",
+      "location": "Chicago, IL",
+      "engagement": "Employment",
+      "engagementNote": "The owner identified subsequent roles as contracts; the employment arrangement for this role has not been further specified.",
+      "summary": "Level 2/3 support connecting healthcare endpoints, virtualization, directory services and communications.",
+      "highlights": [
+        "Provide Level 2/3 support across endpoints, peripherals, AV, Cisco VoIP, mobile devices and datacenter equipment.",
+        "Manage user/account provisioning in Active Directory, Azure AD and Exchange, including GPO, Wi-Fi/SSO and mailbox permissions.",
+        "Deploy Windows machines through SCCM/MECM and PXE, including driver packs, BIOS and firmware updates.",
+        "Support VMware ESXi/vSphere, VM resources and host/storage alerts; diagnose hardware degradation through SolarWinds, iDRAC, iLO and IPMI.",
+        "Support Citrix XenDesktop/XenApp, Cisco CUCM, Cisco AnyConnect and MFA/SSO workflows.",
+        "Document recurring issues, share weekly operational updates and apply BigFix remediation work."
+      ],
+      "technologies": [
+        "SCCM / MECM",
+        "PXE",
+        "VMware ESXi / vSphere",
+        "Citrix XenDesktop / XenApp",
+        "Active Directory",
+        "Azure AD",
+        "Exchange",
+        "SolarWinds",
+        "iDRAC",
+        "iLO",
+        "IPMI",
+        "Cisco CUCM",
+        "Cisco AnyConnect",
+        "BigFix"
+      ]
+    },
+    {
+      "id": "dyopath",
+      "company": "DyoPath LP (MSP)",
+      "title": "Service Desk Analyst 3 & Team Lead",
+      "start": "2021-10",
+      "end": "2022-07",
+      "period": "Oct 2021 — Jul 2022",
+      "location": "Houston, TX · Remote",
+      "engagement": "Employment",
+      "engagementNote": "No contract or permanent classification was supplied for this role.",
+      "summary": "Multi-client service desk support and team leadership across healthcare, finance and enterprise environments.",
+      "highlights": [
+        "Provide Tier 1/2/3 support across multiple MSP client environments and identify recurring issues.",
+        "Use ServiceNow for incident routing, service requests, change activity and asset/CMDB tracking.",
+        "Handle identity provisioning and access through Azure AD, Oracle IAM, SailPoint and Active Directory.",
+        "Configure and deploy endpoints using SCCM, VMware Horizon and Intune, including imaging, patching and application deployment.",
+        "Troubleshoot Exchange/Outlook, BitLocker, VPN, DNS/DHCP, mapped drives, print servers and logon scripts.",
+        "Coordinate documented remote troubleshooting with Field Service Onsite teams before dispatch.",
+        "Train and lead a technical support team, manage ticket/call queues and maintain knowledge-base documentation."
+      ],
+      "technologies": [
+        "ServiceNow",
+        "Azure AD",
+        "Oracle IAM",
+        "SailPoint",
+        "Active Directory",
+        "SCCM",
+        "VMware Horizon",
+        "Intune",
+        "Exchange",
+        "Outlook",
+        "BitLocker",
+        "Cisco AnyConnect",
+        "SonicWall",
+        "ShadowBackup"
+      ]
+    },
+    {
+      "id": "chicago-lab",
+      "company": "Chicago Lab Services Inc.",
+      "title": "Desktop Support / Infrastructure Ownership",
+      "start": "2018-01",
+      "end": null,
+      "period": "Jan 2018 — Present",
+      "location": "Chicago, IL",
+      "engagement": "Full-time build → on-call / project support",
+      "engagementNote": "The initial infrastructure work was full-time. It later became call-based support for issues, patching, upgrades and changes; the transition date was not supplied.",
+      "summary": "Built the laboratory’s IT infrastructure from the ground up and continues to support it through on-call troubleshooting, patching, upgrades and changes.",
+      "highlights": [
+        "Plan, size, procure and deploy PCs, laptops, printers, servers, firewalls, gateways, routers, switches, telephony, cameras and cabling.",
+        "Rack servers/switches, terminate Ethernet cabling and configure VLANs, PoE switches and gateways.",
+        "Implement Windows Server 2019 and Active Directory, with provisioning, role-based access and GPOs for laboratory, accounting and operations teams.",
+        "Support Wolters Kluwer accounting software and Labsoft, including laboratory equipment connectivity through RS-232/RJ45 integration with the lab server.",
+        "Maintain OS, driver, software and firmware updates across endpoints, servers and network devices.",
+        "Design and deploy 3CX with Yealink handsets, SIP fax integration and custom print-server queues.",
+        "Configure pfSense NAT, port forwarding, VPN access, segmentation, SIP traffic handling and QoS.",
+        "Build the company web presence with Drupal and SiteGround; collaborate with external developers on secure patient/doctor laboratory-report delivery.",
+        "Coordinate third-party security testing and remediation work, alongside endpoint security management."
+      ],
+      "technologies": [
+        "Windows Server 2019",
+        "Active Directory",
+        "GPO",
+        "VLAN",
+        "PoE",
+        "Cat5e / Cat6",
+        "pfSense",
+        "3CX",
+        "Yealink",
+        "SIP",
+        "Wolters Kluwer",
+        "Labsoft",
+        "RS-232",
+        "Drupal",
+        "SiteGround"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "chicago-lab",
+      "title": "BUILT FROM THE GROUND.",
+      "organization": "Chicago Lab Services Inc.",
+      "category": "Networking",
+      "kind": "project",
+      "status": "owner-clarified",
+      "summary": "From initial sizing and procurement to a working laboratory environment, followed by ongoing call-based support.",
+      "details": [
+        "The initial work covered the full IT environment: endpoints, servers, racks, switching, firewalling, cabling, telephony and laboratory connectivity.",
+        "Windows Server 2019, Active Directory, VLANs, PoE and pfSense connect laboratory, accounting and operations workflows.",
+        "The scope includes 3CX/Yealink voice, SIP fax, custom print queues, and RS-232 laboratory-device integration.",
+        "The arrangement evolved from full-time build work into on-call troubleshooting, patching, upgrades and changes.",
+        "The company site uses Drupal/SiteGround. Work with external developers on secure report delivery is a separate responsibility."
+      ],
+      "tags": [
+        "Infrastructure build",
+        "Networking",
+        "Identity",
+        "Telephony",
+        "Laboratory connectivity",
+        "Ongoing support"
+      ],
+      "period": "Jan 2018 — Present",
+      "engagement": "Full-time build → on-call / project support",
+      "source": "Owner-supplied résumé and November 4, 2026 clarification",
+      "art": "chroma"
+    },
+    {
+      "id": "tropicana",
+      "title": "SUPPORT ACROSS THE SYSTEM.",
+      "organization": "Tropicana Brands Group",
+      "category": "Support",
+      "kind": "experience",
+      "status": "resume-backed",
+      "summary": "Cross-site support engineering across employee devices, identity, collaboration spaces and executive technology.",
+      "details": [
+        "Support Windows/macOS and Microsoft 365, including Teams, Outlook and SharePoint.",
+        "Configure and troubleshoot Teams Rooms, Zoom Rooms, AV and integrated meeting technology.",
+        "Handle provisioning, onboarding/offboarding, asset tracking, identity access and MFA.",
+        "Document recurring issues and practical SOPs while working with infrastructure and engineering teams."
+      ],
+      "tags": [
+        "Contract",
+        "Executive support",
+        "Endpoints",
+        "Identity",
+        "Collaboration"
+      ],
+      "period": "Jul 2025 — Present",
+      "engagement": "Contract",
+      "source": "Owner-supplied résumé and November 4, 2026 clarification",
+      "art": "offline"
+    },
+    {
+      "id": "robinhood",
+      "title": "ZERO TOUCH. HUMAN SUPPORT.",
+      "organization": "Robinhood",
+      "category": "Infrastructure",
+      "kind": "experience",
+      "status": "resume-backed",
+      "summary": "A contract support role connecting endpoint rollout, access management and hands-on employee support.",
+      "details": [
+        "Use JAMF Pro, Apple Business Manager, Okta and FleetDM in deployment, provisioning and compliance workflows.",
+        "Provision endpoint devices for new-hire waves and support onboarding/offboarding documentation.",
+        "Support YubiKey/FIDO2, MFA and authentication across SaaS platforms.",
+        "Manage support work through ServiceNow, Jira and Confluence, including executive and meeting-room support."
+      ],
+      "tags": [
+        "Contract",
+        "Provisioning",
+        "JAMF Pro",
+        "Okta",
+        "FIDO2"
+      ],
+      "period": "Nov 2024 — Dec 2025",
+      "engagement": "Contract",
+      "source": "Owner-supplied résumé and November 4, 2026 clarification",
+      "art": "signal"
+    },
+    {
+      "id": "illinois-doit",
+      "title": "DEPLOY. VERIFY. DOCUMENT.",
+      "organization": "Illinois Department of Innovation and Technology (DoIT)",
+      "category": "Infrastructure",
+      "kind": "experience",
+      "status": "resume-backed",
+      "summary": "Repeatable endpoint deployment, hardware validation and the reporting needed to operate a managed environment.",
+      "details": [
+        "Use SCCM/MECM and PXE for batch and zero-touch deployment, with driver packs, BIOS and firmware for Dell, HP and Lenovo.",
+        "Support directory, Exchange, Intune and AirWatch workflows alongside ServiceNow asset/CMDB records.",
+        "Perform hardware testing and use PowerShell/SQL for administration and reporting.",
+        "Connect fleet visibility through SCCM reporting, Power BI and SolarWinds monitoring."
+      ],
+      "tags": [
+        "Contract",
+        "PXE",
+        "SCCM / MECM",
+        "Hardware validation",
+        "Reporting"
+      ],
+      "period": "Mar 2024 — Nov 2024",
+      "engagement": "Contract",
+      "source": "Owner-supplied résumé and November 4, 2026 clarification",
+      "art": "amplitude"
+    },
+    {
+      "id": "kirkland-ellis",
+      "title": "DETAIL UNDER PRESSURE.",
+      "organization": "Kirkland & Ellis LLP",
+      "category": "Support",
+      "kind": "experience",
+      "status": "resume-backed",
+      "summary": "Tier 2/3 desktop, collaboration and connectivity support for attorneys and staff.",
+      "details": [
+        "Support endpoints, imaging, patching, mobile equipment, AV and Microsoft 365 in a legal environment.",
+        "Troubleshoot Outlook, shared mailboxes, delegate access, calendars, PST/OST issues and iManage integration.",
+        "Work with AD/Azure AD, SCCM, Intune and AirWatch for user and device workflows.",
+        "Provision Avaya SIP phones and investigate registration, audio, QoS and VLAN-tagging problems."
+      ],
+      "tags": [
+        "Contract",
+        "Tier 2/3",
+        "Outlook",
+        "iManage",
+        "SIP / AV"
+      ],
+      "period": "Jan 2024 — Mar 2024",
+      "engagement": "Contract",
+      "source": "Owner-supplied résumé and November 4, 2026 clarification",
+      "art": "signal"
+    },
+    {
+      "id": "alter-domus",
+      "title": "RACK + REMOTE.",
+      "organization": "Alter Domus",
+      "category": "Infrastructure",
+      "kind": "experience",
+      "status": "resume-backed",
+      "summary": "Physical and virtual infrastructure support, from hardware health alerts to network and endpoint issues.",
+      "details": [
+        "Support Cisco, Dell, HPE and Supermicro hardware, Cisco Catalyst switching and Sophos firewall environments.",
+        "Inspect IPMI/iDRAC/iLO health, diagnose HDD/RAM/PSU failures and coordinate vendor RMA work.",
+        "Support VMware ESXi/vSphere, firmware/patch updates, CMDB records and VM provisioning.",
+        "Troubleshoot routing, NAT, VLANs, DNS/DHCP and VPN access using Wireshark and SolarWinds."
+      ],
+      "tags": [
+        "Contract",
+        "Datacenter",
+        "iDRAC / iLO / IPMI",
+        "VMware",
+        "Networking"
+      ],
+      "period": "Sep 2023 — Jan 2024",
+      "engagement": "Contract",
+      "source": "Owner-supplied résumé and November 4, 2026 clarification",
+      "art": "monolith"
+    },
+    {
+      "id": "endeavour",
+      "title": "BEHIND THE EVERYDAY.",
+      "organization": "Endeavour Health / Swedish Hospital",
+      "category": "Infrastructure",
+      "kind": "experience",
+      "status": "resume-backed",
+      "summary": "Level 2/3 support linking healthcare endpoints, directory services, virtual infrastructure and communications.",
+      "details": [
+        "Support endpoints and datacenter equipment alongside AD/Azure AD/Exchange provisioning.",
+        "Deploy Windows endpoints using SCCM/MECM, PXE and hardware-specific driver/firmware packages.",
+        "Support VMware and Citrix environments and investigate host/storage/hardware alerts.",
+        "Work with SolarWinds, native server management tools, Cisco CUCM, VPN and MFA/SSO workflows."
+      ],
+      "tags": [
+        "Healthcare technology",
+        "Endpoints",
+        "Virtualization",
+        "Monitoring",
+        "Unified communications"
+      ],
+      "period": "Jul 2022 — Sep 2023",
+      "engagement": "Employment",
+      "source": "Owner-supplied résumé and November 4, 2026 clarification",
+      "art": "artifact"
+    },
+    {
+      "id": "dyopath",
+      "title": "A QUEUE IS A SYSTEM.",
+      "organization": "DyoPath LP (MSP)",
+      "category": "Support",
+      "kind": "experience",
+      "status": "resume-backed",
+      "summary": "Multi-client technical support and team leadership across an MSP service desk.",
+      "details": [
+        "Provide Tier 1/2/3 troubleshooting across healthcare, finance and enterprise client environments.",
+        "Manage incident, request, change and asset/CMDB work through ServiceNow.",
+        "Handle identity, endpoint deployment, Exchange/Outlook, VPN and network support across client systems.",
+        "Train technical support colleagues, route queues and document remote troubleshooting before Field Service Onsite escalation."
+      ],
+      "tags": [
+        "MSP",
+        "Team leadership",
+        "ServiceNow",
+        "Identity",
+        "Escalation"
+      ],
+      "period": "Oct 2021 — Jul 2022",
+      "engagement": "Employment",
+      "source": "Owner-supplied résumé and November 4, 2026 clarification",
+      "art": "amplitude"
+    },
+    {
+      "id": "board-repair",
+      "title": "DOWN TO THE BOARD.",
+      "organization": "Personal practice",
+      "category": "Repair",
+      "kind": "practice",
+      "status": "personal-practice",
+      "summary": "Hands-on electronics and board-level repair practice beneath the enclosure.",
+      "details": [
+        "Explore PCs, laptops, server boards, components, power paths and connectors as part of a long-standing technical interest.",
+        "This entry represents personal practice. No specific documented client repair, measurement set or successful outcome has been supplied.",
+        "Future bench notes can capture symptoms, inspection, measurements, repair steps and verification when evidence is available."
+      ],
+      "tags": [
+        "Electronics",
+        "Board-level repair",
+        "Hardware",
+        "Personal practice"
+      ],
+      "period": "Ongoing personal practice",
+      "engagement": "Personal practice",
+      "source": "Owner-supplied interests; no specific repair case supplied",
+      "art": "tidal"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Support & operations",
+      "items": [
+        "Executive support",
+        "Tier 2/3 troubleshooting",
+        "Incident / request / change workflows",
+        "Onboarding / offboarding",
+        "Knowledge bases and SOPs"
+      ]
+    },
+    {
+      "name": "Datacenter & hardware",
+      "items": [
+        "Dell / EMC",
+        "HPE",
+        "Supermicro",
+        "Cisco",
+        "Racking and cabling",
+        "iDRAC / iLO / IPMI",
+        "Hardware diagnostics and RMA"
+      ]
+    },
+    {
+      "name": "Networks",
+      "items": [
+        "Fiber / Ethernet / SFP",
+        "Switching and wireless APs",
+        "Routing / NAT / VLANs",
+        "DNS / DHCP / VPN",
+        "pfSense / Sophos",
+        "Wireshark / SolarWinds"
+      ]
+    },
+    {
+      "name": "Endpoints & identity",
+      "items": [
+        "Windows / macOS / Linux",
+        "SCCM / MECM / PXE",
+        "Intune / AirWatch",
+        "JAMF Pro / Apple Business Manager",
+        "Active Directory / Azure AD",
+        "Okta / MFA / FIDO2"
+      ]
+    },
+    {
+      "name": "Platforms & collaboration",
+      "items": [
+        "VMware ESXi / vSphere",
+        "Citrix",
+        "Microsoft 365",
+        "Google Workspace",
+        "Teams Rooms / Zoom Rooms",
+        "Cisco CUCM / Avaya SIP"
+      ]
+    },
+    {
+      "name": "Hands-on practice",
+      "items": [
+        "Electronics",
+        "Laptops and desktops",
+        "Servers",
+        "Board-level repair",
+        "PowerShell / SQL",
+        "Documentation"
+      ]
+    }
+  ],
+  "credentials": [],
+  "education": [],
+  "contentPolicy": {
+    "omitPhone": true,
+    "omitStreetAddress": true,
+    "noSolicitationPrompts": true,
+    "preserveSuppliedDates": true,
+    "metrics": "No quantitative outcomes supplied; do not invent them.",
+    "illustrations": "Original generated reconstructions, not photographs of employer systems.",
+    "credentials": "Do not render until the owner confirms status and wording."
+  },
+  "updatedAt": "2026-11-04"
+}

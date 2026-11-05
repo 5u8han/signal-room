@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="theme-boot.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Sub — support engineering, infrastructure, networks and hands-on repair. Explore an illustrated home lab in motion.">
+  <title>5u8han / The home lab</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preload" as="image" href="assets/homelab/room-front.png">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="studio.css">
+  <link rel="stylesheet" href="tech-reels.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="homelab.css">
+  <script type="module" src="common.js"></script>
+  <script type="module" src="homelab.js"></script>
+</head>
+<body data-page="home" data-home="homelab">
+  <header id="site-header"></header>
+  <main id="main">
+    <section class="homelab" aria-labelledby="home-title">
+      <div class="homelab-art">
+        <div class="homelab-copy">
+          <p class="homelab-eyebrow">SUB / CHICAGO / ALWAYS TINKERING</p>
+          <h1 id="home-title">5u8han<span aria-hidden="true">_</span></h1>
+          <p class="homelab-mission">I build, support, and repair the<br class="desktop-break"> technology people rely on.</p>
+          <div class="homelab-typebar" aria-hidden="true"><span class="type-prompt">~/sub</span><span id="homelab-typed">Support engineering</span><span class="type-cursor"></span></div>
+          <p class="sr-only">Support engineering, datacenter operations, networks, identity, endpoints, automation, and board-level repair.</p>
+        </div>
+        <div class="homelab-corner"><span class="room-live-dot"></span><span>ILLUSTRATED HOMELAB</span><span id="room-side">FRONT / 01</span></div>
+        <div id="room-viewport" class="homelab-viewport" tabindex="0" role="region" aria-label="Interactive illustrated home office; inspect machines with the buttons in the room">
+          <div class="homelab-world" id="room-world">
+            <div class="room-turntable" id="room-turntable">
+              <div class="room-face room-face-front" id="room-face-front">
+                <img class="room-environment" src="assets/homelab/room-front.png" alt="Sub's illustrated home office: parts bench on the left, four server racks, a central KVM table and printer, and a gaming desk with a super-ultrawide and laptop on the right." fetchpriority="high" decoding="async">
+                <div class="room-theme-wash" aria-hidden="true"></div>
+                <div class="room-ambient" aria-hidden="true"></div>
+                <canvas id="room-front-canvas" class="room-emissions" aria-hidden="true"></canvas>
+                <div id="front-hotspots" class="room-hotspots" role="group" aria-label="Inspect the home lab"></div>
+              </div>
+              <div class="room-face room-face-rear" id="room-face-rear" aria-hidden="true" inert>
+                <img class="room-environment" src="assets/homelab/room-rear.png" alt="Rear service view of the same home office, with server power supplies, PDUs, rear network ports and cable loops." loading="lazy" decoding="async">
+                <div class="room-theme-wash" aria-hidden="true"></div>
+                <div class="room-ambient" aria-hidden="true"></div>
+                <canvas id="room-rear-canvas" class="room-emissions" aria-hidden="true"></canvas>
+                <div id="rear-hotspots" class="room-hotspots" role="group" aria-label="Inspect the rear service bays"></div>
+              </div>
+              <div class="room-depth" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="room-loading" id="room-loading" role="status"><span></span>Opening the home lab…</div>
+        </div>
+        <div class="room-hint"><span aria-hidden="true">↖</span> Touch a machine. There’s a story behind every light.</div>
+      </div>
+      <canvas id="room-popout" class="room-popout" aria-hidden="true" hidden></canvas>
+      <div class="homelab-deskbar">
+        <div class="homelab-story" aria-live="polite" aria-atomic="true"><p class="homelab-eyebrow" id="lab-phase">AT THE DESK</p><h2 id="lab-headline">All checks passing.</h2><p id="lab-action">A little gaming. The lab keeps running.</p></div>
+        <div class="homelab-network" aria-label="WAN status"><p class="homelab-eyebrow">THE WAY IN</p><div id="wan-links"><span data-wan="fiber" class="is-active">FIBER <i></i></span><b>→</b><span data-wan="coax">COAX <i></i></span><b>→</b><span data-wan="cellular">CELLULAR <i></i></span></div><p id="wan-caption">Fiber primary. Two ways back.</p></div>
+        <div class="homelab-progress" id="lab-progress" hidden><span id="lab-repair-step">Read the alert.</span><div role="progressbar" aria-label="Repair story progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div><span id="lab-queue"></span></div>
+      </div>
+      <div class="homelab-controls" role="group" aria-label="Home lab controls">
+        <div class="homelab-controls-left">
+          <button type="button" id="lab-pause" aria-pressed="false"><span aria-hidden="true">Ⅱ</span><span class="control-label">Pause</span></button>
+          <button type="button" id="lab-auto" aria-pressed="true"><i class="control-dot"></i>Auto incidents</button>
+          <button type="button" id="lab-flow" aria-pressed="true"><span aria-hidden="true">⇄</span>Traffic</button>
+          <button type="button" id="lab-sound" aria-pressed="false"><span aria-hidden="true">◌</span><span class="control-label">Sound off</span></button>
+          <button type="button" id="lab-zoom" aria-pressed="false"><span aria-hidden="true">⤢</span><span class="control-label">Detail view</span></button>
+          <button type="button" id="lab-greet"><span aria-hidden="true">↗</span>Say hello</button>
+          <button type="button" id="lab-step" hidden>Next step →</button>
+        </div>
+        <div class="homelab-controls-right"><a class="homelab-radio" href="music.html" target="_blank" rel="noopener"><span aria-hidden="true">♫</span> Webamp <span class="sr-only">(opens in a new tab)</span></a><button type="button" id="lab-console-open" aria-haspopup="dialog">Console <span aria-hidden="true">&gt;_</span></button><button type="button" id="lab-scenarios-open" aria-haspopup="dialog">Choose an incident <span aria-hidden="true">+</span></button><button type="button" id="lab-reset" aria-label="Reset the lab to healthy operation" title="Reset the lab">↺</button></div>
+      </div>
+      <p class="homelab-announcement sr-only" id="lab-announcement" role="status"></p>
+      <p class="homelab-quiet-note" id="lab-quiet-note" hidden>Motion is quiet. Inspect the room or use Next step to follow a repair.</p>
+      <p class="homelab-toast" id="lab-toast" role="status" hidden></p>
+    </section>
+    <nav class="homelab-index container" aria-label="Explore Sub's work"><a href="work.html"><span>01 / THE WORK</span>Projects &amp; practice <b aria-hidden="true">↗</b></a><a href="about.html"><span>02 / THE EXPERIENCE</span>The full picture <b aria-hidden="true">↗</b></a><a href="lab.html"><span>03 / THE PLAYGROUND</span>Keep experimenting <b aria-hidden="true">↗</b></a><a href="room-studies.html"><span>04 / THE SKETCHBOOK</span>Room studies <b aria-hidden="true">↗</b></a></nav>
+  </main>
+  <footer id="site-footer"></footer>
+  <dialog class="homelab-dialog homelab-inspector" id="lab-inspector" aria-labelledby="inspector-title"><header><p class="homelab-eyebrow">INSIDE THE LAB</p><button type="button" data-close-dialog aria-label="Close device inspection">×</button></header><p class="inspector-kind" id="inspector-kind"></p><h2 id="inspector-title"></h2><p class="inspector-description" id="inspector-description"></p><div class="inspector-status" id="inspector-status"></div><div class="inspector-metrics" id="inspector-metrics"></div><div class="inspector-stories" id="inspector-stories"></div><footer>Illustrated equipment / simulated room state</footer></dialog>
+  <dialog class="homelab-dialog homelab-scenarios" id="lab-scenarios" aria-labelledby="scenarios-title"><header><div><p class="homelab-eyebrow">FOLLOW THE REPAIR</p><h2 id="scenarios-title">What happens next?</h2></div><button type="button" data-close-dialog aria-label="Close incident selection">×</button></header><p>Choose a story, or let the lab surprise you. Sub reads the alert, traces the cause, fixes it, and checks the result.</p><div class="scenario-grid" id="scenario-grid"></div><footer id="scenario-queue-note">The lab is a simulation. Your own machines are not connected.</footer></dialog>
+  <dialog class="homelab-dialog homelab-console" id="lab-console" aria-labelledby="console-title"><header><div><p class="homelab-eyebrow">KVM / iLO / iDRAC / IPMI</p><h2 id="console-title">The management console.</h2></div><button type="button" data-close-dialog aria-label="Close management console">×</button></header><div class="console-status"><span class="room-live-dot"></span><span id="console-state">All checks passing</span><span>LOCAL WORLD</span></div><pre class="console-feed" id="console-feed" tabindex="0" aria-label="Recent lab events"></pre><form id="console-command-form"><label for="console-command">sub@homelab:~$</label><input id="console-command" name="command" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="help" maxlength="100"><button type="submit" aria-label="Run simulated console command">↵</button></form><p class="console-hint">Try btop, lsblk, df -h, journalctl, or help. This terminal belongs to the illustrated world.</p></dialog>
+</body>
+</html>

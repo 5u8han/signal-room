@@ -1,0 +1,49 @@
+{
+  "generator": "render-datacenter-films.py",
+  "attribution": "Original procedural datacenter and technician illustrations created for Sub; rendered locally with Pillow and FFmpeg.",
+  "notes": "Generated maintenance scenes, not recordings of client systems. Silent periodic motion, no rapid full-field flashing.",
+  "clips": [
+    {
+      "width": 960,
+      "height": 540,
+      "duration": 12.0,
+      "fps": 30,
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "audio": false,
+      "bytes": 162766,
+      "faststart": true,
+      "video": "tech-ad-backbone.mp4",
+      "poster": "tech-ad-backbone.jpg",
+      "loop": true,
+      "original": true,
+      "loopEndpointVerified": true,
+      "fullDecodeVerified": true,
+      "title": "The Maintenance Window",
+      "description": "An isometric rack aisle: a technician reads a KVM warning, follows the fault, reseats a server module and verifies the restored signal.",
+      "frameCount": 360,
+      "sha256": "a8797cb05702752fc5e89723c90f072382d9a5e81d9484093db174c4616688c4"
+    },
+    {
+      "width": 960,
+      "height": 540,
+      "duration": 12.0,
+      "fps": 30,
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "audio": false,
+      "bytes": 229669,
+      "faststart": true,
+      "video": "tech-ad-restore.mp4",
+      "poster": "tech-ad-restore.jpg",
+      "loop": true,
+      "original": true,
+      "loopEndpointVerified": true,
+      "fullDecodeVerified": true,
+      "title": "Follow the Signal",
+      "description": "A front-facing network service bay: fiber paths, rack alerts and a KVM diagnostic lead a technician through a physical repair and verification.",
+      "frameCount": 360,
+      "sha256": "03143d3c96d1db6f0bc0047eff6c9a3207186a643627d30d534c37b2cb8c0376"
+    }
+  ]
+}

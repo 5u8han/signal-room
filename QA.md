@@ -1,0 +1,58 @@
+# Portfolio Studio validation — November 5, 2026
+
+## Current polish pass / browser verification pending
+
+- Syntax, 35 pages and 372 local links passed; all 20 API/model tests passed.
+- The deliberate 30 fps limiter was removed. The render loop follows requestAnimationFrame with a ~60 fps target; actual browser/display FPS has not been measured in this pass.
+- Native Canvas renders inspected the seated white chair in three palettes, glide pose, diagnostic terminal and rear repair. The white chair remains visible at the back and near armrest; accent piping changes with the palette. Rendering coverage exercised 3,000 frames across the ten stories. This is software rendering coverage, not browser timing or layout QA.
+- LED glow sprites, route lengths and screen buffers are cached. Console panes paint at 20 Hz and the gaming view at 30 Hz while actor and scene movement can paint at display cadence.
+- Webamp 2.3.1 was acquired from the official npm package with its MIT license. The bundled local original MP3 fully decodes as 44.1 kHz stereo, exactly 48 seconds, mean -18.2 dB and peak -3.2 dB. Public player APIs were checked against the shipped version declarations.
+- Browser control reports disabled in Work settings. Current Webamp playback/dragging, updated theme menu interactions, CSS floor/pop-out effect and browser responsiveness are pending visual checks. Do not reuse earlier browser screenshots as proof of this pass.
+- Credential-pattern scan found no token/private-key candidates in repository inputs. Local databases, environment files, dependency/runtime caches and logs remain ignored. Original personal portrait files are excluded from public assets and repository candidates.
+- An active GitHub Actions workflow could not be uploaded with the current OAuth workflow scope. Its configuration is retained as an inactive example; checks reported here are local checks, not a claimed successful remote CI run.
+
+## Current home-office hero
+
+This section supersedes the earlier hero selection/prototype status below. Sub selected room study 01 and supplied portrait references. The homepage now uses a generated home-office environment and stylized character derivatives, with an interactive incident model.
+
+- Final source check passes: JavaScript syntax, 34 pages, 359 local asset/anchor links, the retained factual profile records and film manifests.
+- All 20 tests pass: eight existing API/SQLite tests plus 12 new scene-model tests. Every one of the ten stories reaches diagnosis, its own service target, verification and healthy recovery. Tests distinguish redundant PSU degradation, UPS-backed mains loss, RAM host shutdown, software-only failure, primary/coax/cellular routing, queues, pause/reset, and independent actor feet versus panel coordinates.
+- Actor geometry smoke check exercised both room faces through all ten stories, with 136,088 canvas operations and no non-finite geometry. The effects renderer also received a separate geometry smoke check during implementation.
+- Browser review loaded the actual loopback homepage and generated assets. Observed the character at the gaming desk, walking to the console, management display changes, front equipment activity, rear-service scene and healthy returns. No console errors were reported in final review.
+- Device inspection works. In the memory-upgrade story the inspector showed “Host stopped for service”, activity 0% and memory pressure 99%; unaffected devices continue in the model. The simulated console accepted `whoami` and displayed the response as plain text.
+- Public story stepping verified PSU notice → console → diagnosis → target → rear repair → verification → return. Rear service displayed Dark while retaining the underlying Light choice; changing the saved choice to Dusk during repair left the temporary Dark view active, then recovery restored Dusk and removed the override. The final preview was returned to Light with motion and automatic incidents enabled.
+- Mains-loss review verified local blackout state with readable light-colored logo/mission overlay even when the visitor selected Light. Equipment emission layers remain separate from room dimming.
+- Phone review passed at 390×844 and 320×740 without horizontal document overflow. The 1080px detail plane pans inside its own viewport; the phone detail viewport retains the full 608px room height. Temporary browser viewport override was reset.
+- Global quiet mode showed no cursor animation and a zero-second room-rotation transition; public Next step continued the story without automatic motion. Manual pause, reset, traffic controls and scenario selection were exercised. Audio was explicitly enabled and then disabled; final audio is off. Parts-bench and printer interactions produced their expected responses.
+- Portrait audit compared file hashes and scanned public text assets: no original portrait file, original filename or local reference path is present under `dist/`. Four generated derivatives are in `dist/assets/homelab/`; prompts and provenance are in `research/HOMELAB-ARTWORK-V3.md`.
+- Cloudflare deployment dry-run passes with 161 static files and the unchanged 49.17 KiB Worker bundle (13.45 KiB gzip). No deployment, account resources, database bindings or GitHub push was performed.
+
+Screenshots: `homelab-front-dark.jpg`, `homelab-rear-service.jpg`, `homelab-mains-outage.jpg`, `homelab-mobile-320.jpg`.
+
+Verification limits: this is a layered image/sprite/canvas scene with a shallow CSS 3D room turn, not a fully modeled volumetric room. Hardware families remain illustrative pending exact inventory. A timed locator wait for the brief PSU replacement caption did not capture that interval; later inspection found the naturally playing story back at healthy idle. The rear repair itself and preference restoration were verified separately through the visible stepping controls. This is not a broad device/performance benchmark or a full screen-reader audit. Final portfolio copy remains a separate pending intake.
+
+## Completed
+
+- Local availability: all 33 HTML routes return HTTP 200 from the persistent 4320 preview; a 128-byte MP4 range returns HTTP 206 with the expected length.
+- Source checks: JavaScript syntax; 33 HTML pages; 343 local asset/anchor links; eight career roles; nine cases; two original film manifests. Public content scan excludes phone/ZIP and hire/contact-me prompts. The five newer roles match the owner's Contract clarification; credential/degree claims are withheld.
+- API tests: eight isolated in-memory SQLite tests pass. They cover consent/validation, duplicate events, sanitized analytics fields, actual range/campaign queries, inquiry persistence/review, origin checks, oversized bodies, failed production auth, production Turnstile configuration gate, rate limits, synthetic-data isolation and retention.
+- Cloudflare build: Wrangler 4.157.0 dry-run bundles the actual Worker and static assets successfully. Config deliberately has no unverified account ID, D1 ID or Access audience.
+- Actual local Cloudflare runtime: public `/` returned 200; `/dashboard.html`, `/dashboard` and `/api/admin/overview` returned 401 without a valid Access session. A forged JWT also returned 401. `/api/config` correctly reports tracking/correspondence disabled with production bindings absent. Temporary workerd server was stopped after testing.
+- Browser desktop: three datacenter worlds rendered at 1280×720, with visible technician/rack/KVM compositions, progressing incidents, native controls, no observed console errors and no horizontal overflow. Blueprint console layering was corrected so diagnostics sit above the plan. Source/Canvas lifecycle models covered all service phases, movement to multiple racks, manual dispatch, pause/reset and cleanup at desktop/mobile dimensions.
+- Browser phone: the three landing pages, work, about, concepts and source reference were inspected at 390×844. Landing variants, about, résumé, work and demo dashboard were also checked at 320×780. In every checked layout, document scrollWidth equals clientWidth and sampled console errors/warnings are empty. Temporary viewport override was reset.
+- Work/content: all nine cases render through the existing filter/grid/dialog interface. About renders eight roles, the five Contract labels and Chicago Lab's full-time-to-on-call history. Public profile data omits unconfirmed credentials and education claims; the plain-text résumé is generated from the same current role records.
+- Dashboard desktop: all four views, 7d range, keyboard chart inspection, date data table, content search/sort/empty state, CSV download, campaign URL building/copy, Inbox filters and demo/recorded switching were exercised. CSV neutralizes formula prefixes in exported text. Synthetic demo engagement counts were corrected to scale with each period.
+- Dashboard phone: drawer opens, selecting a view closes it, and Evening mode/recorded Inbox/demo Overview fit 390px and 320px layouts. No observed console warnings/errors. Message dates and update times use Chicago; traffic-day series use UTC.
+- Real local flow: accepting optional analytics recorded local events. A browser-submitted note with a reserved `.invalid` test address appeared in the actual SQLite-backed Inbox. Mark reviewed persisted. No email was sent. These are labeled local preview records, not production traffic or real prospects.
+- Themes: switching to Evening and restoring Follow desktop completed in the browser without errors; the circular reveal cleanup finished. Earlier retained theme logic checks cover OS/manual preference resolution and cancellation. No fresh OS setting was changed during this iteration.
+- Films: both new assets are 960× 540, 12 seconds, 30 fps / 360 frames, silent H.264/yuv420p faststart loops. Renderer asserts identical periodic endpoints; full decoding and poster inspection passed. Both films reached browser readyState 4, reported duration 12 and advancing currentTime, and played muted with loop enabled. Native controls were exercised on the second film.
+
+## Limits and pending production work
+
+The earlier three datacenter concepts remain comparison prototypes. Sub subsequently selected home-office room study 01; the current implementation and its verification are recorded above. This is not a full browser/device matrix, screen-reader audit, performance benchmark or scientific simulation validation. A timed wait for one exact repair caption did not establish a wall-clock cycle guarantee; the service-state progression is covered by the lifecycle model and observed incident changes.
+
+Cloudflare CLI login is expired. No production D1 database, Access application, Turnstile widget, domain route or live data binding was created. The positive production Access-JWT/D1 path still needs an authenticated staging test after connection; local tests establish fail-closed behavior only. No source has been pushed to GitHub, and 5u8han.dev remains unchanged.
+
+Audience analytics are optional and session-based, not identification of people. Demo data are never inserted into the recorded event tables. The local correspondence test is retained as an explicitly named preview check; archiving changes status rather than deleting the record. No campaigns, marketing messages or replies are sent from this prototype.
+
+The Node/SQLite preview remains on loopback port 4320 in a detached background process. The original design lab on 4318 is preserved. Screenshots are under `screenshots/`.

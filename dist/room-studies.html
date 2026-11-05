@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="theme-boot.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Five original homelab composition studies: four rooms and a pixel-art treatment.">
+  <title>Sub / Homelab room studies</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="room-studies.css">
+  <script type="module" src="room-studies.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to room studies</a>
+  <header class="review-header">
+    <a class="wordmark" href="index.html" aria-label="5u8han.dev homepage">5u8han<span>.dev</span></a>
+    <span class="review-label"><span aria-hidden="true"></span> Room studies / still compositions</span>
+    <a class="back-link" href="concepts.html">Earlier concepts <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="study-intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">THE HOMELAB / COMPOSITION REVIEW</p><h1 id="page-title">Pick the room.</h1></div>
+      <p>Four places for the same lab. Start with the home office, explore the alternatives, then compare the pixel-art treatment.</p>
+    </section>
+    <section class="study-workspace" aria-labelledby="study-title">
+      <div class="study-toolbar">
+        <div class="room-options" role="group" aria-label="Choose room">
+          <button type="button" data-room="home-office" aria-pressed="true"><span>01</span> Home office</button>
+          <button type="button" data-room="basement" aria-pressed="false"><span>02</span> Basement</button>
+          <button type="button" data-room="garage" aria-pressed="false"><span>03</span> Garage</button>
+          <button type="button" data-room="server-room" aria-pressed="false"><span>04</span> Server room</button>
+        </div>
+        <div class="style-options" role="group" aria-label="Choose art treatment">
+          <button type="button" data-treatment="illustrated" aria-pressed="true">Illustrated</button>
+          <button type="button" data-treatment="pixel" aria-pressed="false" aria-describedby="pixel-note">Pixel art <span aria-hidden="true">✦</span></button>
+        </div>
+      </div>
+      <figure class="study-figure">
+        <div class="art-stage" id="art-stage">
+          <img id="study-image" src="assets/room-studies/home-office.png" alt="Illustrated home-office homelab, seen from the front, with detailed equipment racks and a central ultrawide console." fetchpriority="high" decoding="async">
+          <span class="art-index" id="art-index" aria-hidden="true">01 / 05</span>
+          <button class="enlarge-button" id="enlarge-button" type="button" aria-haspopup="dialog"><span aria-hidden="true">⤢</span> Explore details</button>
+        </div>
+        <figcaption class="study-caption">
+          <div><p class="eyebrow" id="study-treatment">ILLUSTRATED / SHALLOW DEPTH</p><h2 id="study-title">Home office</h2></div>
+          <p id="study-description">A working lab woven into a home office, with daylight, warm materials, and a place for electronics repair.</p>
+          <span class="still-label">STILL STUDY</span>
+        </figcaption>
+      </figure>
+      <p class="treatment-note" id="pixel-note">The pixel-art comparison uses the home-office setting. Choosing it returns to that room.</p>
+      <p class="selection-status visually-hidden" id="selection-status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="contact-sheet" aria-labelledby="all-studies-title">
+      <div class="section-heading"><h2 id="all-studies-title">All five studies</h2><p>Compare the atmosphere and equipment detail.</p></div>
+      <div class="thumbnail-grid">
+        <button type="button" class="thumbnail is-selected" data-study="home-office" aria-label="View illustrated home office" aria-pressed="true"><img src="assets/room-studies/home-office.png" alt="" loading="lazy" decoding="async"><span><b>01 / Home office</b><small>Illustrated</small></span></button>
+        <button type="button" class="thumbnail" data-study="basement" aria-label="View illustrated basement workshop" aria-pressed="false"><img src="assets/room-studies/basement.png" alt="" loading="lazy" decoding="async"><span><b>02 / Basement workshop</b><small>Illustrated</small></span></button>
+        <button type="button" class="thumbnail" data-study="garage" aria-label="View illustrated garage lab" aria-pressed="false"><img src="assets/room-studies/garage.png" alt="" loading="lazy" decoding="async"><span><b>03 / Garage lab</b><small>Illustrated</small></span></button>
+        <button type="button" class="thumbnail" data-study="server-room" aria-label="View illustrated dedicated server room" aria-pressed="false"><img src="assets/room-studies/server-room.png" alt="" loading="lazy" decoding="async"><span><b>04 / Dedicated room</b><small>Illustrated</small></span></button>
+        <button type="button" class="thumbnail" data-study="pixel-office" aria-label="View pixel-art home office" aria-pressed="false"><img src="assets/room-studies/pixel-office.png" alt="" loading="lazy" decoding="async"><span><b>05 / Home office</b><small>Pixel art</small></span></button>
+      </div>
+    </section>
+    <aside class="review-note"><span aria-hidden="true">↳</span><p>These studies establish the room and art direction. Equipment shown is representative while the model list is pending. The character will follow your reference photos; the finished scene will add the repairs, traffic, lighting changes, and movement.</p></aside>
+  </main>
+  <footer class="review-footer"><span>5u8han.dev / HOMELAB STUDIES</span><a href="#page-title">Back to the room ↑</a></footer>
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div class="detail-toolbar"><div><p class="eyebrow">DETAIL VIEW</p><h2 id="detail-title">Home office</h2></div><button type="button" id="detail-close" aria-label="Close detail view">Close <span aria-hidden="true">×</span></button></div>
+    <p class="detail-hint">Scroll sideways to inspect the full composition. Press Escape to close.</p>
+    <div class="detail-pan" tabindex="0" role="region" aria-label="Full-size study image; scroll to explore"><img id="detail-image" src="assets/room-studies/home-office.png" alt="Enlarged illustrated home-office homelab." decoding="async"></div>
+  </dialog>
+</body>
+</html>

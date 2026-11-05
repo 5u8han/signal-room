@@ -1,0 +1,92 @@
+/* Site chrome is themed; original artwork is translated independently from video. */
+html[data-theme=dark]{--theme-paper:#0d1012;--theme-ink:#f4f1e8;--theme-accent:#dfff55;--theme-muted:#a9b4ac;--theme-surface:#1b2224;--theme-rule:#44504a;--theme-pink:#f78fc9;--theme-blue:#8a91ff;color-scheme:dark}
+html[data-theme=light]{--theme-paper:#f4f1e9;--theme-ink:#182122;--theme-accent:#3e4eca;--theme-muted:#5e6867;--theme-surface:#e8e8df;--theme-rule:#a8b0aa;--theme-pink:#b8327d;--theme-blue:#3e4eca;color-scheme:light}
+html[data-theme=evening]{--theme-paper:#edcfc5;--theme-ink:#302334;--theme-accent:#8f2e40;--theme-muted:#684653;--theme-surface:#e2b8b0;--theme-rule:#a87e85;--theme-pink:#b53d65;--theme-blue:#6f547e;color-scheme:light}
+html[data-theme]{--bg:var(--theme-paper)!important;--fg:var(--theme-ink)!important;--paper:var(--theme-paper)!important;--ink:var(--theme-ink)!important;--accent:var(--theme-accent)!important;--muted:var(--theme-muted)!important;--line:var(--theme-rule)!important;--rule:var(--theme-rule)!important;--chrome-ink:var(--theme-ink)!important;--chrome-accent:var(--theme-accent)!important;--chrome-muted:var(--theme-muted)!important;--lime:var(--theme-accent)!important;--pink:var(--theme-pink)!important;--blue:var(--theme-blue)!important;--reel-bg:var(--theme-paper);--reel-ink:var(--theme-ink);--reel-accent:var(--theme-accent);--reel-muted:var(--theme-muted);background:var(--theme-paper);color:var(--theme-ink)}
+html[data-theme] body,html[data-theme] body.light-page{--bg:var(--theme-paper);--fg:var(--theme-ink);--muted:var(--theme-muted);--line:var(--theme-rule);background:var(--theme-paper)!important;color:var(--theme-ink)!important}
+html[data-theme=evening] body{background-image:radial-gradient(ellipse at 90% 0,#f4aca64a,transparent 54%),radial-gradient(ellipse at 0 40%,#b98ba52b,transparent 55%)!important}
+html[data-theme] ::selection{background:var(--theme-accent);color:var(--theme-paper)}
+html[data-theme] :is(#site-header,.footer-base,.menu-dialog,.command-dialog,.profile-section,.case-toolbar){background:var(--theme-paper);color:var(--theme-ink)}
+html[data-theme] :is(.main-header,.menu-top,.menu-links a,.command-heading,.command-note,.footer-main,.footer-meta,.hero-bottom,.approach-steps>article,.work-space,.sidebar-lab-link,.study-note,.atlas-hero-foot,.atlas-filter-row){border-color:var(--theme-rule)}
+html[data-theme] :is(.desktop-nav a,.nav-index,.menu-caption,.menu-links a>span,.menu-bottom,.command-empty,.command-note,.footer-main p,.footer-meta,.hero-meta,.hero-description p,.hero-bottom,.section-top>.micro,.section-top-note,.approach-heading>.micro,.approach-steps p,.work-kicker span,.work-heading h1>span,.work-intro>span,.sidebar-heading>span:last-child,.work-filters button,.sidebar-note,.work-toolbar>p,.project-caption p,.about-hero-note>p,.timeline-role,.timeline-details,.atlas-controls>p,.inventory-heading>p,#inventory-count,.inventory-boundary,.next-tests article>span,.next-tests p,.profile-layout>div>p,.profile-layout>div>.profile-fact-note,.profile-layout label>span,.profile-layout #profile-status,.lab-title-row aside>p,.lab-references>p,.render-intro>p,.cue-section aside>p,.atlas-hero-meta,.atlas-intro p,.atlas-hero-foot,.atlas-catalog-heading .micro,.atlas-catalog-heading>aside>span,.atlas-card-tags,.atlas-empty p,#atlas-result-count){color:var(--theme-muted)}
+html[data-theme] :is(.desktop-nav a:hover,.desktop-nav a[aria-current=page],.command-heading input,.sort-control select,.profile-layout input,.inventory-toolbar input,.inventory-toolbar select,.atlas-controls select,.atlas-search input,.case-toolbar button,.case-viewer,.work-empty,.atlas-empty,.sculpture-controls,.seed-controls input,.seed-controls button,.cue-editor textarea){color:var(--theme-ink)}
+html[data-theme] :is(.icon-btn,.menu-button,.case-toolbar button,.layout-switch,.atlas-search,#atlas-saved-filter,.atlas-empty,.profile-layout input,.inventory-toolbar input,.inventory-toolbar select,.atlas-controls select,.cue-editor textarea){border-color:var(--theme-rule)}
+html[data-theme] :is(.profile-layout input,.inventory-toolbar input,.inventory-toolbar select,.atlas-controls select,.cue-editor textarea){accent-color:var(--theme-accent)}
+html[data-theme] :is(.icon-btn:hover,.menu-button:hover,.work-filters button:hover,.layout-switch,.case-viewer,.work-empty,.profile-layout input,.inventory-toolbar input,.inventory-toolbar select,.atlas-controls select,.sculpture-controls,.seed-controls input,.seed-controls button,.cue-editor textarea,.atlas-search,.atlas-empty){background:var(--theme-surface)}
+html[data-theme] :is(.footer-cta,.signal-strip){background:var(--theme-accent);color:var(--theme-paper);border-color:var(--theme-accent)}
+html[data-theme] :is(.footer-round,.footer-round:hover){border-color:currentColor}
+html[data-theme] .footer-round:hover{background:var(--theme-paper);color:var(--theme-accent)}
+html[data-theme] .btn-lime,html[data-theme] .icon-btn[aria-pressed=true],html[data-theme] .command-results a:hover,html[data-theme] .command-results a:focus-visible,html[data-theme] .work-filters button[aria-pressed=true],html[data-theme] .atlas-filters>button[aria-pressed=true]{background:var(--theme-accent);border-color:var(--theme-accent);color:var(--theme-paper)}
+html[data-theme] .btn-dark{background:var(--theme-ink);border-color:var(--theme-ink);color:var(--theme-paper)}
+html[data-theme] .outline-type{-webkit-text-stroke-color:var(--theme-ink);color:var(--theme-ink)}
+html[data-theme] .about-hero h1>span{color:var(--theme-accent)}
+html[data-theme] .capability-band{background:var(--theme-surface);color:var(--theme-ink)}
+html[data-theme] :is(.capability-band .section-top>.micro,.capability-number,.capability-grid p,.capability-tags){color:var(--theme-muted)}
+html[data-theme] .capability-grid>article{border-color:var(--theme-rule)}
+html[data-theme] .atlas-index{background:var(--theme-paper);color:var(--theme-ink)}
+html[data-theme] .atlas-hero-copy h1>span,html[data-theme] .atlas-hero-foot a,html[data-theme] .atlas-card-caption>span{color:var(--theme-accent)}
+html[data-theme] .atlas-catalog-heading h2 span{-webkit-text-stroke-color:var(--theme-accent)}
+html[data-theme] .atlas-manifesto{background:var(--theme-accent);color:var(--theme-paper)}
+html[data-theme] .atlas-filters>button{color:var(--theme-muted)}
+html[data-theme] #atlas-saved-filter{color:var(--theme-ink)}
+html[data-theme] #atlas-saved-filter>span{background:var(--theme-surface);color:var(--theme-muted)}
+html[data-theme] #atlas-saved-filter[aria-pressed=true]{background:var(--theme-accent);color:var(--theme-paper)}
+html[data-theme] .atlas-search input::placeholder,html[data-theme] .profile-layout input::placeholder{color:var(--theme-muted);opacity:1}
+html[data-theme] :is(.profile-actions .btn-outline,.lab-references>.micro,.lab-references>a,.lab-title-row h1>span,.control-kicker .micro,.lab-range-label output){color:var(--theme-accent)}
+html[data-theme] :is(.section-intro>p,.experience-list summary>span:nth-child(2),.experience-list p,.atlas-source,.atlas-font-note,.entry-group,.entry-body p,.entry-body .entry-pages,.case-title-row .micro,.case-narrative .micro,.case-disclaimer,.sculpture-controls .lab-status,.shape-field legend,.seed-field legend){color:var(--theme-muted)}
+html[data-theme] :is(.experience-list>details,.atlas-controls,.inventory-stats,.inventory-stats span+span,.inventory-list,.inventory-entry,.entry-tag,.next-tests,.color-row,.shape-presets button,.seed-controls button,.seed-controls input){border-color:var(--theme-rule)}
+html[data-theme] .entry-body .entry-paths{background:var(--theme-surface);color:var(--theme-ink)}
+html[data-theme] .shape-presets button{color:var(--theme-ink)}
+html[data-theme] .shape-presets button[aria-pressed=true]{background:var(--theme-accent);color:var(--theme-paper);border-color:var(--theme-accent)}
+html[data-theme] .sculpture-actions .btn{background:var(--theme-ink);border-color:var(--theme-ink);color:var(--theme-paper)}
+html[data-theme] .case-toolbar #case-close{background:var(--theme-ink);color:var(--theme-paper)}
+
+/* Canvas palettes are intentionally authored as images. Translate the complete
+   composition (including its labels) so pointer coordinates remain unchanged. */
+html[data-has-artwork=true] :is(.horizon-world,.horizon-ending,.garden-world,.garden-ending,.depth-world,.depth-ending,.architecture-world,.architecture-ending,.current-world,.force-scene,.liquid-scene,.weather-scene,.editorial-stage,.editorial-end,.palimpsest-scene,.gravity-stage,.choir-stage,.fabric-stage,.magnetic-stage,.orbital-world,.orbital-story,.giants-world,.continuum,.ghost-intro,.ghost-toolbar,#ghost-grid,.ghost-bottom,.light-world,.storm-world){filter:var(--theme-art-filter,none)}
+html[data-has-artwork=true] :is(.force-main,.liquid-main,.weather-main,.editorial-main,.palimpsest-main){background:var(--theme-paper);color:var(--theme-ink)}
+/* Preserve original variables inside filtered compositions. */
+html[data-has-artwork=true] :is(.horizon-world,.horizon-ending,.garden-world,.garden-ending,.depth-world,.depth-ending,.architecture-world,.architecture-ending,.current-world,.force-scene,.liquid-scene,.weather-scene,.editorial-stage,.editorial-end,.palimpsest-scene,.gravity-stage,.choir-stage,.fabric-stage,.magnetic-stage,.orbital-world,.orbital-story,.giants-world,.continuum,.ghost-intro,.ghost-toolbar,#ghost-grid,.ghost-bottom,.light-world,.storm-world){--paper:var(--study-original-background);--ink:var(--study-original-foreground);--accent:var(--study-original-accent);--muted:color-mix(in srgb,var(--study-original-foreground) 70%,var(--study-original-background));--rule:color-mix(in srgb,var(--study-original-foreground) 24%,transparent);color:var(--study-original-foreground)}
+html[data-has-artwork=true] :is(.force-scene,.liquid-scene,.weather-scene,.palimpsest-scene,.giants-world){background:var(--study-original-background)}
+html[data-theme] :is(.orbital-controls,#ghost-viewer){background:var(--theme-surface);color:var(--theme-ink)}
+html[data-theme] :is(.orbital-telemetry,.ghost-viewer-copy>p){color:var(--theme-muted)}
+html[data-theme] .orbital-controls select{background:var(--theme-paper);color:var(--theme-ink)}
+html[data-theme] .orbital-controls>label{color:var(--theme-ink)}
+html[data-has-artwork=true] .ghost-flying{filter:var(--theme-art-filter,none)}
+
+.theme-picker{position:relative;flex-shrink:0;color:var(--theme-ink);font-family:Geist,system-ui,sans-serif;font-size:12px;line-height:1.4}
+.theme-trigger{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;min-width:42px;padding:9px 11px;color:var(--theme-ink)!important;background:transparent!important;border:1px solid var(--theme-rule)!important;cursor:pointer;font-size:9px!important;font-family:inherit;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.theme-trigger svg{width:17px;height:17px;flex-shrink:0}
+.theme-trigger-chevron{font-size:14px;line-height:.7;margin-top:-3px}
+.theme-trigger[aria-expanded=true],.theme-trigger:hover{background:var(--theme-surface)!important;color:var(--theme-ink)!important}
+.theme-picker[data-override=true] .theme-trigger{position:relative;border-style:dashed!important}
+.theme-picker[data-override=true] .theme-trigger::after{content:'';position:absolute;top:4px;right:4px;width:4px;height:4px;border-radius:50%;background:currentColor;pointer-events:none}
+.theme-menu{position:absolute;right:0;top:calc(100% + 10px);z-index:3000;width:254px;max-width:calc(100vw - 24px);padding:12px;background:var(--theme-paper);color:var(--theme-ink);border:1px solid var(--theme-rule);box-shadow:0 18px 60px #0003;text-align:left;isolation:isolate}
+.theme-menu-kicker{font-size:8px!important;letter-spacing:.13em;margin:3px 6px 12px!important;color:var(--theme-muted)!important}
+.theme-menu button{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;width:100%;min-height:57px!important;padding:8px!important;border:1px solid transparent!important;background:transparent!important;color:var(--theme-ink)!important;text-align:left;font:inherit!important;text-transform:none!important;letter-spacing:0!important}
+.theme-menu button:hover,.theme-menu button:focus-visible{background:var(--theme-surface)!important;border-color:var(--theme-rule)!important}
+.theme-menu button[aria-checked=true]{border-color:var(--theme-rule)!important}
+.theme-menu strong{display:block;font-size:12px;font-weight:500;line-height:1.4}
+.theme-menu small{display:block;font-size:9px;color:var(--theme-muted);margin-top:2px}
+.theme-swatch{display:block;width:29px;height:29px;border:1px solid #8885;border-radius:50%;flex-shrink:0}
+.theme-swatch-dark{background:linear-gradient(135deg,#0d1012 0 66%,#dfff55 66%)}
+.theme-swatch-light{background:linear-gradient(135deg,#f4f1e9 0 66%,#3e4eca 66%)}
+.theme-swatch-evening{background:linear-gradient(135deg,#edcfc5 0 66%,#8f2e40 66%)}
+.theme-choice-check{margin-left:auto;font-size:12px;visibility:hidden}
+.theme-menu [aria-checked=true] .theme-choice-check{visibility:visible}
+.theme-menu-divider{height:1px;background:var(--theme-rule);margin:10px 0}
+.theme-system>svg{width:29px;height:23px;flex-shrink:0}
+.theme-menu-note{font-size:8px!important;line-height:1.6;margin:12px 7px 2px!important;color:var(--theme-muted)!important}
+#atlas-header .theme-trigger{min-height:35px;min-width:35px;padding:8px;font-size:8px!important}
+#atlas-header .theme-trigger-word{display:none}
+#atlas-header .theme-trigger svg{width:15px;height:15px}
+#atlas-header .theme-trigger-chevron{display:none}
+#atlas-header:has(.theme-menu:not([hidden])){z-index:1800;backdrop-filter:none}
+html[data-theme-reveal=active]::view-transition-group(root){animation:none}
+html[data-theme-reveal=active]::view-transition-old(root),html[data-theme-reveal=active]::view-transition-new(root){animation:none;mix-blend-mode:normal;opacity:1}
+html[data-theme-reveal=active]::view-transition-old(root){z-index:1}
+html[data-theme-reveal=active]::view-transition-new(root){z-index:2}
+@media(max-width:1150px){.theme-trigger-word{display:none}.theme-trigger-chevron{display:none}.theme-trigger{padding:9px}}
+@media(max-width:760px){.theme-trigger{width:36px;min-width:36px;height:36px;min-height:36px;padding:8px}.theme-trigger svg{width:16px;height:16px}.theme-menu{width:244px}.atlas-brand span>small{display:none}.atlas-top{gap:9px}.atlas-top-controls{gap:5px}.atlas-top-controls .atlas-index-link{min-width:45px;padding-inline:7px}}
+@media(max-width:380px){.atlas-title{display:none}.atlas-brand{font-size:8px}.atlas-brand b{font-size:16px}.atlas-top{padding-inline:12px}.atlas-top-controls button#atlas-pause{min-width:45px;padding-inline:6px}.theme-trigger{width:32px;min-width:32px}.main-header{gap:8px}.main-header .wordmark{font-size:17px;gap:6px}.main-header .wordmark .brand-x{display:none}.main-header .menu-button{padding-inline:8px;gap:0}.main-header .menu-button svg{display:none}}
+@media(prefers-reduced-motion:reduce){html[data-theme-reveal=active]::view-transition-old(root),html[data-theme-reveal=active]::view-transition-new(root){animation:none!important}}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><script src="theme-boot.js"></script><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A hands-on portfolio lab. Sculpt generative motion, explore 3D, play a sound, and keep a frame.">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#080908">
+  <title>The Lab — Portfolio experiments</title>
+  <link rel="stylesheet" href="common.css"><link rel="stylesheet" href="lab.css">
+  <script type="module" src="common.js"></script><script type="module" src="lab.js"></script>
+<link rel="stylesheet" href="tech-reels.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="studio.css"></head>
+<body data-page="lab">
+  <header id="site-header"></header>
+  <main id="main">
+    <section class="container lab-intro" aria-labelledby="lab-title">
+      <div class="lab-topline"><span class="micro">THE LAB / SIGNAL, STRUCTURE, POSSIBILITY</span><span class="lab-live"><i></i> FOUR WAYS TO EXPLORE AN IDEA</span></div>
+      <div class="lab-title-row"><h1 id="lab-title" class="display">SERIOUSLY<br><span>PLAYFUL.</span></h1><aside><span class="lab-coordinate">(03 — ENGINEERING IN MOTION)</span><p>Signals have a rhythm.<br>Structure has a point of view.<br>This is the experimental side.</p><a href="#experiment-003" class="lab-anchor">Make something move <span aria-hidden="true">↓</span></a></aside></div>
+    </section>
+
+    <section id="experiment-003" class="container sculpture-section" aria-labelledby="sculpture-section-title">
+      <div class="lab-section-label"><span class="micro">EXPERIMENT #003</span><h2 id="sculpture-section-title">A little chaos. A lot of possibility.</h2><span class="runtime-label">ANIME.JS / LIVE</span></div>
+      <div class="sculpture-workspace">
+        <div class="sculpture-area">
+          <div class="sculpture-stage" id="sculpture-stage">
+            <div class="stage-metadata"><span id="shape-label">ORBIT STUDY</span><span>SEED <b id="stage-seed">024</b></span></div>
+            <div class="stage-cross stage-cross-a" aria-hidden="true">+</div><div class="stage-cross stage-cross-b" aria-hidden="true">+</div>
+            <svg id="sculpture" class="sculpture-svg" viewBox="0 0 600 600" role="img" aria-labelledby="sculpture-title sculpture-desc"><title id="sculpture-title">Orbit study</title><desc id="sculpture-desc">A generative sculpture of overlapping elliptical ribbons.</desc><g id="sculpture-shapes"></g></svg>
+            <span class="sculpture-signature">FORM IS A FEELING<span>© ORIGINAL STUDY / 2026</span></span>
+            <span class="stage-axis" aria-hidden="true">X + Y + A LITTLE WHY</span>
+          </div>
+          <div class="sculpture-transport"><button id="motion-play" type="button" class="transport-button" aria-label="Play sculpture"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></button><div class="transport-track"><label class="sr-only" for="motion-timeline">Sculpture progress</label><input id="motion-timeline" type="range" min="0" max="1000" value="380" step="1"></div><span id="motion-time">1.52 / 4.00</span><button id="motion-replay" class="transport-button" type="button" aria-label="Replay sculpture"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8a8 8 0 1 1-1 6M4 4v5h5"/></svg></button></div>
+        </div>
+        <aside class="sculpture-controls" aria-label="Sculpture controls">
+          <div class="control-kicker"><span class="micro">YOUR MOVE</span><span aria-hidden="true">✳</span></div><h3>Change the<br>whole feeling.</h3>
+          <fieldset class="shape-field"><legend>Start with a form</legend><div class="shape-presets"><button type="button" data-shape="orbit" aria-pressed="true"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><ellipse cx="16" cy="16" rx="13" ry="6" transform="rotate(45 16 16)"/><ellipse cx="16" cy="16" rx="13" ry="6" transform="rotate(-45 16 16)"/></svg>Orbit</button><button type="button" data-shape="stack" aria-pressed="false"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="6" y="4" width="20" height="13" rx="3"/><rect x="6" y="10" width="20" height="13" rx="3"/><rect x="6" y="16" width="20" height="13" rx="3"/></svg>Stack</button><button type="button" data-shape="bloom" aria-pressed="false"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><ellipse cx="16" cy="16" rx="5" ry="13"/><ellipse cx="16" cy="16" rx="5" ry="13" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="5" ry="13" transform="rotate(120 16 16)"/></svg>Bloom</button></div></fieldset>
+          <label class="lab-range-label" for="motion-duration">Duration <output id="duration-output">4.0 s</output></label><input id="motion-duration" type="range" min="1" max="8" value="4" step="0.5">
+          <label class="lab-range-label" for="motion-spread">Spread <output id="spread-output">62%</output></label><input id="motion-spread" type="range" min="20" max="100" value="62" step="1">
+          <div class="color-row"><label for="sculpture-color">Make it your color</label><input id="sculpture-color" type="color" value="#dfff00"></div>
+          <fieldset class="seed-field"><legend>A different kind of random</legend><div class="seed-controls"><button type="button" id="seed-prev" aria-label="Previous seed">−</button><label class="sr-only" for="seed-input">Sculpture seed</label><input id="seed-input" type="number" min="1" max="9999" value="24"><button type="button" id="seed-next" aria-label="Next seed">+</button><button type="button" id="seed-random" aria-label="Random seed">↗</button></div></fieldset>
+          <div class="sculpture-actions"><button type="button" id="save-sculpture" class="btn btn-lime">Keep this frame <span aria-hidden="true">↗</span></button><button type="button" id="reset-sculpture" class="reset-button">Reset study</button></div>
+          <p id="sculpture-status" class="lab-status" role="status">Static, until you say go.</p>
+        </aside>
+      </div>
+      <div class="experiment-foot"><span>ONE SHAPE. ENDLESS DIRECTIONS.</span><p>Play a finite study, scrub to a moment, or save the current frame as an SVG.</p><span>NO AUTOPLAY. YOUR PACE.</span></div>
+    </section>
+
+    <section class="container lab-pair" aria-label="Experiments in dimension and sound">
+      <article class="dimension-experiment" aria-labelledby="dimension-title">
+        <div class="small-experiment-heading"><span class="micro">EXPERIMENT #004</span><span class="runtime-label">THREE.JS / ON DEMAND</span></div><h2 id="dimension-title">Another dimension.</h2><p class="small-experiment-copy">Turn a simple knot into a different point of view.</p>
+        <div id="three-stage" class="three-stage" aria-label="Interactive 3D knot"><svg class="three-fallback" viewBox="0 0 400 310" role="img" aria-label="An outlined sculptural knot preview"><g fill="none" stroke="#080908" stroke-width="22"><ellipse cx="200" cy="155" rx="117" ry="58" transform="rotate(-38 200 155)"/><ellipse cx="200" cy="155" rx="117" ry="58" transform="rotate(38 200 155)"/></g><g fill="none" stroke="#dfff00" stroke-width="5"><ellipse cx="200" cy="155" rx="117" ry="58" transform="rotate(-38 200 155)"/><ellipse cx="200" cy="155" rx="117" ry="58" transform="rotate(38 200 155)"/></g></svg><span class="three-caption">DRAG TO TURN / RENDER ONLY WHEN SOMETHING CHANGES</span></div>
+        <div class="small-experiment-actions"><button id="enable-three" class="btn btn-dark" type="button">Enable 3D <span aria-hidden="true">↗</span></button><button id="turn-three" class="small-tool" type="button" disabled>Rotate</button><button id="save-three" class="small-tool" type="button" disabled>Save PNG</button></div><p id="three-status" class="lab-status" role="status">A still preview. The 3D engine loads when you ask.</p>
+      </article>
+      <article class="sound-experiment" aria-labelledby="sound-title">
+        <div class="small-experiment-heading"><span class="micro">EXPERIMENT #005</span><span class="runtime-label">TONE.JS / ON GESTURE</span></div><h2 id="sound-title">Looks good.<br>Sounds different.</h2><p class="small-experiment-copy">Three notes. A little resonance. Always your choice.</p>
+        <div class="sound-sculpture" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="sound-controls"><label class="lab-range-label" for="sound-pitch">Base pitch <output id="pitch-output">220 Hz</output></label><input id="sound-pitch" type="range" min="110" max="440" step="5" value="220"><div class="small-experiment-actions"><button id="play-sound" class="btn btn-dark" type="button">Play three notes <span aria-hidden="true">↗</span></button><button id="stop-sound" type="button" class="small-tool" disabled>Stop sound</button></div></div><p id="sound-status" class="lab-status" role="status">Sound is off. Nothing plays without your click.</p>
+      </article>
+    </section>
+
+    <section class="container render-experiment" aria-labelledby="render-title">
+      <div class="render-intro"><span class="micro">EXPERIMENT #006 / FRAME BY FRAME</span><h2 id="render-title">A moment,<br>made to keep.</h2><p>A local rendered motion study. An ordinary video player. A small reminder that a live animation and a finished film are different things.</p><div class="render-recipe"><span>FFMPEG / RENDERED OUTPUT</span><span>DETERMINISTIC FRAMES / LOCAL FILE</span></div></div>
+      <div class="render-player"><video controls playsinline preload="metadata" poster="assets/render-study.jpg" width="960" height="540" aria-label="Rendered geometric signal study"><source src="assets/render-study.mp4" type="video/mp4"><track default kind="captions" src="assets/render-study.vtt" srclang="en" label="English descriptions">Your browser does not support this video.</video><p>Silent signal motion study. Captions describe the visual sequence.</p></div>
+    </section>
+
+    <section class="container cue-section" aria-labelledby="cue-title">
+      <aside><span class="micro">A VOICE STARTS WITH A POINT OF VIEW.</span><h2 id="cue-title">Say something<br>worth hearing.</h2><p>Write three short cues. Export timed captions for this four-second study. No recording, transcription or synthetic voice is sent anywhere.</p><details><summary>What is running here?</summary><p>The cue editor and VTT export run locally. Whisper and ElevenLabs inform the transcription and narration workflow, but no model or external voice service is connected. Remotion, HyperFrames and Manim are retained rendering references; this video is the separate FFmpeg test.</p></details></aside>
+      <div class="cue-editor"><label class="micro" for="caption-cues">THREE CUES / ONE PER LINE</label><textarea id="caption-cues" rows="5" maxlength="600">Trace the signal.
+Follow the fault.
+Restore the connection.</textarea><div class="cue-actions"><button class="btn btn-outline" type="button" id="save-captions">Export captions <span aria-hidden="true">↗</span></button><span id="cue-status" role="status">3 cues · 4 seconds · VTT</span></div></div>
+    </section>
+    <section class="container lab-references"><span class="micro">THE MIX</span><p>Motion lifecycle · Anime.js · Three.js · Tone.js · algorithmic art · deterministic rendering · accessible controls</p><a href="reference.html#inventory">Explore the complete inventory <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer id="site-footer"></footer>
+</body>
+</html>

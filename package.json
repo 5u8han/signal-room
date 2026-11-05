@@ -1,0 +1,24 @@
+{
+  "name": "signal-room",
+  "version": "1.0.0",
+  "description": "5u8han.dev \u2014 interactive homelab, engineering portfolio and After Hours Radio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "cf:check": "WRANGLER_LOG_PATH=.local/wrangler-logs WRANGLER_SEND_METRICS=false wrangler deploy --dry-run",
+    "cf:dev": "wrangler dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "jose": "^6.2.15"
+  },
+  "devDependencies": {
+    "wrangler": "^4.157.0"
+  },
+  "private": true
+}
