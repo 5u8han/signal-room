@@ -1,6 +1,6 @@
 # Interactive home office
 
-The selected home-office study is now the homepage at [http://127.0.0.1:4320/](http://127.0.0.1:4320/). This is the current local animation build. Nothing has been pushed to GitHub or deployed to Cloudflare or the public domain.
+The selected home-office study is now the homepage at [http://127.0.0.1:4320/](http://127.0.0.1:4320/). Source is pushed to the private [Signal Room repository](https://github.com/5u8han/signal-room) on `main` and `testing`; the local checkout uses `testing`. Nothing has been deployed to Cloudflare or the public domain. The latest polish uses a continuous glide, white theme-accented chair, richer screens and a separate Webamp Radio page; current browser verification is pending as recorded in QA.md.
 
 ## Room and character
 

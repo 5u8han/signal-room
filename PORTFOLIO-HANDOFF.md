@@ -8,6 +8,8 @@ The separate `music.html` page self-hosts Webamp 2.3.1 and an original 48-second
 
 GitHub rejected the initial push because the connected OAuth credential lacks workflow scope. The check workflow was retained as an inactive example under `.github/workflow-examples/`; it is not an active CI run. No account permissions were expanded.
 
+The subsequent application push succeeded and was verified through the GitHub API. Both `main` and `testing` exist in the private repository; local development remains on `testing`. The working tree was clean after the push. Local preview process was relaunched with MP3 MIME/range support, verified by actual HTTP requests.
+
 Code checks, all 20 tests, Cloudflare dry-run and native canvas renders are passing. Current browser control is disabled in Work settings. Do not claim measured browser FPS, current live Webamp playback, CSS pop-out behavior or updated responsive visual QA until browser access is restored. Prior browser checks below apply to the earlier iteration.
 
 ## Current build — supersedes the still-study handoff
@@ -22,9 +24,9 @@ The three earlier animated concepts remain at `/concepts.html` and their individ
 
 Sub wants all abilities represented and explicitly rejects ranking one category of work above another. Do not resume a narrowed target-role questionnaire. New factual/story intake is in `research/CONTENT-INTAKE-V2.md`; official hardware panels and maintenance staging are in `research/HARDWARE-REFERENCE-V2.md`. The earlier still-study prompts are in `research/ROOM-STUDY-PROMPTS.md`; current animation assets are documented separately in `research/HOMELAB-ARTWORK-V3.md`.
 
-`npm run check` and all twenty automated tests have passed. Browser review has exercised desktop and 390-pixel phone overview/detail layouts, HPE shutdown during upgrade, and rare PSU service lighting while preserving/changing/restoring the selected theme. Final visual QA is still ongoing; use `QA.md` for the final exact observations rather than treating this paragraph as exhaustive. The existing loopback preview remains available. No Cloudflare public deployment, domain changes or Git push occurred.
+`npm run check` and all twenty automated tests have passed. Earlier browser review exercised desktop and 390-pixel phone overview/detail layouts, HPE shutdown during upgrade, and rare PSU service lighting while preserving/changing/restoring the selected theme. Use the latest QA section for the exact verification limit of the newer polish. The loopback preview remains available. No Cloudflare public deployment or domain change occurred; source is now pushed to Signal Room.
 
-Current root is this `portfolio-studio` checkout, with a local `main` branch and no remote/push yet. It is separate from `../5u8han`, which is the supplied GitHub profile repository and has not been changed. The old VidStream design lab is preserved separately. Synced project `sources/` remain read-only.
+Current root is this `portfolio-studio` checkout, on `testing` with origin `https://github.com/5u8han/signal-room.git`. It is separate from `../5u8han`, which is the supplied GitHub profile repository and has not been changed. The old VidStream design lab is preserved separately. Synced project `sources/` remain read-only.
 
 ## Agreed direction
 

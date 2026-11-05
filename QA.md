@@ -10,6 +10,7 @@
 - Browser control reports disabled in Work settings. Current Webamp playback/dragging, updated theme menu interactions, CSS floor/pop-out effect and browser responsiveness are pending visual checks. Do not reuse earlier browser screenshots as proof of this pass.
 - Credential-pattern scan found no token/private-key candidates in repository inputs. Local databases, environment files, dependency/runtime caches and logs remain ignored. Original personal portrait files are excluded from public assets and repository candidates.
 - An active GitHub Actions workflow could not be uploaded with the current OAuth workflow scope. Its configuration is retained as an inactive example; checks reported here are local checks, not a claimed successful remote CI run.
+- Application push then succeeded to private `5u8han/signal-room`. GitHub API verification confirmed `main` and `testing` at the same application commit; the local working branch is `testing`. Actual HTTP verification returned Radio 200, MP3 `audio/mpeg` with byte-range support, and exactly 128 bytes for the requested range.
 
 ## Current home-office hero
 
@@ -51,7 +52,7 @@ Verification limits: this is a layered image/sprite/canvas scene with a shallow 
 
 The earlier three datacenter concepts remain comparison prototypes. Sub subsequently selected home-office room study 01; the current implementation and its verification are recorded above. This is not a full browser/device matrix, screen-reader audit, performance benchmark or scientific simulation validation. A timed wait for one exact repair caption did not establish a wall-clock cycle guarantee; the service-state progression is covered by the lifecycle model and observed incident changes.
 
-Cloudflare CLI login is expired. No production D1 database, Access application, Turnstile widget, domain route or live data binding was created. The positive production Access-JWT/D1 path still needs an authenticated staging test after connection; local tests establish fail-closed behavior only. No source has been pushed to GitHub, and 5u8han.dev remains unchanged.
+Cloudflare CLI login is expired. No production D1 database, Access application, Turnstile widget, domain route or live data binding was created. The positive production Access-JWT/D1 path still needs an authenticated staging test after connection; local tests establish fail-closed behavior only. Source is now pushed to the private Signal Room repository, while 5u8han.dev remains unchanged.
 
 Audience analytics are optional and session-based, not identification of people. Demo data are never inserted into the recorded event tables. The local correspondence test is retained as an explicitly named preview check; archiving changes status rather than deleting the record. No campaigns, marketing messages or replies are sent from this prototype.
 
