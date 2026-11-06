@@ -9,7 +9,9 @@ A new, experimental portfolio built around support engineering, datacenter work,
 ## Open the local preview
 
 - [Interactive home office](http://127.0.0.1:4320/)
-- [Compare four liquid-glass landings](http://127.0.0.1:4320/glass-studies.html)
+- [Corrected Canopy room](http://127.0.0.1:4320/glass-01.html)
+- [Earlier navigation comparisons](http://127.0.0.1:4320/glass-studies.html)
+- [Local reference recordings / chapters](http://127.0.0.1:4321/)
 - [After Hours Radio / Webamp](http://127.0.0.1:4320/music.html)
 - [Room studies / four settings and pixel-art test](http://127.0.0.1:4320/room-studies.html)
 - [Earlier cinematic landing](http://127.0.0.1:4320/concept-cinematic.html)
@@ -26,7 +28,11 @@ The preview runs only on 127.0.0.1:4320. It has a real local SQLite database. Lo
 
 ## What is built
 
-Four new live liquid-glass landing studies are ready for selection: **Canopy** (`glass-01.html`, 82svh), **Split Signal** (`glass-02.html`, 84svh), **Glass Spine** (`glass-03.html`, 83svh), and **Command Dock** (`glass-04.html`, 80svh). Navigation floats inside the animated room; the main identity sits lower. Existing artwork supplies the fitted scene and ambient extension without stretching the character. The glass uses restrained blur, lit edges, pointer highlights, press/open motion and an optional SVG displacement filter on the side rail. Dark/Light/Dusk, contrast and quiet preferences are retained. Compare the actual screenshots at `glass-studies.html`, then open a route to interact. These are review alternatives; the baseline homepage links them while the final choice is pending. See [the retained design reference](research/LIQUID-GLASS.md). Regenerate the four scene routes after changing the baseline with `node scripts/create-glass-studies.mjs`.
+The four navigation studies remain archived for comparison; Sub rejected all four menus and described Canopy as the closest. The current correction makes the real room cover the landing field, removes the empty strip and broad Light/Dusk glow layers, and gives both monitors measured perspective surfaces with laptop/headphone occlusion. The existing menu arrangements have only been quieted while the next direction awaits Sub's choices. The desktop fields retain 80–84svh; phones show a full-height swipeable room with a Whole room overview. Regenerate the four scene routes from the baseline with `node scripts/create-glass-studies.mjs`.
+
+The three requested reference pages have local browser recordings with chapter controls at the review link above. Video files and raw captures stay in ignored local folders outside deployment. `node scripts/assemble-reference-recordings.mjs` assembles available local captures; `node scripts/serve-reference-recordings.mjs` serves the player on 127.0.0.1:4321. See [reference observations](research/REFERENCE-SITES-NOTES.md).
+
+[Motionmaxxing](research/MOTIONMAXXING.md) is imported into the separate design toolkit at pinned revision `8c8ec0f`. Its source, skill, runtime, examples and license context are retained for later film work. The public source inventory marks it as a reference, rather than a running integration.
 
 The current polish pass replaces the four-frame walk with a continuous glide, targets display-paced rendering around 60 fps, keeps the white theme-trimmed chair visible around Sub, and uses cached lights and screen graphics. Theme selection is click-only. The center display shows a btop-inspired view and meaningful incident commands; the gaming monitor combines a driving scene with build/service panes. The floor fades into the page and **Say hello** briefly moves the character beyond the room boundary on desktop. Webamp runs separately with an original local synth loop; see `MUSIC.md`. Live browser review verified the chair, room boundary effect, theme selection/restoration, phone layouts and actual Radio playback. This browser reported approximately 50 fps; 60 fps remains a target. See `QA.md` for evidence and limits.
 

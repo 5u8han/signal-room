@@ -1,16 +1,16 @@
 {
   "schema": 1,
-  "reviewed_on": "2026-11-04",
+  "reviewed_on": "2026-11-06",
   "scope": "Complete named source catalog plus every retained SKILL.md path, deduplicated across mirror paths and repeated Remotion bundles. No claim of blanket activation.",
-  "raw_skill_file_count": 146,
+  "raw_skill_file_count": 147,
   "unique_guide_entries": 126,
-  "source_entries": 35,
+  "source_entries": 36,
   "counts": {
-    "runtime": 6,
     "adapted": 45,
-    "sample": 67,
-    "reference": 38,
-    "input": 5
+    "runtime": 6,
+    "input": 5,
+    "reference": 40,
+    "sample": 67
   },
   "entries": [
     {
@@ -2730,6 +2730,37 @@
       ],
       "license": "See retained source license context",
       "url": null
+    },
+    {
+      "id": "motionmaxxing",
+      "name": "Motionmaxxing",
+      "group": "Motion film toolkit",
+      "status": "reference",
+      "use": "Reviewed and staged locally for future motion films: timing, staging, kinetic typography and render inspection.",
+      "pages": [
+        "Source workbench"
+      ],
+      "url": "https://github.com/Tejashmakwana/motionmaxxing",
+      "gap": "Separate toolkit checkout. Its runtime and render scripts are not integrated into the live site.",
+      "kind": "source",
+      "license": "Apache-2.0 project; bundled components retain their own notices."
+    },
+    {
+      "id": "motionmaxxing-skill",
+      "name": "Motionmaxxing · film direction",
+      "group": "Motionmaxxing · source guide",
+      "status": "reference",
+      "use": "Frame-authored film planning and review. Website navigation, typing, pause and reduced-motion behavior remain governed by the portfolio brief.",
+      "pages": [
+        "Source workbench"
+      ],
+      "kind": "skill",
+      "description": "Directed motion, deterministic film timelines and visual review.",
+      "paths": [
+        "work/design-toolkit/motionmaxxing/SKILL.md"
+      ],
+      "license": "Apache-2.0 project; see retained LICENSE and NOTICE.",
+      "url": "https://github.com/Tejashmakwana/motionmaxxing/blob/8c8ec0f2a6f6c9a0da15cd24f7b1298ab298368c/SKILL.md"
     }
   ],
   "style_samples": [
@@ -5223,6 +5254,7 @@
     "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-render/SKILL.md",
     "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-saas/SKILL.md",
     "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-studio/SKILL.md",
-    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-upgrade/SKILL.md"
+    "toolkits/staged-web-media-2026-11-01/sources/remotion-skills/skills/remotion-upgrade/SKILL.md",
+    "work/design-toolkit/motionmaxxing/SKILL.md"
   ]
 }

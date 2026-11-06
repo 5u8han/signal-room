@@ -77,3 +77,10 @@ Animation stops when hidden or offscreen, and respects reduced motion. The deskt
 At this handoff, `npm run check` and all twenty automated tests have passed. Browser review has exercised desktop, a 390-pixel phone overview/detail view, HPE shutdown during upgrade, and rear PSU lighting with a saved-choice change and restoration. Final visual QA is still being completed; [QA.md](QA.md) is the source for precise final observations and limitations.
 
 Content rewriting remains pending the project-story intake. Sub wants all abilities represented with equal respect; existing résumé-based page copy is provisional. See [research/CONTENT-INTAKE-V2.md](research/CONTENT-INTAKE-V2.md). Further refinement should use the owner's animation feedback, actual hardware/service details and eventual fourth-theme choice.
+
+
+## November 6 correction: room coverage and display surfaces
+
+The retained navigation-study routes now cover their actual landing field with an aspect-preserved room plane, eliminating the fitted top strip and blurred ambient duplicate. `glass-studies.js` derives `--glass-room-width` from the measured field size, aligns the pop-out canvas, and keeps the gaming desk visible. The phone field is a horizontally scrollable panorama; Whole room is an explicit overview mode. Normal pause/reduced-motion behavior and quiet repair stepping remain available.
+
+Live monitor content is projected to the physical inner-glass quadrilaterals in `homelab-layout.js`. Cached perspective mapping in `homelab-effects.js` fits the center KVM and sloping ultrawide while retaining painted bezels and clipping behind the Legion/headphones. The neutral screen palette has restrained accent color, slight inner-edge falloff and a faint reflection. Projection updates use the existing20/30Hz screen cache cadence. Source-image replacements require remeasuring these surfaces; do not revert them to arbitrary rectangles or scale the image and emission canvas independently.

@@ -8,7 +8,9 @@ for(const[id,name]of[['1','Canopy'],['2','Split Signal'],['3','Glass Spine'],['4
     .replace('<title>5u8han / The home lab</title>',`<title>0${id} / ${name} — Liquid glass landing study</title>`)
     .replace('<link rel="stylesheet" href="homelab.css">','<link rel="stylesheet" href="homelab.css">\n  <link rel="stylesheet" href="glass-studies.css">')
     .replace('<script type="module" src="homelab.js"></script>','<script type="module" src="homelab.js"></script>\n  <script type="module" src="glass-studies.js"></script>')
-    .replace('data-home="homelab"','data-home="homelab" data-glass-variant="'+id+'"');
+    .replace('data-home="homelab"','data-home="homelab" data-glass-variant="'+id+'"')
+    .replace('  <header id="site-header"></header>\n','')
+    .replace('<div class="homelab-art">','<div class="homelab-art">\n        <header id="site-header" class="glass-site-header"></header>');
   await writeFile(new URL('glass-0'+id+'.html',dist),html);
 }
 console.log('Generated four live liquid-glass landing review pages.');

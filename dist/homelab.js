@@ -10,6 +10,7 @@ const frontCanvas=$('#room-front-canvas'),rearCanvas=$('#room-rear-canvas');
 const contexts=[frontCanvas.getContext('2d'),rearCanvas.getContext('2d')];
 const popCanvas=$('#room-popout'),popContext=popCanvas.getContext('2d'),popHeight=1.19;
 const inspector=$('#lab-inspector'),scenariosDialog=$('#lab-scenarios'),consoleDialog=$('#lab-console');
+const glassStudy=Boolean(document.body.dataset.glassVariant);
 const dialogs=[inspector,scenariosDialog,consoleDialog],reduced=matchMedia('(prefers-reduced-motion: reduce)'),small=matchMedia('(max-width:760px)');
 const lifetime=new AbortController(),signal=lifetime.signal;
 const model=createHomelabModel({layout:ACTOR_LAYOUT,initialDelay:12,idleDelay:18});
@@ -21,6 +22,7 @@ const modelById=new Map(DEVICES.map(d=>[d.id,d]));
 let state=model.getState(),actor=null,assets=null,raf=0,lastFrame=0,elapsed=0,lastDOM=0,ready=false,disposed=false;
 let manualPaused=false,visible=true,motion=true,traffic=true,detail=false,inspected=null,themeRelease=null,rear=false,theme=getThemeState();
 let popStarted=-Infinity,worldWidth=0,worldHeight=0,viewportWidth=0,lastDarkness=-1,sampleStart=0,sampleFrames=0;
+const phonePanorama=()=>glassStudy&&small.matches&&!detail;
 const actorButtons=[];
 for(const effect of effects)effect.setOptions({palette:theme.palette});
 let pointer={x:0,y:0,active:false},previousPhase='',previousSerial=0,inspectionSignature='',toastTimer,manualPanUntil=0;
@@ -145,14 +147,14 @@ $('#lab-step').addEventListener('click',()=>{
   model.pause(false);state=model.advance(state.phase==='idle'?.02:Math.max(.02,(durations[state.phase]||1)-state.phaseTime+.02));
   if(state.phase==='repair'&&state.phaseProgress<.01)state=model.advance((state.incident?.repairSeconds||10)*.38);
   model.pause(true);state=model.getState();actor?.update(state,elapsed,0,{motion:false,palette:theme.palette});syncRear();updateDOM(true);
-  if(detail&&actor){const point=actor.position();viewport.scrollLeft=(rear?1-point.x:point.x)*world.clientWidth-viewport.clientWidth*.53;}
+  if((detail||phonePanorama())&&actor){const point=actor.position();viewport.scrollLeft=(rear?1-point.x:point.x)*world.clientWidth-viewport.clientWidth*.53;}
   requestFrame();
 },{signal});
 $('#lab-reset').addEventListener('click',()=>{state=model.reset();popStarted=-Infinity;releaseTheme();if(assets)actor=createHomelabActor({...assets,...WORLD,layout:ACTOR_LAYOUT,effectsLayout:EFFECT_LAYOUT});previousPhase='';updateDOM(true);syncRear();requestFrame();showToast('Checks passing. Back to the desk.');},{signal});
 $('#lab-zoom').addEventListener('click',()=>{
-  detail=!detail;art.dataset.detail=String(detail);$('#lab-zoom').setAttribute('aria-pressed',String(detail));$('#lab-zoom .control-label').textContent=detail?'Whole room':'Detail view';
+  detail=!detail;art.dataset.detail=String(detail);$('#lab-zoom').setAttribute('aria-pressed',String(detail));
   if(!small.matches){if(detail){viewport.style.height=Math.min(innerHeight*.82,1000)+'px';world.style.width=Math.max(viewport.clientWidth*1.35,1500)+'px';viewport.style.overflowX='auto';viewport.style.overflowY='auto';}else{viewport.style.height='';world.style.width='';viewport.style.overflowX='';viewport.style.overflowY='';}}
-  resize();if(detail){const x=state.rearView?1-state.actor.x:state.actor.x;viewport.scrollLeft=x*world.clientWidth-viewport.clientWidth*.5;viewport.scrollTop=Math.max(0,world.clientHeight-viewport.clientHeight);}else{viewport.scrollLeft=0;viewport.scrollTop=0;}requestFrame();
+  resize();if(detail||phonePanorama()){const x=state.rearView?1-state.actor.x:state.actor.x;viewport.scrollLeft=x*world.clientWidth-viewport.clientWidth*.5;viewport.scrollTop=Math.max(0,world.clientHeight-viewport.clientHeight);}else{viewport.scrollLeft=0;viewport.scrollTop=0;}requestFrame();
 },{signal});
 
 function releaseTheme(){if(themeRelease){const release=themeRelease;themeRelease=null;release();}}
@@ -203,7 +205,9 @@ async function toggleAudio(){
 $('#lab-sound').addEventListener('click',toggleAudio,{signal});
 
 function resize(){
-  if(!ready)return;worldWidth=world.clientWidth;worldHeight=world.clientHeight;viewportWidth=viewport.clientWidth;
+  $('#lab-zoom .control-label').textContent=glassStudy&&small.matches?(detail?'Immersive view':'Whole room'):(detail?'Whole room':'Detail view');
+  if(!ready)return;const oldWidth=worldWidth,oldViewport=viewportWidth;worldWidth=world.clientWidth;worldHeight=world.clientHeight;viewportWidth=viewport.clientWidth;
+  if(phonePanorama()&&(Math.abs(oldWidth-worldWidth)>.5||oldViewport!==viewportWidth)){const x=state.rearView?1-state.actor.x:state.actor.x;viewport.scrollLeft=clamp(x*worldWidth-viewportWidth*.53,0,Math.max(0,worldWidth-viewportWidth));}
   const w=Math.max(320,Math.min(2560,Math.round(worldWidth*Math.min(devicePixelRatio||1,1.5)))),h=Math.round(w*WORLD.height/WORLD.width);
   for(const canvas of [frontCanvas,rearCanvas]){if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;delete canvas.dataset.painted;}}
   if(!small.matches&&!detail){popCanvas.width=w;popCanvas.height=Math.round(h*popHeight);popCanvas.style.height=worldHeight*popHeight+'px';}
@@ -231,7 +235,7 @@ function render(dt=0){
   canvas.dataset.painted='true';
   const position=actor.position();
   for(const entry of actorButtons){const x=entry.isRear?1-position.x:position.x,transform='translate3d('+Math.round((x-.045)*worldWidth)+'px,'+Math.round((position.y-.40)*worldHeight)+'px,0)';if(entry.lastTransform!==transform){entry.lastTransform=transform;entry.button.style.transform=transform;}}
-  if(detail&&performance.now()>manualPanUntil&&dt>0){const x=rear?1-position.x:position.x,target=clamp(x*worldWidth-viewportWidth*.53,0,Math.max(0,worldWidth-viewportWidth));viewport.scrollLeft+=(target-viewport.scrollLeft)*(1-Math.exp(-2.2*dt));}
+  if((detail||phonePanorama())&&performance.now()>manualPanUntil&&dt>0){const x=rear?1-position.x:position.x,target=clamp(x*worldWidth-viewportWidth*.53,0,Math.max(0,worldWidth-viewportWidth));viewport.scrollLeft+=(target-viewport.scrollLeft)*(1-Math.exp(-2.2*dt));}
 }
 
 function frame(timestamp){
@@ -250,6 +254,7 @@ function frame(timestamp){
 function requestFrame(){if(!raf&&!disposed&&ready&&visible&&!document.hidden)raf=requestAnimationFrame(frame);}
 function pointerState(event){const r=world.getBoundingClientRect();pointer={x:clamp((event.clientX-r.left)/r.width),y:clamp((event.clientY-r.top)/r.height),active:true};if(!motion||manualPaused)requestFrame();}
 world.addEventListener('pointermove',pointerState,{signal,passive:true});world.addEventListener('pointerleave',()=>{pointer.active=false;if(!motion||manualPaused)requestFrame();},{signal});viewport.addEventListener('pointerdown',()=>manualPanUntil=performance.now()+4500,{signal,passive:true});viewport.addEventListener('wheel',()=>manualPanUntil=performance.now()+4500,{signal,passive:true});
+viewport.addEventListener('focusin',()=>manualPanUntil=performance.now()+4500,{signal});
 window.addEventListener('portfolio:motionchange',syncMotion,{signal});reduced.addEventListener('change',syncMotion,{signal});
 window.addEventListener('portfolio:themechange',event=>{theme=event.detail;for(const effect of effects)effect.setOptions({palette:theme.palette});requestFrame();},{signal});
 document.addEventListener('visibilitychange',()=>{lastFrame=0;manageTheme();syncAudio();if(!document.hidden)requestFrame();else if(raf){cancelAnimationFrame(raf);raf=0;}},{signal});

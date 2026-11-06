@@ -22,3 +22,10 @@ The interface, technical illustrations, generative algorithms, captions, 20 Moti
 The browser does not contact package CDNs, image CDNs, font services, analytics or voice providers. The local server's policy restricts resources to itself and necessary local data/blob exports. Official links in the source inventory open only when a visitor follows them.
 
 Public design ideas from Fluent, shadcn, Skiper, beUI, React Bits, Magic UI, Elaya, Codrops and the other sources are adapted through original implementation. Raw paid/restricted component collections and inactive SKILL.md text are not republished as application code. Remotion skill licensing/source gaps remain attached to the relevant reference entries. `VENDOR.json` records bundle byte counts and SHA-256 hashes.
+
+
+## Staged reference additions / November 6
+
+Motionmaxxing is retained as a complete separate checkout at revision `8c8ec0f2a6f6c9a0da15cd24f7b1298ab298368c`; see `research/MOTIONMAXXING.md`. Its Apache-2.0 LICENSE and NOTICE, plus separate bundled GSAP/Three/opentype/Inter terms, remain with the upstream source. No Motionmaxxing vendor runtime or showcase film was copied into the public portfolio bundle.
+
+The user-requested Delta Cafés, Roveia and Atmos About recordings remain local design-reference captures in ignored `research/recordings/`. They are not portfolio films or public deployment assets; their original source links remain attached in the player and research notes.

@@ -4,8 +4,16 @@
 export const WORLD={width:1920,height:1080};
 export const EFFECT_LAYOUT={
   cableY:.267,
-  console:{x:.405,y:.407,w:.143,h:.104},
-  workstationScreen:{x:.814,y:.479,w:.158,h:.082},
+  // Inner glass edges measured on the 1672×941 room illustration. Quads leave
+  // the painted bezels untouched; foreground objects are separate occlusions.
+  console:{x:677/1672,y:383/941,w:241/1672,h:100/941,
+    quad:[{x:677/1672,y:384/941},{x:918/1672,y:383/941},{x:918/1672,y:483/941},{x:678/1672,y:483/941}]},
+  workstationScreen:{x:1358/1672,y:447/941,w:271/1672,h:104/941,
+    quad:[{x:1358/1672,y:447/941},{x:1629/1672,y:450/941},{x:1626/1672,y:551/941},{x:1359/1672,y:534/941}],
+    occlusions:[
+      [{x:1605/1672,y:475/941},{x:1672/1672,y:478/941},{x:1672/1672,y:562/941},{x:1597/1672,y:553/941}],
+      [{x:1352/1672,y:509/941},{x:1362/1672,y:512/941},{x:1368/1672,y:524/941},{x:1369/1672,y:544/941},{x:1352/1672,y:544/941}]
+    ]},
   nodes:{fiber:{x:.195,y:.392},coax:{x:.235,y:.363},cellular:{x:.267,y:.394}},
   devices:{
     edge:{x:.183,y:.348,w:.102,h:.068,kind:'edge'},

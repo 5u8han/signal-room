@@ -11,7 +11,8 @@
  * Layout coordinates are normalized to the whole artwork. A device is a rect
  * {x,y,w,h,kind,rows?,cols?,label?,driveArea?,portsArea?,statusPoint?}.
  * driveArea/portsArea are also GLOBAL normalized rects, statusPoint a global
- * normalized point. console/workstationScreen are the INNER SCREEN rects.
+ * normalized point. console/workstationScreen are INNER SCREEN rects, with
+ * optional quad:[TL,TR,BR,BL] and occlusions:[polygon] in artwork coordinates.
  * Optional nodes:{id:{x,y}} and links:[{from,to,points?,color?}] replace routes.
  * Optional rear:{devices,console,nodes,links} aligns the reverse illustration.
  * Front/rear rects are deliberately authored separately, never inferred from a
@@ -71,6 +72,10 @@ export const DEFAULT_HOMELAB_EFFECT_LAYOUT={
 
 function rect(value,width,height){return{x:value.x*width,y:value.y*height,w:value.w*width,h:value.h*height};}
 function point(value,width,height){return{x:value.x*width,y:value.y*height};}
+function display(value,width,height){
+  if(!value)return null;
+  return{...rect(value,width,height),quad:value.quad?.map(p=>point(p,width,height)),occlusions:value.occlusions?.map(polygon=>polygon.map(p=>point(p,width,height)))};
+}
 function inner(box,x,y,w,h){return{x:box.x+box.w*x,y:box.y+box.h*y,w:box.w*w,h:box.h*h};}
 function colorRGB(hex){
   if(!colors.has(hex))colors.set(hex,[1,3,5].map(index=>parseInt(hex.slice(index,index+2),16)));
@@ -91,6 +96,11 @@ function roomPalette(palette){
     panel:blendColor(C.ink,accent,.16),
   };
 }
+function monitorPalette(accent){
+  // Physical displays retain a near-black neutral surface. Theme color belongs
+  // in restrained UI details, not an opaque green/pink rectangle over the art.
+  return{accent:blendColor(accent,'#8aa9b8',.68),emission:blendColor(accent,'#adc0ca',.76),background:'#08131c',panel:'#101d27',border:'#2c424d'};
+}
 function makeSurface(width,height){
   const surface=typeof OffscreenCanvas==='function'?new OffscreenCanvas(width,height):globalThis.document?.createElement('canvas');
   if(!surface)return null;
@@ -98,6 +108,65 @@ function makeSurface(width,height){
   surface.height=height;
   const ctx=surface.getContext('2d');
   return ctx?{surface,ctx}:null;
+}
+function pathPolygon(ctx,points){
+  ctx.moveTo(points[0].x,points[0].y);
+  for(const point of points.slice(1))ctx.lineTo(point.x,point.y);
+  ctx.closePath();
+}
+function clipDisplay(ctx,box){
+  ctx.beginPath();
+  if(box.quad)pathPolygon(ctx,box.quad);else ctx.rect(box.x,box.y,box.w,box.h);
+  ctx.clip();
+  if(box.occlusions?.length){
+    ctx.beginPath();ctx.rect(box.x-1,box.y-1,box.w+2,box.h+2);
+    for(const polygon of box.occlusions)pathPolygon(ctx,polygon);
+    ctx.clip('evenodd');
+  }
+}
+function screenMesh(quad,textureWidth,textureHeight){
+  const[p0,p1,p2,p3]=quad;
+  const dx1=p1.x-p2.x,dx2=p3.x-p2.x,dx3=p0.x-p1.x+p2.x-p3.x;
+  const dy1=p1.y-p2.y,dy2=p3.y-p2.y,dy3=p0.y-p1.y+p2.y-p3.y;
+  const determinant=dx1*dy2-dx2*dy1;
+  const g=Math.abs(determinant)>1e-8?(dx3*dy2-dx2*dy3)/determinant:0;
+  const h=Math.abs(determinant)>1e-8?(dx1*dy3-dx3*dy1)/determinant:0;
+  const a=p1.x-p0.x+g*p1.x,b=p3.x-p0.x+h*p3.x;
+  const d=p1.y-p0.y+g*p1.y,e=p3.y-p0.y+h*p3.y;
+  const project=(u,v)=>{const denominator=g*u+h*v+1;return{x:(a*u+b*v+p0.x)/denominator,y:(d*u+e*v+p0.y)/denominator}};
+  const triangles=[],columns=8,rows=2;
+  const vertex=(u,v)=>({source:{x:u*textureWidth,y:v*textureHeight},destination:project(u,v)});
+  function triangle(vertices){
+    const[s0,s1,s2]=vertices.map(v=>v.source),[t0,t1,t2]=vertices.map(v=>v.destination);
+    const denominator=(s1.x-s0.x)*(s2.y-s0.y)-(s2.x-s0.x)*(s1.y-s0.y);
+    const xx=((t1.x-t0.x)*(s2.y-s0.y)-(t2.x-t0.x)*(s1.y-s0.y))/denominator;
+    const xy=((t2.x-t0.x)*(s1.x-s0.x)-(t1.x-t0.x)*(s2.x-s0.x))/denominator;
+    const yx=((t1.y-t0.y)*(s2.y-s0.y)-(t2.y-t0.y)*(s1.y-s0.y))/denominator;
+    const yy=((t2.y-t0.y)*(s1.x-s0.x)-(t1.y-t0.y)*(s2.x-s0.x))/denominator;
+    const center={x:(t0.x+t1.x+t2.x)/3,y:(t0.y+t1.y+t2.y)/3};
+    // A subpixel overlap avoids antialiased cracks between opaque triangles.
+    const clip=[t0,t1,t2].map(point=>{const dx=point.x-center.x,dy=point.y-center.y,length=Math.hypot(dx,dy)||1;return{x:point.x+dx/length*.35,y:point.y+dy/length*.35}});
+    triangles.push({clip,matrix:[xx,yx,xy,yy,t0.x-xx*s0.x-xy*s0.y,t0.y-yx*s0.x-yy*s0.y]});
+  }
+  for(let row=0;row<rows;row++)for(let column=0;column<columns;column++){
+    const tl=vertex(column/columns,row/rows),tr=vertex((column+1)/columns,row/rows);
+    const br=vertex((column+1)/columns,(row+1)/rows),bl=vertex(column/columns,(row+1)/rows);
+    triangle([tl,tr,br]);triangle([tl,br,bl]);
+  }
+  return triangles;
+}
+function projectDisplay(cache,box){
+  const mapped=cache.mapped;
+  if(!mapped)return;
+  const ctx=mapped.ctx,sx=mapped.surface.width/box.w,sy=mapped.surface.height/box.h;
+  ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,mapped.surface.width,mapped.surface.height);
+  ctx.setTransform(sx,0,0,sy,-box.x*sx,-box.y*sy);
+  ctx.save();clipDisplay(ctx,box);
+  for(const triangle of cache.mesh){
+    ctx.save();ctx.beginPath();pathPolygon(ctx,triangle.clip);ctx.clip();
+    ctx.transform(...triangle.matrix);ctx.drawImage(cache.surface,0,0);ctx.restore();
+  }
+  ctx.restore();
 }
 function roundRect(ctx,box,radius,fill,stroke){ctx.beginPath();ctx.roundRect(box.x,box.y,box.w,box.h,radius);if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.stroke()}}
 function line(ctx,points,color,width=1){if(points.length<2)return;ctx.beginPath();ctx.moveTo(points[0].x,points[0].y);for(const p of points.slice(1))ctx.lineTo(p.x,p.y);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke()}
@@ -208,13 +277,13 @@ function inBox(x,y,b){return x>=b.x&&y>=b.y&&x<=b.x+b.w&&y<=b.y+b.h;}
 
 export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
   let configuration,front,rear,lastState={},lastTime=0,disposed=false;
-  let theme=roomPalette();
+  let theme=roomPalette(),monitor=monitorPalette(theme.accent);
   const options={dataFlow:true,cables:true,motes:true};
   const pulses=[],springs=new Map(),screens=new Map();
   function build(source){
     const normalizedDevices=source.devices||{};
     const devices=Object.fromEntries(Object.entries(normalizedDevices).map(([id,data])=>[id,{...data,id,label:data.label||DEVICE_LABELS[id]||id,bounds:rect(data,width,height)}]));
-    const console=source.console?rect(source.console,width,height):null,workstationScreen=source.workstationScreen?rect(source.workstationScreen,width,height):null;
+    const console=display(source.console,width,height),workstationScreen=display(source.workstationScreen,width,height);
     const nodes={};for(const[id,data]of Object.entries(devices))nodes[id]={x:data.bounds.x+data.bounds.w*.5,y:data.bounds.y+data.bounds.h*.5};
     if(console)nodes.console={x:console.x+console.w*.5,y:console.y+console.h*.5};
     for(const[id,data]of Object.entries(source.nodes||{}))nodes[id]=point(data,width,height);
@@ -336,16 +405,16 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     ctx.beginPath();
     ctx.roundRect(box.x,box.y,box.w,box.h,Math.min(3,box.w*.012));
     ctx.clip();
-    ctx.fillStyle=theme.background;
+    ctx.fillStyle=monitor.background;
     ctx.fillRect(box.x,box.y,box.w,box.h);
   }
   function telemetryPanel(ctx,box,title){
-    ctx.fillStyle=theme.panel;
+    ctx.fillStyle=monitor.panel;
     ctx.fillRect(box.x,box.y,box.w,box.h);
     ctx.lineWidth=.65;
-    ctx.strokeStyle=theme.border;
+    ctx.strokeStyle=monitor.border;
     ctx.strokeRect(box.x,box.y,box.w,box.h);
-    label(ctx,title,box.x+5,box.y+5,6.2,theme.emission);
+    label(ctx,title,box.x+5,box.y+5,6.2,monitor.emission);
   }
   function plot(ctx,box,values,color){
     const baseline=box.y+box.h;
@@ -355,7 +424,7 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     for(const p of points)ctx.lineTo(p.x,p.y);
     ctx.lineTo(box.x+box.w,baseline);
     ctx.closePath();
-    ctx.fillStyle=rgba(color,.21);
+    ctx.fillStyle=rgba(color,.13);
     ctx.fill();
     line(ctx,points,color,.8);
   }
@@ -377,35 +446,35 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     const host=healthOf(state,'hpe'),gpu=healthOf(state,'gpu'),storage=healthOf(state,'storage');
     const load=clamp((host.load+gpu.load+storage.load)/3),memory=clamp(host.memoryUsed??.43);
     const timeText=String(Math.floor(time/60)).padStart(2,'0')+':'+String(Math.floor(time%60)).padStart(2,'0');
-    ctx.fillStyle=rgba(theme.accent,.15);
+    ctx.fillStyle=rgba(monitor.accent,.055);
     ctx.fillRect(x,y,w,head);
-    label(ctx,'sub@kvm:~$ btop',x+pad,y+head*.52,8,theme.emission);
+    label(ctx,'sub@kvm:~$ btop',x+pad,y+head*.52,8,monitor.emission);
     label(ctx,'uptime 01:'+timeText,x+w-pad,y+head*.52,6.1,C.white,'right');
     telemetryPanel(ctx,cpu,'CPU');
     label(ctx,Math.round(load*100)+'%  '+Math.round(host.temperature??37)+'°C',cpu.x+cpu.w-pad,cpu.y+5,5.9,C.white,'right');
-    plot(ctx,inner(cpu,.035,.35,.93,.53),graphValues(time,load,.19),theme.emission);
+    plot(ctx,inner(cpu,.035,.35,.93,.53),graphValues(time,load,.19),monitor.emission);
     telemetryPanel(ctx,mem,'MEM');
     label(ctx,(64*memory).toFixed(1)+' / 64 GiB',mem.x+mem.w-pad,mem.y+5,5.8,C.white,'right');
-    ctx.fillStyle=theme.background;
+    ctx.fillStyle=monitor.background;
     ctx.fillRect(mem.x+5,mem.y+10,mem.w-10,3.8);
-    ctx.fillStyle=memory>.93?C.amber:theme.emission;
+    ctx.fillStyle=memory>.93?C.amber:monitor.emission;
     ctx.fillRect(mem.x+5,mem.y+10,(mem.w-10)*memory,3.8);
     telemetryPanel(ctx,net,'NET');
     const route=state.wan?.active;
     label(ctx,route?route+'  ↓ '+(2+load*15).toFixed(1)+'M':'no uplink',net.x+net.w-pad,net.y+5,5.8,route?C.white:C.amber,'right');
-    plot(ctx,inner(net,.035,.46,.93,.45),graphValues(time*.75,route?load*.75:0,route?.19:0,25),theme.emission);
+    plot(ctx,inner(net,.035,.46,.93,.45),graphValues(time*.75,route?load*.75:0,route?.19:0,25),monitor.emission);
     telemetryPanel(ctx,processes,'PROCESSES');
-    label(ctx,'PID   COMMAND       CPU',rightX+5,panelsY+14,6.1,theme.emission);
+    label(ctx,'PID   COMMAND       CPU',rightX+5,panelsY+14,6.1,monitor.emission);
     const list=[['308','qemu-system',host.load*.6],['824','media-api',.06+load*.26],['495','node_export',.012+load*.14],['718','tailscaled',.019+load*.09],['251','sshd',.008+load*.1],['417','caddy',.008+load*.07]];
     const rowHeight=(processes.h-21)/list.length;
     list.forEach(([pid,name,usage],i)=>{
       const yy=panelsY+21+i*rowHeight;
       if(i===0){
-        ctx.fillStyle=rgba(theme.emission,.1);
+        ctx.fillStyle=rgba(monitor.emission,.1);
         ctx.fillRect(rightX+2,yy-rowHeight*.42,rightW-4,rowHeight);
       }
       label(ctx,pid+'   '+name,rightX+5,yy,6.1,C.white);
-      label(ctx,(usage*100).toFixed(1),rightX+rightW-pad,yy,6.1,theme.emission,'right');
+      label(ctx,(usage*100).toFixed(1),rightX+rightW-pad,yy,6.1,monitor.emission,'right');
     });
     label(ctx,'kvm-01  •  fabric '+(route?'up':'unavailable')+'  •  '+(state.console?.title||'Checks passing'),x+pad,y+h-bottom*.55,6,route?C.muted:C.amber);
   }
@@ -446,12 +515,12 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     }
     function typed(command,start){
       const count=clamp(Math.floor((elapsed-start)*31),0,command.length);
-      write(prompt+command.slice(0,count)+(count<command.length&&frac(time*1.4)<.55?'▌':''),theme.emission);
+      write(prompt+command.slice(0,count)+(count<command.length&&frac(time*1.4)<.55?'▌':''),monitor.emission);
       return count===command.length;
     }
     let session='KVM / EVENT STREAM';
     if(phase==='notice'||phase==='to-console'){
-      write('sub@kvm:~$ journalctl -f -t lab-watch',theme.emission);
+      write('sub@kvm:~$ journalctl -f -t lab-watch',monitor.emission);
       write('lab-watch: '+(issue?.title||'Inspecting event'),tint);
       for(const entry of state.console?.lines||[])write(entry,C.white);
     }else if(phase==='diagnose'){
@@ -459,7 +528,7 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
       if(commands.host!=='kvm'){
         const ssh='ssh sub@'+commands.host;
         const count=clamp(Math.floor(elapsed*32),0,ssh.length);
-        write('sub@kvm:~$ '+ssh.slice(0,count)+(count<ssh.length&&frac(time*1.4)<.55?'▌':''),theme.emission);
+        write('sub@kvm:~$ '+ssh.slice(0,count)+(count<ssh.length&&frac(time*1.4)<.55?'▌':''),monitor.emission);
       }
       const delay=commands.host==='kvm'?.1:1.0;
       if(elapsed>=delay&&typed(commands.check,delay)){
@@ -477,21 +546,21 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
       }
     }else{
       session=commands.host.toUpperCase()+' / '+(phase==='repair'?'MAINTENANCE':'DIAGNOSTIC');
-      write(prompt+commands.check,theme.emission);
+      write(prompt+commands.check,monitor.emission);
       if(phase==='repair'){
         for(const entry of state.console?.lines||[])write('# '+entry,C.white);
       }else{
         for(const entry of terminalOutput(issue?.kind,state,false))write(entry,C.white);
       }
     }
-    ctx.fillStyle=rgba(theme.accent,.23);
+    ctx.fillStyle=rgba(monitor.accent,.10);
     ctx.fillRect(x,y,w,head);
-    label(ctx,session,x+pad,y+head*.54,7.2,theme.emission);
+    label(ctx,session,x+pad,y+head*.54,7.2,monitor.emission);
     label(ctx,phase==='verify'?'CHECKING':issue?.severity==='critical'?'CRITICAL':'ALERT',x+w-pad,y+head*.54,6.2,phase==='verify'?C.green:tint,'right');
     const start=rows.length>maxRows?rows.length-maxRows:0;
     rows.slice(start).forEach(({value,color},index)=>label(ctx,value,x+pad,y+head+7+index*rowHeight,font,color));
     if(rows.length<maxRows&&frac(time*1.4)<.55&&phase!=='diagnose'){
-      ctx.fillStyle=theme.emission;
+      ctx.fillStyle=monitor.emission;
       ctx.fillRect(x+pad,y+head+4+rows.length*rowHeight,font*.55,font*.9);
     }
   }
@@ -508,18 +577,18 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     const raceTime=paused?(state.incident.startedAt??time):time;
     const sky=ctx.createLinearGradient(0,y,0,y+h);
     sky.addColorStop(0,'#101b37');
-    sky.addColorStop(.48,blendColor('#2d1b4c',theme.accent,.3));
-    sky.addColorStop(.52,theme.panel);
+    sky.addColorStop(.48,blendColor('#2d1b4c',monitor.accent,.3));
+    sky.addColorStop(.52,monitor.panel);
     sky.addColorStop(1,'#101827');
     ctx.fillStyle=sky;
     ctx.fillRect(x,y,w,h);
-    spill(ctx,x+w*.68,horizon,w*.48,h*.81,theme.emission,.6);
+    spill(ctx,x+w*.68,horizon,w*.48,h*.81,monitor.emission,.6);
     for(let i=0;i<18;i++){
       const seed=seedOf('ridge'+i),xx=x+i*w/18,bh=h*(.015+seed*.16);
       ctx.fillStyle=i%2?'#162034':'#141a30';
       ctx.fillRect(xx,horizon-bh,w/18+.3,bh+2);
       if(seed>.37){
-        ctx.fillStyle=rgba(theme.emission,.55);
+        ctx.fillStyle=rgba(monitor.emission,.55);
         ctx.fillRect(xx+2,horizon-bh+2,1.4,1.15);
       }
     }
@@ -534,16 +603,16 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     ctx.closePath();
     ctx.fillStyle='#141722';
     ctx.fill();
-    ctx.strokeStyle=rgba(theme.emission,.59);
+    ctx.strokeStyle=rgba(monitor.emission,.59);
     ctx.lineWidth=1;
     ctx.stroke();
     for(let i=0;i<13;i++){
       const p=frac(raceTime*1.27+i/13),q=clamp(p+.038);
-      const color=rgba(theme.emission,.31+p*.61);
+      const color=rgba(monitor.emission,.31+p*.61);
       line(ctx,[{x:center(p),y:yy(p)},{x:center(q),y:yy(q)}],color,.65+p*.95);
       for(const side of [-1,1]){
         const edge=center(p)+half(p)*side;
-        ctx.fillStyle=rgba(theme.emission,.58);
+        ctx.fillStyle=rgba(monitor.emission,.58);
         ctx.fillRect(edge-1,yy(p)-p*1.7,2,p*1.7+1);
       }
     }
@@ -556,14 +625,14 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     ctx.closePath();
     ctx.fillStyle='#1f273a';
     ctx.fill();
-    ctx.strokeStyle=rgba(theme.emission,.61);
+    ctx.strokeStyle=rgba(monitor.emission,.61);
     ctx.lineWidth=.7;
     ctx.stroke();
     dot(ctx,carX-w*.058,carY+h*.073,1.4,C.red,.9,3);
     dot(ctx,carX+w*.058,carY+h*.073,1.4,C.red,.9,3);
     ctx.fillStyle='rgba(7,12,20,.69)';
     ctx.fillRect(x,y,w,12);
-    label(ctx,'NIGHT LOOP',x+5,y+6.2,7,theme.emission);
+    label(ctx,'NIGHT LOOP',x+5,y+6.2,7,monitor.emission);
     label(ctx,paused?'PAUSED':Math.round(164+Math.sin(raceTime*.8)*14)+' KM/H',x+w-5,y+6.2,6.4,C.white,'right');
   }
   function drawWorkstation(ctx,box,state,time){
@@ -588,21 +657,35 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     const commands=['$ ./ops/deploy.sh','$ rsync -a snapshots/ vault:','$ npm run check'];
     const progress=frac(time/18);
     const service=state.services?.application||'healthy';
-    ctx.fillStyle=theme.panel;
+    ctx.fillStyle=monitor.panel;
     ctx.fillRect(x,y,w,h);
-    ctx.fillStyle=theme.border;
+    ctx.fillStyle=monitor.border;
     ctx.fillRect(x,y,1.15,h);
-    label(ctx,'WORKSPACE  /  02',x+pad,y+h*.10,6.5,theme.emission);
+    label(ctx,'WORKSPACE  /  02',x+pad,y+h*.10,6.5,monitor.emission);
     label(ctx,commands[job],x+pad,y+h*.27,6.3,C.white);
     label(ctx,['build · verify · deploy','incremental snapshot','lint · test · package'][job],x+pad,y+h*.41,5.8,C.muted);
-    ctx.fillStyle=theme.background;
+    ctx.fillStyle=monitor.background;
     ctx.fillRect(x+pad,y+h*.49,w-pad*2,3);
-    ctx.fillStyle=theme.emission;
+    ctx.fillStyle=monitor.emission;
     ctx.fillRect(x+pad,y+h*.49,(w-pad*2)*progress,3);
-    label(ctx,'PRODUCTION',x+pad,y+h*.67,6.1,theme.emission);
+    label(ctx,'PRODUCTION',x+pad,y+h*.67,6.1,monitor.emission);
     label(ctx,'api '+(service==='healthy'?'200':'503')+'  /  '+(state.wan?.active||'no uplink'),x+pad,y+h*.82,6.3,service==='healthy'?C.green:C.red);
     label(ctx,'CPU '+Math.round(load*100)+'%',x+w-pad,y+h*.93,5.7,C.muted,'right');
     ctx.restore();
+  }
+  function displayCoating(ctx,box){
+    const{x,y,w,h}=box;
+    // Low-contrast edge falloff and a faint window reflection belong inside
+    // the glass. They do not create an outer glow or repaint the bezel.
+    const edges=ctx.createLinearGradient(x,y,x+w,y);
+    edges.addColorStop(0,'rgba(0,0,0,.19)');edges.addColorStop(.13,'rgba(0,0,0,0)');
+    edges.addColorStop(.82,'rgba(0,0,0,0)');edges.addColorStop(1,'rgba(0,0,0,.24)');
+    ctx.fillStyle=edges;ctx.fillRect(x,y,w,h);
+    const glass=ctx.createLinearGradient(x,y,x+w*.75,y+h);
+    glass.addColorStop(0,'rgba(183,204,220,.055)');glass.addColorStop(.27,'rgba(183,204,220,.012)');
+    glass.addColorStop(.47,'rgba(183,204,220,.03)');glass.addColorStop(.6,'rgba(183,204,220,0)');glass.addColorStop(1,'rgba(0,0,0,.10)');
+    ctx.fillStyle=glass;ctx.fillRect(x,y,w,h);
+    ctx.lineWidth=1.1;ctx.strokeStyle='rgba(0,0,0,.55)';ctx.strokeRect(x+.5,y+.5,w-1,h-1);
   }
   function cachedScreen(ctx,name,box,state,time,fps,paint){
     if(!box)return;
@@ -610,23 +693,33 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
     if(!cache){
       const buffer=makeSurface(Math.ceil(box.w*1.5),Math.ceil(box.h*1.5));
       cache=buffer?{...buffer,frame:-1,signature:''}:null;
+      if(cache&&box.quad){
+        cache.mapped=makeSurface(cache.surface.width,cache.surface.height);
+        cache.mesh=screenMesh(box.quad,cache.surface.width,cache.surface.height);
+      }
       screens.set(name,cache);
     }
     if(!cache){
-      paint(ctx,box,state,time);
+      ctx.save();clipDisplay(ctx,box);paint(ctx,box,state,time);displayCoating(ctx,box);ctx.restore();
       return;
     }
     const frame=Math.floor(time*fps);
-    const signature=[state.phase,state.incident?.serial,state.console?.mode,state.console?.lines?.join('|'),state.wan?.active,state.devices?.workstation?.power,theme.accent].join(':');
+    const signature=[state.phase,state.incident?.serial,state.console?.mode,state.console?.lines?.join('|'),state.wan?.active,state.devices?.workstation?.power,monitor.accent].join(':');
     if(cache.frame!==frame||cache.signature!==signature){
       const screen=cache.ctx;
       screen.setTransform(cache.surface.width/box.w,0,0,cache.surface.height/box.h,0,0);
       screen.clearRect(0,0,box.w,box.h);
       paint(screen,{x:0,y:0,w:box.w,h:box.h},state,time);
+      displayCoating(screen,{x:0,y:0,w:box.w,h:box.h});
+      if(cache.mapped)projectDisplay(cache,box);
       cache.frame=frame;
       cache.signature=signature;
     }
-    ctx.drawImage(cache.surface,box.x,box.y,box.w,box.h);
+    ctx.save();
+    if(box.quad&&!cache.mapped)clipDisplay(ctx,box);
+    ctx.globalAlpha*=name==='workstation'&&isOff(healthOf(state,'workstation'))?1:.96;
+    ctx.drawImage(cache.mapped?.surface||cache.surface,box.x,box.y,box.w,box.h);
+    ctx.restore();
   }
   function drawRoutes(ctx,view,state,time,dt,pointer){
     const px=pointer&&pointer.active!==false?pointer.x*width:-width,py=pointer&&pointer.active!==false?pointer.y*height:-height;
@@ -708,6 +801,6 @@ export function createHomelabEffects({width=1920,height=1080,layout={}}={}){
   setLayout(layout);
   return{draw,setLayout,setOptions(next={}){
     for(const key of Object.keys(options))if(key in next)options[key]=!!next[key];
-    if(next.palette){const nextTheme=roomPalette(next.palette);if(nextTheme.accent!==theme.accent){theme=nextTheme;screens.clear();}}
+    if(next.palette){const nextTheme=roomPalette(next.palette);if(nextTheme.accent!==theme.accent){theme=nextTheme;monitor=monitorPalette(theme.accent);screens.clear();}}
   },hitTest,tap,dispose(){disposed=true;pulses.length=0;springs.clear();screens.clear();}};
 }

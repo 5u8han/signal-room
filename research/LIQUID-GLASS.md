@@ -1,5 +1,7 @@
 # Liquid-glass landing studies
 
+**Later feedback / correction:** Sub rejected the four menus and called Canopy the closest. The fitted plane, blurred ambient extension, broad pale/pink veils and pointer/SVG highlights from the initial experiment were removed. The live room now covers the landing field with restrained neutral controls. The initial implementation notes below are historical; the next navigation direction awaits Sub's choices from the three recorded reference sites. See `REFERENCE-SITES-NOTES.md`.
+
 Retained reference and implementation map · November 6, 2026
 
 ## Design intent

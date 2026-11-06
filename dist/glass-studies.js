@@ -30,11 +30,17 @@ if(variant&&art&&hero&&header){
   const typebar=art.querySelector('.homelab-typebar');
   typebar?.classList.add('glass-surface','glass-typebar');
 
-  // The fitted room is narrower than the browser. Keep the existing pop-out
-  // canvas aligned to that exact plane without stretching the character.
+  // Cover the actual field, including the min-height on short viewports.
+  // A fitted/narrower plane leaves a strip above the room on taller displays.
   const world=art.querySelector('#room-world'),popout=hero.querySelector('#room-popout');
+  let lastCoverWidth=0;
   const alignPopout=()=>{
     if(!world||!popout)return;
+    if(art.dataset.detail!=='true'){
+      const field=art.getBoundingClientRect();
+      const coverWidth=Math.ceil(Math.max(field.width,field.height*1672/941));
+      if(Math.abs(coverWidth-lastCoverWidth)>.5){lastCoverWidth=coverWidth;art.style.setProperty('--glass-room-width',coverWidth+'px');}
+    }
     const room=world.getBoundingClientRect(),section=hero.getBoundingClientRect();
     popout.style.left=(room.left-section.left)+'px';
     popout.style.top=(room.top-section.top)+'px';
@@ -49,51 +55,8 @@ if(variant&&art&&hero&&header){
   strip.innerHTML=`<div class="glass-study-heading"><p class="glass-study-kicker">LIQUID GLASS / LANDING STUDIES</p><h2><span>0${variant.id}</span> ${variant.name}</h2><p>${variant.description}</p></div><nav class="glass-study-choices" aria-label="Landing design examples">${variants.map(item=>`<a href="glass-0${item.id}.html"${item.id===variant.id?' aria-current="page"':''}><span>0${item.id}</span>${item.name}<span aria-hidden="true">↗</span></a>`).join('')}<a class="glass-study-compare" href="glass-studies.html">Compare all four<span aria-hidden="true">↗</span></a></nav>`;
   hero.after(strip);
 
-  // A static, low-frequency displacement provides optional optical bending.
-  // CSS should keep a blur/saturation fallback where SVG backdrop filters are
-  // unsupported; no noise texture or filter primitive animates every frame.
-  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
-  svg.setAttribute('width','0');
-  svg.setAttribute('height','0');
-  svg.setAttribute('aria-hidden','true');
-  svg.setAttribute('focusable','false');
-  svg.classList.add('glass-optics');
-  svg.style.cssText='position:absolute;width:0;height:0;overflow:hidden;pointer-events:none';
-  svg.innerHTML='<defs><filter id="glass-lens" x="-5%" y="-10%" width="110%" height="120%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.025" numOctaves="1" seed="17" result="refraction"/><feGaussianBlur in="refraction" stdDeviation="2" result="smooth-refraction"/><feDisplacementMap in="SourceGraphic" in2="smooth-refraction" scale="9" xChannelSelector="R" yChannelSelector="G" result="refracted"/><feGaussianBlur in="refracted" stdDeviation="0.6" result="soft-glass"/><feColorMatrix in="soft-glass" type="saturate" values="1.22"/></filter></defs>';
-  document.body.append(svg);
-
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
-  const events=new AbortController();
-  const {signal}=events;
-  const surfaces=[header,shell,links,tools,typebar].filter(Boolean);
-  let frame=0,pointer=null,disposed=false;
-  const motionAllowed=()=>!reduce.matches&&document.documentElement.dataset.motion!=='off';
-  const reset=()=>{
-    if(frame)cancelAnimationFrame(frame);
-    frame=0;pointer=null;
-    for(const surface of surfaces){surface.style.setProperty('--glass-x','50%');surface.style.setProperty('--glass-y','18%');}
-  };
-  const update=()=>{
-    frame=0;
-    if(disposed||!pointer||!motionAllowed()||document.hidden)return;
-    // Read geometry before changing paint-only custom properties.
-    const positions=surfaces.map(surface=>{
-      const bounds=surface.getBoundingClientRect();
-      const x=bounds.width?Math.max(0,Math.min(1,(pointer.x-bounds.left)/bounds.width)):.5;
-      const y=bounds.height?Math.max(0,Math.min(1,(pointer.y-bounds.top)/bounds.height)):.18;
-      return{surface,x,y};
-    });
-    for(const{surface,x,y}of positions){surface.style.setProperty('--glass-x',(x*100).toFixed(2)+'%');surface.style.setProperty('--glass-y',(y*100).toFixed(2)+'%');}
-  };
-  art.addEventListener('pointermove',event=>{
-    if(event.pointerType==='touch'||!motionAllowed())return;
-    pointer={x:event.clientX,y:event.clientY};
-    if(!frame)frame=requestAnimationFrame(update);
-  },{signal,passive:true});
-  art.addEventListener('pointerleave',reset,{signal,passive:true});
-  window.addEventListener('portfolio:motionchange',reset,{signal});
-  reduce.addEventListener('change',reset,{signal});
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)reset()},{signal});
-  window.addEventListener('pagehide',()=>{disposed=true;events.abort();geometry.disconnect();reset()},{once:true});
-  reset();
+  const phone=matchMedia('(max-width:760px)'),hint=art.querySelector('.room-hint');
+  const updateHint=()=>{if(hint){hint.firstElementChild.textContent=phone.matches?'↔':'↖';hint.lastChild.textContent=phone.matches?' Swipe to explore. Touch a machine.':' Touch a machine. There’s a story behind every light.';}};
+  phone.addEventListener('change',updateHint);updateHint();
+  window.addEventListener('pagehide',()=>{geometry.disconnect();phone.removeEventListener('change',updateHint)},{once:true});
 }
