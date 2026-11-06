@@ -37,7 +37,7 @@ for(const dialog of [menu,command])dialog.addEventListener('click',event=>{if(ev
 let toastTimer;function toast(message){let el=document.querySelector('#global-toast');if(!el){el=document.createElement('p');el.id='global-toast';el.className='global-toast';el.setAttribute('role','status');document.body.append(el)}clearTimeout(toastTimer);el.textContent=message;el.hidden=false;toastTimer=setTimeout(()=>el.hidden=true,3500)}
 
 const removeThemePicker=mountThemePicker(document.querySelector('.header-actions'));
-const techReels=mountTechReels({context:'portfolio',study:{title:document.title,page}});
+const techReels=document.body.dataset.techReels==='off'?{dispose(){}}:mountTechReels({context:'portfolio',study:{title:document.title,page}});
 window.addEventListener('pagehide',()=>{techReels.dispose();removeThemePicker()},{once:true});
 window.addEventListener('pageshow',event=>{if(event.persisted)location.reload()});
 

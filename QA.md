@@ -1,4 +1,16 @@
-# Portfolio Studio validation — November 5, 2026
+# Portfolio Studio validation — November 6, 2026
+
+## Liquid-glass landing studies / November 6
+
+- Four actual live scene routes plus a screenshot comparison hub were added. Existing image planes, generated character, hardware animation and incident controller are reused. The baseline homepage links the alternatives; no final navigation design has been selected.
+- At the native 1280×720 desktop viewport, the landing fields measured approximately 590 px (Canopy / 82%), 605 px (Split Signal / 84%), 598 px (Glass Spine / 83%), and 576 px (Command Dock / 80%). All four had navigation inside the room and no horizontal document overflow.
+- All four phone routes passed at 390×844 and 320×740 without document overflow. The 320×740 hero measured 622 px (~84%). A short 320×568 check measured 483 px (85%) with compact identity spacing and no overflow. The temporary browser viewport override was reset, confirmed at 1280×720, and the temporary QA tab closed.
+- Pointer theme switching exercised Dark, Light and Dusk. Light-theme text over the busy window artwork received a local gradient scrim. A simulated mains blackout in Light retained readable white identity text over a dark local scrim, without overwriting the selected page theme. The glass menu fit inside the phone viewport and closed with Escape.
+- Header search opened/closed after moving the existing nodes. HPE device inspection returned the correct online/resource panel. Desktop greeting pop-out coordinates matched the fitted room's exact position and width and visibly crossed the floor boundary. The new scene framing reported about 50 fps in an in-app browser sample, not a verified 60 fps result.
+- Rear PSU service was stepped through diagnosis and repair. The shallow room turn showed the rear artwork correctly; service changed Dusk to Dark, then restored Dusk during return. The header remained usable. No warnings/errors were captured in the reviewed new-page browser logs.
+- All four comparison images were generated from actual browser screenshots and confirmed loaded at natural width 1265 px. Evidence: `dist/assets/glass-studies/`, `screenshots/glass-comparison.jpg`, and `screenshots/glass-rear-service.jpg`. The comparison hub explicitly skips the automatic film sections; its four cards link to the live experiences.
+- Final checks passed: JavaScript syntax, 40 HTML pages, 467 local asset/anchor links, all 20 API/model tests, and a Cloudflare dry-run that read 183 static assets. These remain local checks, not remote GitHub CI or a public deployment.
+- Fidelity limit: CSS blur/highlights and optional static SVG displacement approximate the reference material. Native Apple Liquid Glass rendering, cross-engine refraction support, reduced-transparency emulation, and a broad device/accessibility audit were not claimed. Portfolio factual copy was not rewritten in this pass.
 
 ## Current polish pass / browser verification completed
 

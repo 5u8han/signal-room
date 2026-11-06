@@ -1,4 +1,12 @@
-# Portfolio Studio handoff — November 5, 2026
+# Portfolio Studio handoff — November 6, 2026
+
+## Current review: four liquid-glass landings
+
+The latest request is a design comparison, awaiting Sub's choice. Open `http://127.0.0.1:4320/glass-studies.html` for screenshots and links. Four full working room pages put the navigation inside the animation and the main identity below it: Canopy (`glass-01.html`, broad top ribbon, 82svh), Split Signal (`glass-02.html`, separated islands, 84svh), Glass Spine (`glass-03.html`, left rail, 83svh), and Command Dock (`glass-04.html`, upper-right two-row navigator, 80svh). Phone framing uses about 84svh with an 85svh cap on short displays. The existing generated room/character media is reused, with ambient extension and a fitted room plane. The current recommendation is Split Signal; it is not an accepted selection.
+
+The user-supplied liquid-glass reference and primary design/implementation sources are retained in `research/LIQUID-GLASS.md`. `glass-studies.js` moves the existing header nodes and preserves their listeners; `glass-studies.css` owns the four compositions, glass material, identity contrast, theme/blackout states and responsive layouts. `scripts/create-glass-studies.mjs` regenerates scene HTML from the baseline. `common.js` now honors `data-tech-reels="off"` for the comparison hub only. The baseline homepage adds a link to the studies; the new design has not been rolled out across the site. No factual content rewrite was attempted.
+
+Live browser review covered all four desktop/phone routes, theme/menu/search controls, equipment inspection, aligned greeting pop-out and rear PSU service/theme restoration. `QA.md` records exact measurements and limitations. Forty pages/467 local links, all 20 tests and the 183-asset Cloudflare dry-run pass. Local development remains on `testing`; no public Cloudflare deployment occurred.
 
 ## Latest polish and repository
 
