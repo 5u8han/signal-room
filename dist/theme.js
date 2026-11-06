@@ -18,6 +18,7 @@ function readPreference(){try{const value=normalizeTheme(localStorage.getItem(ST
 function preferredTheme(){return preference==='system'?(desktop.matches?'dark':'light'):preference}
 function activeOverride(){return[...overrides.values()].at(-1)||null}
 function resolved(){return activeOverride()?.theme||preferredTheme()}
+function syncPickers(){for(const update of pickers)update()}
 export function getThemeState(){
   const theme=resolved(),override=activeOverride();
   return{theme,preference,preferredTheme:preferredTheme(),overridden:Boolean(override),overrideReason:override?.reason||null,palette:{...palettes[theme]}};
@@ -45,7 +46,7 @@ function paint(){
   if(!browserColor){browserColor=document.createElement('meta');browserColor.name='theme-color';document.head.append(browserColor)}
   browserColor.content=palette.paper;
   applyArtwork(theme);
-  for(const update of pickers)update();
+  syncPickers();
   window.dispatchEvent(new CustomEvent('portfolio:themechange',{detail:state}));
 }
 function motionAllowed(){return!reduced.matches&&root.dataset.motion!=='off'&&root.dataset.atlasMotion!=='off'}
@@ -55,6 +56,7 @@ function cancelReveal(){
   try{transition?.skipTransition()}catch{}
   transition=null;
   root.removeAttribute('data-theme-reveal');
+  syncPickers();
 }
 export function initializeTheme(){
   if(started)return getThemeState();
@@ -97,6 +99,7 @@ export async function setTheme(next,event){
   const radius=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
   if(previousTheme===resolved()||!document.startViewTransition||!motionAllowed()){paint();return}
   root.dataset.themeReveal='active';
+  syncPickers();
   try{
     transition=document.startViewTransition(paint);
     const currentTransition=transition;
@@ -106,7 +109,7 @@ export async function setTheme(next,event){
     reveal=root.animate({clipPath:[`circle(0px at ${x}px ${y}px)`,`circle(${radius}px at ${x}px ${y}px)`]}, {duration:680,easing:'cubic-bezier(.22,.7,.22,1)',fill:'both',pseudoElement:'::view-transition-new(root)'});
     await reveal.finished.catch(()=>{});
     await currentTransition.finished.catch(()=>{});
-    if(token===sequence){reveal?.cancel();reveal=null;transition=null;root.removeAttribute('data-theme-reveal')}
+    if(token===sequence){reveal?.cancel();reveal=null;transition=null;root.removeAttribute('data-theme-reveal');syncPickers()}
   }catch{if(token===sequence){paint();cancelReveal()}}
 }
 let pickerId=0;
@@ -124,18 +127,21 @@ export function mountThemePicker(container){
   function close(restore=false){open=false;menu.hidden=true;trigger.setAttribute('aria-expanded','false');if(restore)trigger.focus({preventScroll:true})}
   function sync(){
     const state=getThemeState();
+    trigger.setAttribute('aria-disabled',String(root.dataset.themeReveal==='active'));
     for(const button of buttons)button.setAttribute('aria-checked',String(button.dataset.themeChoice===preference));
     host.dataset.override=String(state.overridden);trigger.dataset.activeTheme=state.theme;
     trigger.title=state.overridden?`${themeName(state.theme)} · temporary ${state.overrideReason}`:`${themeName(state.theme)} theme${preference==='system'?' · following desktop':''}`;
     menu.querySelector('.theme-menu-note').textContent=state.overridden?`Temporarily using ${themeName(state.theme)} for ${state.overrideReason}. Your ${preference==='system'?'desktop setting':themeName(state.preferredTheme)+' choice'} returns after service.`:preference==='system'?`Following your desktop: ${themeName(state.theme)}.`:`${themeName(state.theme)} is saved for this browser.`;
   }
-  const blur=()=>queueMicrotask(()=>{if(open&&!host.contains(document.activeElement))close()});
   const outside=event=>{if(!host.contains(event.target))close()};
-  host.addEventListener('focusout',blur,{signal});document.addEventListener('pointerdown',outside,{signal});
-  trigger.addEventListener('click',()=>{if(open)close();else show()},{signal});
+  // A pointer can blur a button before its click in some browsers. Close from
+  // an outside pointer or keyboard navigation, rather than that focus change.
+  document.addEventListener('pointerdown',outside,{signal});
+  trigger.addEventListener('click',()=>{if(root.dataset.themeReveal==='active')return;if(open)close();else show()},{signal});
   for(const button of buttons)button.addEventListener('click',event=>{setTheme(button.dataset.themeChoice,event);close(true)},{signal});
   host.addEventListener('keydown',event=>{
     const current=buttons.indexOf(document.activeElement);
+    if(open&&event.key==='Tab'){close(true);return}
     if(open&&event.key==='Escape'){event.preventDefault();event.stopPropagation();close(true);return}
     if(['ArrowDown','ArrowUp','Home','End'].includes(event.key)){event.preventDefault();show();let index=event.key==='Home'?0:event.key==='End'?buttons.length-1:current<0?(event.key==='ArrowUp'?buttons.length-1:0):(current+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length;buttons[index].focus();return}
     if(open&&/^[a-z]$/i.test(event.key)&&!event.ctrlKey&&!event.metaKey){const found=buttons.find(button=>button.querySelector('strong').textContent.toLowerCase().startsWith(event.key.toLowerCase()));if(found){event.preventDefault();found.focus()}}

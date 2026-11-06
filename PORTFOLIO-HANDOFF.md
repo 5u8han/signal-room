@@ -10,7 +10,7 @@ GitHub rejected the initial push because the connected OAuth credential lacks wo
 
 The subsequent application push succeeded and was verified through the GitHub API. Both `main` and `testing` exist in the private repository; local development remains on `testing`. The working tree was clean after the push. Local preview process was relaunched with MP3 MIME/range support, verified by actual HTTP requests.
 
-Code checks, all 20 tests, Cloudflare dry-run and native canvas renders are passing. Current browser control is disabled in Work settings. Do not claim measured browser FPS, current live Webamp playback, CSS pop-out behavior or updated responsive visual QA until browser access is restored. Prior browser checks below apply to the earlier iteration.
+Code checks, all 20 tests, Cloudflare dry-run and native canvas renders are passing. Browser control is now restored. Current live review verified white chair layering, palette changes, diagnostic/game panes, the floor blend and character pop-out, phone overview/detail layouts, simulated console output, actual Webamp playback/pause/close/reopen, and blocked-autoplay feedback/retry. A theme focus race and misleading optimistic playback status were fixed during this review. The browser reported about 50 fps in desktop samples; do not claim measured 60 fps or a broad performance benchmark. See `QA.md` and `screenshots/browser-*.jpg` for exact coverage. Current review fixes are on `testing`; `main` retains the initial application baseline until promoted.
 
 ## Current build — supersedes the still-study handoff
 
