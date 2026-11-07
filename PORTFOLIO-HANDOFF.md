@@ -1,8 +1,12 @@
 # Portfolio Studio handoff — November 6, 2026
 
+## Current review: three complete labeled sites
+
+Sub requested full test sites interpreting the three references, with the live animation and exact section/detail IDs. They are built at `design-studies.html`, linking `study-delta.html`, `study-roveia.html` and `study-atmos.html`. These are three distinct long-page compositions, not new glass-menu variations. Delta has 38 labeled elements, Roveia 48 and Atmos 41. Each has a searchable Section map, Copy ID, three label modes, quiet motion and the actual incident/inspection/console scene. The hub has a combined searchable address book. `research/DESIGN-INTERPRETATIONS.md` explains the source-to-section mapping and maintenance. `node scripts/create-reference-studies.mjs` regenerates routes/catalog from templates plus the current room. This comparison pass is authorized; no final choice or production rollout is approved yet.
+
 ## Latest correction and pending reference choices
 
-Sub rejected the four glass menu designs. Canopy was the closest, but **no final navigation direction is approved**. The next design pass must wait for Sub's cherry-picks from Delta Cafés, Roveia and Atmos Gallery / About. Do not restore the earlier Split Signal recommendation as a user choice.
+Sub rejected the four glass menu designs. Canopy was the closest, but **no final navigation direction is approved**. The three full test sites above are now available for Sub's cherry-picks from Delta Cafés, Roveia and Atmos Gallery / About. Final rollout still awaits that selection. Do not restore the earlier Split Signal recommendation as a user choice.
 
 The existing studies now use a genuinely covering live room plane with the source aspect ratio preserved and the camera biased to keep the gaming desk visible. The header is part of the scene markup and floats over real room pixels; the fitted-plane gap, blurred clone backdrop, broad pale/pink logo/floor veils and large glass highlights were removed. Both live displays use measured perspective mapping, retained bezels and foreground occlusion. Phones default to a full-height swipeable panorama with actor following; Whole room switches to a short full-room overview. The portrait character and incident model remain intact. `QA.md` and `screenshots/corrected-canopy-*.jpg` record proof.
 
@@ -10,7 +14,7 @@ Three actual, silent browser recordings of the provided pages are available at h
 
 Motionmaxxing was fully cloned, pinned clean at `8c8ec0f2a6f6c9a0da15cd24f7b1298ab298368c`, and reviewed in sibling `work/design-toolkit/motionmaxxing`. See `research/MOTIONMAXXING.md` and `work/design-toolkit/README.md`. Its Apache-2.0 project and bundled component notices are preserved. The toolkit remains staged; no installer, renderer, provider or global registration ran. The source inventory adds its source and skill as references. Film heuristics never override this interactive site's controls or Sub's preferences.
 
-## Current review: four liquid-glass landings
+## Earlier comparison: four liquid-glass landings
 
 The latest request is a design comparison, awaiting Sub's choice. Open `http://127.0.0.1:4320/glass-studies.html` for screenshots and links. Four full working room pages put the navigation inside the animation and the main identity below it: Canopy (`glass-01.html`, broad top ribbon, 82svh), Split Signal (`glass-02.html`, separated islands, 84svh), Glass Spine (`glass-03.html`, left rail, 83svh), and Command Dock (`glass-04.html`, upper-right two-row navigator, 80svh). Phone framing uses about 84svh with an 85svh cap on short displays. The existing generated room/character media is reused, with ambient extension and a fitted room plane. This was an initial comparison. Sub later rejected all four menus and named Canopy as the closest; no final selection is approved.
 

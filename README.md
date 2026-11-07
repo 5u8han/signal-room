@@ -8,6 +8,8 @@ A new, experimental portfolio built around support engineering, datacenter work,
 
 ## Open the local preview
 
+- [Three complete labeled reference sites](http://127.0.0.1:4320/design-studies.html)
+- [Field Notes / Delta](http://127.0.0.1:4320/study-delta.html) · [Connected / Roveia](http://127.0.0.1:4320/study-roveia.html) · [Signal Atlas / Atmos](http://127.0.0.1:4320/study-atmos.html)
 - [Interactive home office](http://127.0.0.1:4320/)
 - [Corrected Canopy room](http://127.0.0.1:4320/glass-01.html)
 - [Earlier navigation comparisons](http://127.0.0.1:4320/glass-studies.html)
@@ -28,6 +30,8 @@ The preview runs only on 127.0.0.1:4320. It has a real local SQLite database. Lo
 
 ## What is built
 
+Three complete reference interpretations are available with the actual live homelab, distinct full-page compositions, and 127 stable labeled elements. Each has a searchable Section map, copyable IDs, section/detail/off label modes and a quiet-motion control. The hub searches the combined address book. Regenerate routes and the catalog with `node scripts/create-reference-studies.mjs`; see [the review guide](research/DESIGN-INTERPRETATIONS.md). These are comparison sites; a production design remains unselected.
+
 The four navigation studies remain archived for comparison; Sub rejected all four menus and described Canopy as the closest. The current correction makes the real room cover the landing field, removes the empty strip and broad Light/Dusk glow layers, and gives both monitors measured perspective surfaces with laptop/headphone occlusion. The existing menu arrangements have only been quieted while the next direction awaits Sub's choices. The desktop fields retain 80–84svh; phones show a full-height swipeable room with a Whole room overview. Regenerate the four scene routes from the baseline with `node scripts/create-glass-studies.mjs`.
 
 The three requested reference pages have local browser recordings with chapter controls at the review link above. Video files and raw captures stay in ignored local folders outside deployment. `node scripts/assemble-reference-recordings.mjs` assembles available local captures; `node scripts/serve-reference-recordings.mjs` serves the player on 127.0.0.1:4321. See [reference observations](research/REFERENCE-SITES-NOTES.md).
@@ -42,7 +46,7 @@ The scene combines generated image planes, transparent character sprites and liv
 
 The earlier three animated concepts and five still room studies remain available for comparison. The original 20 motion studies, #003 sculpture, palette workbench and local engine experiments are retained. Animation stops when hidden/offscreen and respects reduced motion; quiet mode offers a Next step control for following a repair without continuous movement.
 
-All routes share Dark, Light and Dusk themes, desktop-theme following, a click/keyboard picker and a click-origin circle reveal. Dusk retains the existing `evening` storage value for compatibility. The home-office lighting follows those choices. A rare rear PSU repair temporarily applies service lighting across the site, then restores the visitor's current preference without changing its saved value. A fourth theme is still undecided. Two 12-second original rack/technician films replace the earlier unrelated technology adverts. They are silent, illustrated test media—not footage of client equipment.
+The existing portfolio routes share Dark, Light and Dusk themes, desktop-theme following, a click/keyboard picker and a click-origin circle reveal. The three new reference interpretations keep their authored editorial palettes while their theme buttons preview room lighting, indicators and dialogs. Dusk retains the existing `evening` storage value for compatibility. The home-office lighting follows those choices. A rare rear PSU repair temporarily applies service lighting, then restores the visitor's current preference without changing its saved value. A fourth theme is still undecided. Two 12-second original rack/technician films replace the earlier unrelated technology adverts. They are silent, illustrated test media—not footage of client equipment.
 
 Public content contains eight career roles and nine work/practice entries. The five roles after Endeavour Health are labeled Contract. Chicago Lab is described as an initial full-time build followed by ongoing on-call/project support. Phone/ZIP and hire/contact-me prompts are removed. Email, GitHub, LinkedIn and Twitter remain; no Steam profile URL was invented. Credentials/education remain unpublished until current wording is confirmed.
 

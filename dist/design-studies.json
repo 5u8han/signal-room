@@ -1,0 +1,789 @@
+{
+  "schema": 1,
+  "generated": "2026-11-06",
+  "studies": [
+    {
+      "slug": "delta",
+      "title": "Field Notes / Delta interpretation",
+      "url": "study-delta.html",
+      "details": [
+        {
+          "id": "delta-nav",
+          "title": "01 / Split navigation",
+          "design": "Smoked full-width navigation divided around a centered wordmark; persistent position over photography.",
+          "section": true
+        },
+        {
+          "id": "delta-hero",
+          "title": "02 / The living photograph",
+          "design": "Edge-to-edge animated homelab with low-left serif identity, discreet corner controls and a photographic first impression.",
+          "section": true
+        },
+        {
+          "id": "delta-identity",
+          "title": "Live room identity and typewriter",
+          "design": "The existing logo, mission and typing roles are styled for this study, above the working room.",
+          "section": false
+        },
+        {
+          "id": "delta-live-status",
+          "title": "Live repair status",
+          "design": "Actual incident phase, repair progress and WAN status from the retained simulation.",
+          "section": false
+        },
+        {
+          "id": "delta-room-controls",
+          "title": "Live room controls",
+          "design": "Pause, incident selection, device inspection, console, traffic and original Webamp remain functional.",
+          "section": false
+        },
+        {
+          "id": "delta-editorial",
+          "title": "03 / Editorial introduction",
+          "design": "Warm cream ground, asymmetric image and serif text, ample breathing room and a hairline section rule.",
+          "section": true
+        },
+        {
+          "id": "delta-editorial-image",
+          "title": "Cropped hardware portrait",
+          "design": "A tall crop turns the existing room into an equipment portrait; restrained scroll parallax creates depth.",
+          "section": false
+        },
+        {
+          "id": "delta-editorial-copy",
+          "title": "Serif editorial hierarchy",
+          "design": "Large italic serif words alternate with compact sans-serif supporting text, rather than repeated cards.",
+          "section": false
+        },
+        {
+          "id": "delta-signal-path",
+          "title": "04 / The illustrated connection",
+          "design": "A dark editorial interlude replaces photography with line art and moving data; four equally weighted disciplines sit on the same path.",
+          "section": true
+        },
+        {
+          "id": "delta-flow-illustration",
+          "title": "Animated line-art path",
+          "design": "Original SVG connects a fiber entry, switching, compute and repair. Dots follow the route while outlines stay quiet.",
+          "section": false
+        },
+        {
+          "id": "delta-discipline-row",
+          "title": "Equal-weight capability row",
+          "design": "Four numbered columns use typography and spacing for hierarchy, without ranking one kind of work above another.",
+          "section": false
+        },
+        {
+          "id": "delta-field-notes",
+          "title": "05 / Equipment portrait strip",
+          "design": "An immersive horizontal strip changes the photographic rhythm; staggered crops and captions make each discipline feel tangible.",
+          "section": true
+        },
+        {
+          "id": "delta-portrait-strip",
+          "title": "Staggered picture sequence",
+          "design": "Four equipment crops alternate vertical offset, dark framing and small editorial captions. Horizontal swipe replaces compression on phones.",
+          "section": false
+        },
+        {
+          "id": "delta-portrait-bench",
+          "title": "The bench portrait",
+          "design": "Individually addressable equipment crop and caption in the photographic strip.",
+          "section": false
+        },
+        {
+          "id": "delta-portrait-edge",
+          "title": "The edge portrait",
+          "design": "Individually addressable equipment crop and caption in the photographic strip.",
+          "section": false
+        },
+        {
+          "id": "delta-portrait-compute",
+          "title": "The rack portrait",
+          "design": "Individually addressable equipment crop and caption in the photographic strip.",
+          "section": false
+        },
+        {
+          "id": "delta-portrait-desk",
+          "title": "The desk portrait",
+          "design": "Individually addressable equipment crop and caption in the photographic strip.",
+          "section": false
+        },
+        {
+          "id": "delta-infrastructure",
+          "title": "06 / Infrastructure editorial",
+          "design": "An oversized image bleeds toward one edge while a narrow text column holds a more intimate story.",
+          "section": true
+        },
+        {
+          "id": "delta-infrastructure-title",
+          "title": "Oversized editorial title",
+          "design": "Large serif type crosses two lines, with a small numbered marker separating section identity from the headline.",
+          "section": false
+        },
+        {
+          "id": "delta-infrastructure-image",
+          "title": "Wide room detail",
+          "design": "The original generated homelab is reused as a wide photographic crop, without suggesting employer facilities.",
+          "section": false
+        },
+        {
+          "id": "delta-infrastructure-note",
+          "title": "Narrow right-aligned field note",
+          "design": "A short, grounded paragraph sits off the main grid with a thin rule and a tiny marginal label.",
+          "section": false
+        },
+        {
+          "id": "delta-method",
+          "title": "07 / The method accordion",
+          "design": "Editorial questions sit beside a large title; fine rules and circular signs provide structure without heavy card containers.",
+          "section": true
+        },
+        {
+          "id": "delta-method-heading",
+          "title": "Sticky editorial heading",
+          "design": "The left heading stays in place while the method on the right unfolds.",
+          "section": false
+        },
+        {
+          "id": "delta-method-rows",
+          "title": "Ruled progressive disclosure",
+          "design": "Native details rows open with a large plus/minus and readable text; all method steps remain keyboard accessible.",
+          "section": false
+        },
+        {
+          "id": "delta-method-observe",
+          "title": "Observe step",
+          "design": "Individually addressable expandable method row with a hairline divider.",
+          "section": false
+        },
+        {
+          "id": "delta-method-isolate",
+          "title": "Isolate step",
+          "design": "Individually addressable expandable method row with a hairline divider.",
+          "section": false
+        },
+        {
+          "id": "delta-method-repair",
+          "title": "Repair step",
+          "design": "Individually addressable expandable method row with a hairline divider.",
+          "section": false
+        },
+        {
+          "id": "delta-method-verify",
+          "title": "Verify step",
+          "design": "Individually addressable expandable method row with a hairline divider.",
+          "section": false
+        },
+        {
+          "id": "delta-type-field",
+          "title": "08 / Monumental type field",
+          "design": "A forest-green field interrupts the cream editorial sequence with condensed typography, fine metadata and scroll-responsive horizontal movement.",
+          "section": true
+        },
+        {
+          "id": "delta-moving-type",
+          "title": "Oversized moving words",
+          "design": "Two oversized condensed lines move in opposite directions as the section passes through the viewport.",
+          "section": false
+        },
+        {
+          "id": "delta-journal",
+          "title": "09 / Field journal grid",
+          "design": "A three-column editorial grid uses small numbers, image fragments and text, with thin separators rather than floating cards.",
+          "section": true
+        },
+        {
+          "id": "delta-journal-grid",
+          "title": "Quiet three-column journal",
+          "design": "Unequal image crops and short grounded capability notes create the rhythm of a printed journal.",
+          "section": false
+        },
+        {
+          "id": "delta-note-network",
+          "title": "A route is a story.",
+          "design": "Individually addressable journal composition: picture crop, small index, headline and short note.",
+          "section": false
+        },
+        {
+          "id": "delta-note-hardware",
+          "title": "The physical matters.",
+          "design": "Individually addressable journal composition: picture crop, small index, headline and short note.",
+          "section": false
+        },
+        {
+          "id": "delta-note-people",
+          "title": "Leave a useful trail.",
+          "design": "Individually addressable journal composition: picture crop, small index, headline and short note.",
+          "section": false
+        },
+        {
+          "id": "delta-footer",
+          "title": "10 / Landscape footer",
+          "design": "Dark-green closing chapter with an enormous condensed statement, a landscape-backed lower band and quiet utility links.",
+          "section": true
+        },
+        {
+          "id": "delta-footer-wordmark",
+          "title": "Full-width condensed closing line",
+          "design": "Oversized stacked lettering creates the final change of scale.",
+          "section": false
+        },
+        {
+          "id": "delta-footer-landscape",
+          "title": "Photographic utility band",
+          "design": "A darkened crop of the personal room sits behind contact-neutral portfolio navigation and source attribution.",
+          "section": false
+        }
+      ]
+    },
+    {
+      "slug": "roveia",
+      "title": "Connected / Roveia interpretation",
+      "url": "study-roveia.html",
+      "details": [
+        {
+          "id": "roveia-nav",
+          "title": "01 / White capsule navigation",
+          "design": "Persistent white capsule, compact black action and centered link group; the navigation floats independently of the page sections.",
+          "section": true
+        },
+        {
+          "id": "roveia-opening",
+          "title": "02 / Centered typographic opening",
+          "design": "Oversized centered black and blue typography with a short supporting line above a rounded pale-blue media field.",
+          "section": true
+        },
+        {
+          "id": "roveia-opening-type",
+          "title": "Black-and-blue headline",
+          "design": "Tightly spaced centered sans-serif type highlights a second line in vivid blue, with a small rotating symbol as punctuation.",
+          "section": false
+        },
+        {
+          "id": "roveia-opening-note",
+          "title": "Compact centered supporting copy",
+          "design": "A single restrained paragraph gives the massive headline breathing room.",
+          "section": false
+        },
+        {
+          "id": "roveia-hero",
+          "title": "03 / Rounded living media field",
+          "design": "Pale-blue surround, oversized rounded corners and small companion facts frame the actual interactive homelab.",
+          "section": true
+        },
+        {
+          "id": "roveia-identity",
+          "title": "Live room identity and typewriter",
+          "design": "The existing logo, mission and typing roles are styled for this study, above the working room.",
+          "section": false
+        },
+        {
+          "id": "roveia-live-status",
+          "title": "Live repair status",
+          "design": "Actual incident phase, repair progress and WAN status from the retained simulation.",
+          "section": false
+        },
+        {
+          "id": "roveia-room-controls",
+          "title": "Live room controls",
+          "design": "Pause, incident selection, device inspection, console, traffic and original Webamp remain functional.",
+          "section": false
+        },
+        {
+          "id": "roveia-hero-caption",
+          "title": "Media companion row",
+          "design": "Small editorial facts flank the media rather than competing with it.",
+          "section": false
+        },
+        {
+          "id": "roveia-toolbelt",
+          "title": "04 / Quiet toolbelt strip",
+          "design": "A quiet ruled strip of technical families provides a visual pause after the immersive media.",
+          "section": true
+        },
+        {
+          "id": "roveia-toolbelt-type",
+          "title": "Typographic capability strip",
+          "design": "Names of capability areas replace decorative brand logos or invented clients.",
+          "section": false
+        },
+        {
+          "id": "roveia-cases",
+          "title": "05 / Overlapping case sequence",
+          "design": "Three large rounded cases stack with CSS sticky positioning, creating an editorial sequence that changes as the visitor scrolls.",
+          "section": true
+        },
+        {
+          "id": "roveia-case-stack",
+          "title": "Sticky case-card stack",
+          "design": "Each card has its own sticky offset, two-column composition, image field and small capability chips.",
+          "section": false
+        },
+        {
+          "id": "roveia-case-infrastructure",
+          "title": "Built from the ground up.",
+          "design": "Individually addressable sticky case card with grounded experience; no invented results or performance figures.",
+          "section": false
+        },
+        {
+          "id": "roveia-case-infrastructure-visual",
+          "title": "Case 1 media composition",
+          "design": "Original room detail combined with a technical specimen; the image stays inside the rounded case.",
+          "section": false
+        },
+        {
+          "id": "roveia-case-endpoints",
+          "title": "Ready for the next person.",
+          "design": "Individually addressable sticky case card with grounded experience; no invented results or performance figures.",
+          "section": false
+        },
+        {
+          "id": "roveia-case-endpoints-visual",
+          "title": "Case 2 media composition",
+          "design": "Original room detail combined with a technical specimen; the image stays inside the rounded case.",
+          "section": false
+        },
+        {
+          "id": "roveia-case-datacenter",
+          "title": "Read the signal. Follow it through.",
+          "design": "Individually addressable sticky case card with grounded experience; no invented results or performance figures.",
+          "section": false
+        },
+        {
+          "id": "roveia-case-datacenter-visual",
+          "title": "Case 3 media composition",
+          "design": "Original room detail combined with a technical specimen; the image stays inside the rounded case.",
+          "section": false
+        },
+        {
+          "id": "roveia-capabilities",
+          "title": "06 / Capability cards and chips",
+          "design": "Soft gray rounded service cards, compact chips and small blue line illustrations form a readable middle scale.",
+          "section": true
+        },
+        {
+          "id": "roveia-capability-grid",
+          "title": "Gray service-card grid",
+          "design": "Three restrained cards use large line symbols, concise explanations and topic chips; hovering lifts the individual card.",
+          "section": false
+        },
+        {
+          "id": "roveia-capability-support",
+          "title": "Support engineering card",
+          "design": "Individually addressable capability card with blue symbol, neutral surface and small topic chips.",
+          "section": false
+        },
+        {
+          "id": "roveia-capability-systems",
+          "title": "Systems & networks card",
+          "design": "Individually addressable capability card with blue symbol, neutral surface and small topic chips.",
+          "section": false
+        },
+        {
+          "id": "roveia-capability-hardware",
+          "title": "Hardware & electronics card",
+          "design": "Individually addressable capability card with blue symbol, neutral surface and small topic chips.",
+          "section": false
+        },
+        {
+          "id": "roveia-process",
+          "title": "07 / Dark three-step process",
+          "design": "A charcoal rounded panel switches the atmosphere: large headline left, three ordered steps right, with original blue technical objects.",
+          "section": true
+        },
+        {
+          "id": "roveia-process-title",
+          "title": "Large left process column",
+          "design": "The heading and a blue orbit specimen balance the narrower procedural column.",
+          "section": false
+        },
+        {
+          "id": "roveia-process-steps",
+          "title": "Three ruled process steps",
+          "design": "Small numbers, hairline dividers and generous vertical spacing express a method without a dense diagram.",
+          "section": false
+        },
+        {
+          "id": "roveia-step-1",
+          "title": "Understand process step",
+          "design": "An individually selectable process row with a blue index and a concise explanation.",
+          "section": false
+        },
+        {
+          "id": "roveia-step-2",
+          "title": "Investigate process step",
+          "design": "An individually selectable process row with a blue index and a concise explanation.",
+          "section": false
+        },
+        {
+          "id": "roveia-step-3",
+          "title": "Restore & explain process step",
+          "design": "An individually selectable process row with a blue index and a concise explanation.",
+          "section": false
+        },
+        {
+          "id": "roveia-orbit-cards",
+          "title": "08 / Pinned tilted-card sequence",
+          "design": "Capability notes move around a stable centered heading as this tall section scrolls; they replace the reference’s testimonials with factual areas of practice.",
+          "section": true
+        },
+        {
+          "id": "roveia-orbit-heading",
+          "title": "Stable central headline",
+          "design": "A centered heading stays readable while the peripheral cards change position.",
+          "section": false
+        },
+        {
+          "id": "roveia-orbit-network",
+          "title": "Follow the path. orbit card",
+          "design": "A tilted factual capability card with scroll-position-driven travel; static and readable when motion is quiet.",
+          "section": false
+        },
+        {
+          "id": "roveia-orbit-identity",
+          "title": "Understand access. orbit card",
+          "design": "A tilted factual capability card with scroll-position-driven travel; static and readable when motion is quiet.",
+          "section": false
+        },
+        {
+          "id": "roveia-orbit-hardware",
+          "title": "Open the case. orbit card",
+          "design": "A tilted factual capability card with scroll-position-driven travel; static and readable when motion is quiet.",
+          "section": false
+        },
+        {
+          "id": "roveia-orbit-support",
+          "title": "Keep people moving. orbit card",
+          "design": "A tilted factual capability card with scroll-position-driven travel; static and readable when motion is quiet.",
+          "section": false
+        },
+        {
+          "id": "roveia-faq",
+          "title": "09 / Split field-note accordion",
+          "design": "A large left heading opposes simple right-side rows; each question has a black circular plus control.",
+          "section": true
+        },
+        {
+          "id": "roveia-faq-title",
+          "title": "Left FAQ title",
+          "design": "The title and small supporting text occupy their own quiet column.",
+          "section": false
+        },
+        {
+          "id": "roveia-faq-rows",
+          "title": "Circular-control FAQ rows",
+          "design": "Native expandable questions retain keyboard behavior, fine separators and a bold circular indicator.",
+          "section": false
+        },
+        {
+          "id": "roveia-faq-lab",
+          "title": "Is this a real system dashboard?",
+          "design": "Individually addressable question row using native disclosure and a circular sign.",
+          "section": false
+        },
+        {
+          "id": "roveia-faq-practice",
+          "title": "What kind of work does it represent?",
+          "design": "Individually addressable question row using native disclosure and a circular sign.",
+          "section": false
+        },
+        {
+          "id": "roveia-faq-story",
+          "title": "Can I choose what happens in the room?",
+          "design": "Individually addressable question row using native disclosure and a circular sign.",
+          "section": false
+        },
+        {
+          "id": "roveia-faq-quiet",
+          "title": "Can I explore without continuous animation?",
+          "design": "Individually addressable question row using native disclosure and a circular sign.",
+          "section": false
+        },
+        {
+          "id": "roveia-closing",
+          "title": "10 / Centered closing statement",
+          "design": "A centered statement makes a quiet pause before the wave-backed footer.",
+          "section": true
+        },
+        {
+          "id": "roveia-closing-type",
+          "title": "Centered closing typography",
+          "design": "Two-tone type closes the narrative without a sales prompt.",
+          "section": false
+        },
+        {
+          "id": "roveia-footer",
+          "title": "11 / Blue-wave footer",
+          "design": "A soft blue wave introduces a quiet footer with restrained columns and a small identity.",
+          "section": true
+        },
+        {
+          "id": "roveia-footer-wave",
+          "title": "Wave-shaped transition",
+          "design": "Original SVG curves create a broad blue footer transition without a glowing gradient.",
+          "section": false
+        },
+        {
+          "id": "roveia-footer-columns",
+          "title": "Restrained link columns",
+          "design": "A compact brand column, internal links and study navigation keep the closing useful.",
+          "section": false
+        }
+      ]
+    },
+    {
+      "slug": "atmos",
+      "title": "Signal Atlas / Atmos interpretation",
+      "url": "study-atmos.html",
+      "details": [
+        {
+          "id": "atmos-nav",
+          "title": "01 / Thin gallery navigation",
+          "design": "A thin rounded outline spans the viewport; centered identity and small edge controls leave the typography dominant.",
+          "section": true
+        },
+        {
+          "id": "atmos-opening",
+          "title": "02 / Monumental opening typography",
+          "design": "Large, tightly spaced grotesk type sits in generous black negative space, with small editorial metadata far below it.",
+          "section": true
+        },
+        {
+          "id": "atmos-opening-title",
+          "title": "Monumental gallery headline",
+          "design": "Two extremely large, close-set lines establish scale through typography instead of a decorative background.",
+          "section": false
+        },
+        {
+          "id": "atmos-opening-metadata",
+          "title": "Quiet opening metadata",
+          "design": "An index on the left and short supporting text on the right create an asymmetric editorial footnote.",
+          "section": false
+        },
+        {
+          "id": "atmos-hero",
+          "title": "03 / Live room specimen",
+          "design": "The animated homelab becomes a large gallery specimen: an immersive room within a quiet, near-black frame.",
+          "section": true
+        },
+        {
+          "id": "atmos-identity",
+          "title": "Live room identity and typewriter",
+          "design": "The existing logo, mission and typing roles are styled for this study, above the working room.",
+          "section": false
+        },
+        {
+          "id": "atmos-live-status",
+          "title": "Live repair status",
+          "design": "Actual incident phase, repair progress and WAN status from the retained simulation.",
+          "section": false
+        },
+        {
+          "id": "atmos-room-controls",
+          "title": "Live room controls",
+          "design": "Pause, incident selection, device inspection, console, traffic and original Webamp remain functional.",
+          "section": false
+        },
+        {
+          "id": "atmos-interlude",
+          "title": "04 / Olive word-emphasis interlude",
+          "design": "A full-height olive field shifts the atmosphere; words gain emphasis as the reader moves through the section.",
+          "section": true
+        },
+        {
+          "id": "atmos-emphasis-text",
+          "title": "Scroll-emphasized sentence",
+          "design": "Each word has an individual index; opacity follows the section’s scroll progress, with a complete static sentence in quiet mode.",
+          "section": false
+        },
+        {
+          "id": "atmos-index",
+          "title": "05 / Numbered editorial index",
+          "design": "Number, large heading and explanatory text occupy separate columns with fine rules, creating an orderly technical editorial layout.",
+          "section": true
+        },
+        {
+          "id": "atmos-index-title",
+          "title": "Left editorial heading",
+          "design": "A short large heading anchors the numbered layout while the details live in a narrower opposite column.",
+          "section": false
+        },
+        {
+          "id": "atmos-index-explanation",
+          "title": "Right editorial explanation",
+          "design": "A compact paragraph explains breadth without claiming results or ranking kinds of work.",
+          "section": false
+        },
+        {
+          "id": "atmos-comparison-rows",
+          "title": "Fine-rule capability rows",
+          "design": "A restrained comparison table turns technical areas into readable, precise editorial rows.",
+          "section": false
+        },
+        {
+          "id": "atmos-layer-01",
+          "title": "The person comparison row",
+          "design": "An individually addressable row with a narrow index, discipline label and fine separator.",
+          "section": false
+        },
+        {
+          "id": "atmos-layer-02",
+          "title": "The endpoint comparison row",
+          "design": "An individually addressable row with a narrow index, discipline label and fine separator.",
+          "section": false
+        },
+        {
+          "id": "atmos-layer-03",
+          "title": "The connection comparison row",
+          "design": "An individually addressable row with a narrow index, discipline label and fine separator.",
+          "section": false
+        },
+        {
+          "id": "atmos-layer-04",
+          "title": "The platform comparison row",
+          "design": "An individually addressable row with a narrow index, discipline label and fine separator.",
+          "section": false
+        },
+        {
+          "id": "atmos-layer-05",
+          "title": "The component comparison row",
+          "design": "An individually addressable row with a narrow index, discipline label and fine separator.",
+          "section": false
+        },
+        {
+          "id": "atmos-palette",
+          "title": "06 / Interactive three-column palette",
+          "design": "A three-column palette specimen translates the reference’s color analysis into a real, switchable interface; each tone has a defined role.",
+          "section": true
+        },
+        {
+          "id": "atmos-palette-controls",
+          "title": "Palette-switch controls",
+          "design": "Three keyboard-operable buttons switch the specimen’s authored color sets and update the displayed hex values.",
+          "section": false
+        },
+        {
+          "id": "atmos-palette-columns",
+          "title": "Three large color ramps",
+          "design": "Surface, ink and signal are shown as large vertical color specimens with their live hex values.",
+          "section": false
+        },
+        {
+          "id": "atmos-swatch-surface",
+          "title": "SURFACE color specimen",
+          "design": "A selectable design detail with a large color field, small numbered label and current hex value.",
+          "section": false
+        },
+        {
+          "id": "atmos-swatch-ink",
+          "title": "INK color specimen",
+          "design": "A selectable design detail with a large color field, small numbered label and current hex value.",
+          "section": false
+        },
+        {
+          "id": "atmos-swatch-signal",
+          "title": "SIGNAL color specimen",
+          "design": "A selectable design detail with a large color field, small numbered label and current hex value.",
+          "section": false
+        },
+        {
+          "id": "atmos-panels",
+          "title": "07 / Oversized rotating panels",
+          "design": "A tall gallery section holds overlapping full-size color panels, with slight rotation and a change of scale driven by scroll position.",
+          "section": true
+        },
+        {
+          "id": "atmos-panel-base",
+          "title": "Full-size base panel",
+          "design": "Olive panel with enormous close-set type forms the stable base of the composition.",
+          "section": false
+        },
+        {
+          "id": "atmos-panel-floating",
+          "title": "Rotating signal panel",
+          "design": "A restrained rotation and diagonal translation move this large panel across the base during scroll.",
+          "section": false
+        },
+        {
+          "id": "atmos-specimen",
+          "title": "08 / Split room-and-interface specimen",
+          "design": "A large cropped room portrait is paired with an editorial shell interface, joining image and information in a gallery composition.",
+          "section": true
+        },
+        {
+          "id": "atmos-specimen-pair",
+          "title": "Split visual specimen",
+          "design": "One side presents the physical room; the other presents a deliberately authored diagnostic view.",
+          "section": false
+        },
+        {
+          "id": "atmos-room-portrait",
+          "title": "Physical room portrait",
+          "design": "An oversized crop of the original homelab artwork places the physical equipment at center stage.",
+          "section": false
+        },
+        {
+          "id": "atmos-terminal-specimen",
+          "title": "Editorial shell specimen",
+          "design": "A static, selectable diagnostic specimen uses authentic command names and clearly illustrative output, with restrained signal coloring.",
+          "section": false
+        },
+        {
+          "id": "atmos-specimen-caption",
+          "title": "Fine ruled specimen caption",
+          "design": "A narrow index and short caption reconnect the large image/interface pair to the editorial grid.",
+          "section": false
+        },
+        {
+          "id": "atmos-principles",
+          "title": "09 / Ruled principles",
+          "design": "A sparse numbered sequence returns to typography, alignment and fine separators after the large moving panels.",
+          "section": true
+        },
+        {
+          "id": "atmos-principle-grid",
+          "title": "Three-column principle grid",
+          "design": "Three equal editorial columns keep observation, investigation and explanation on the same visual footing.",
+          "section": false
+        },
+        {
+          "id": "atmos-principle-observe",
+          "title": "Observe principle",
+          "design": "An individually selectable editorial principle with an oversized index and quiet supporting text.",
+          "section": false
+        },
+        {
+          "id": "atmos-principle-investigate",
+          "title": "Investigate principle",
+          "design": "An individually selectable editorial principle with an oversized index and quiet supporting text.",
+          "section": false
+        },
+        {
+          "id": "atmos-principle-explain",
+          "title": "Explain principle",
+          "design": "An individually selectable editorial principle with an oversized index and quiet supporting text.",
+          "section": false
+        },
+        {
+          "id": "atmos-footer",
+          "title": "10 / Edge-to-edge wordmark footer",
+          "design": "A near full-width wordmark closes the page; small utility links and a sparse ruled baseline keep the rest quiet.",
+          "section": true
+        },
+        {
+          "id": "atmos-footer-topline",
+          "title": "Sparse footer utility row",
+          "design": "Small links and metadata align to the same fine-rule grid as the numbered sections.",
+          "section": false
+        },
+        {
+          "id": "atmos-footer-wordmark",
+          "title": "Oversized closing wordmark",
+          "design": "Extremely large close-set type spans nearly the full browser width and becomes the closing image.",
+          "section": false
+        }
+      ]
+    }
+  ]
+}

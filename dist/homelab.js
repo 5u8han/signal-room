@@ -10,7 +10,7 @@ const frontCanvas=$('#room-front-canvas'),rearCanvas=$('#room-rear-canvas');
 const contexts=[frontCanvas.getContext('2d'),rearCanvas.getContext('2d')];
 const popCanvas=$('#room-popout'),popContext=popCanvas.getContext('2d'),popHeight=1.19;
 const inspector=$('#lab-inspector'),scenariosDialog=$('#lab-scenarios'),consoleDialog=$('#lab-console');
-const glassStudy=Boolean(document.body.dataset.glassVariant);
+const glassStudy=Boolean(document.body.dataset.glassVariant||document.body.dataset.designStudy);
 const dialogs=[inspector,scenariosDialog,consoleDialog],reduced=matchMedia('(prefers-reduced-motion: reduce)'),small=matchMedia('(max-width:760px)');
 const lifetime=new AbortController(),signal=lifetime.signal;
 const model=createHomelabModel({layout:ACTOR_LAYOUT,initialDelay:12,idleDelay:18});
